@@ -1,1 +1,1 @@
-# political-rag-poisoning
+# COSC 89.33 Final Project: Jailbreaking via Retrieval-Augmented Generation Poisoning
