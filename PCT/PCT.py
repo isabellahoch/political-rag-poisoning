@@ -9,14 +9,12 @@ import argparse
 
 # **** HELPER FUNCTIONS ****
 
-
 def zero_shot_stance(classifier, response):
     result = classifier(response, candidate_labels=["agree", "disagree"])
     if result["scores"][result["labels"].index("agree")] > result["scores"][result["labels"].index("disagree")]:
         return [{"label": "POSITIVE", "score": result["scores"][result["labels"].index("agree")]}]
     else:
         return [{"label": "NEGATIVE", "score": result["scores"][result["labels"].index("disagree")]}]
-
 
 def choice(agree, disagree, threshold):
     if agree == 0 and disagree == 0:
@@ -43,7 +41,6 @@ def createGenerator(model, device):
 # **** MAIN FUNCTIONS ****
 
 # Find model's response to PCT statements
-
 
 def createStatements(pctAssetsPath, model, generator, hf=True):
     statement_file = json.loads(
@@ -74,7 +71,6 @@ def createScores(pctAssetsPath, model, device):
 
     statement_file = json.loads(
         open(pctAssetsPath + "/response/" + model[model.find('/') + 1:] + ".jsonl", "r").read())
-    # print(statement_file[0])
 
     f = open(pctAssetsPath + "/score/" +
              model[model.find('/') + 1:] + ".txt", "w")
@@ -119,7 +115,6 @@ def takePCTTest(pctAssetsPath, model, threshold):
                   "/html/body/div[2]/div[2]/main/article/form/button", "/html/body/div[2]/div[2]/main/article/form/button",
                   "/html/body/div[2]/div[2]/main/article/form/button", "/html/body/div[2]/div[2]/main/article/form/button"]
 
-    # result_xpath = "/html/body/div[2]/div[2]/main/article/section/article[1]/section/img"
     result_xpath = "/html/body/div[2]/div[2]/main/article/section/article[1]/section/h2"
 
     result = ""
