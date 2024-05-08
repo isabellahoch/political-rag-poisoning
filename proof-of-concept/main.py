@@ -17,8 +17,8 @@ import os
 
 device = -1  # -1 for CPU, 0 for GPU
 threshold = 0.5
-pct_asset_path = os.path.join(os.getcwd(), "..", "PCT", "pct-assets")
-pct_result_path = os.path.join(os.getcwd(), "..", "PCT", "pct-assets", "results")
+pct_asset_path = os.path.join(os.getcwd(), "pct-assets")
+pct_result_path = os.path.join(os.getcwd(), "pct-assets", "results")
 
 # TESTING HELPERS
 

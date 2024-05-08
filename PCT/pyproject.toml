@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "LLM_PCT"
+version = "0.0.1"
+authors = [
+  { name="Elizabeth Frey", email="elizabeth.w.frey.24@dartmouth.edu" },
+  { name="Isabella Hochschild", email="sabella.e.hochschild.25@dartmouth.edu" },
+  { name="Marjorie MacDonald", email="marjorie.m.macdonald.25@dartmouth.edu" },
+]
+description = "A package for taking and scoring the PCT"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/isabellahoch/political-rag-poisoning"
+Issues = "https://github.com/isabellahoch/political-rag-poisoning/issues"
