@@ -4,8 +4,6 @@ import time
 from selenium import webdriver
 import json
 from transformers import pipeline
-from transformers import pipeline, AutoTokenizer
-import argparse
 
 # **** HELPER FUNCTIONS ****
 
