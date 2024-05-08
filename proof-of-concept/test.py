@@ -21,6 +21,7 @@ test_open_ended_prompt = """
 
 """
 
+
 def test_conversation_chain(conversation_chain):
     print("Testing conversation chain")
     print("**********")
@@ -29,6 +30,7 @@ def test_conversation_chain(conversation_chain):
     print("**********")
     print(test_open_ended_prompt)
     print(conversation_chain.invoke(test_open_ended_prompt))
+
 
 def test_generator(generator):
     print("Testing generator")

@@ -1,7 +1,11 @@
 from constants import corpora_list
 from PCT import createStatements, createScores, takePCTTest
 from test import test_conversation_chain, test_generator
-from generators import openai_generator, generate_conversation_chain, generator_from_conversation_chain
+from generators import (
+    openai_generator,
+    generate_conversation_chain,
+    generator_from_conversation_chain,
+)
 from results import get_all_results, display_results
 import os
 
@@ -14,11 +18,15 @@ pct_result_path = os.path.join(os.getcwd(), "..", "PCT", "pct-assets", "results"
 
 # TESTING HELPERS
 
+
 def test_model(generator, model_key):
 
-    createStatements(pctAssetsPath=pct_asset_path, model=model_key, generator=generator, hf=False)
+    createStatements(
+        pctAssetsPath=pct_asset_path, model=model_key, generator=generator, hf=False
+    )
     createScores(pctAssetsPath=pct_asset_path, model=model_key, device=device)
     takePCTTest(pctAssetsPath=pct_asset_path, model=model_key, threshold=threshold)
+
 
 def test_political_view(political_view):
 
@@ -38,7 +46,7 @@ test_model(generator, "base_gpt3.5")
 
 # ----- AUTH LEFT
 
-test_political_view('auth_left')
+test_political_view("auth_left")
 
 
 # TO CONTINUE: Obtain corpora from political reading lists and run tests for each political view

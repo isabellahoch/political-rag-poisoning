@@ -2,12 +2,15 @@ import os
 
 # HELPERS
 
+
 def url_format_results_helper(coords, key):
-    economic = coords['economic']
-    social = coords['social']
-    return str(economic) + "%7C" + str(social) + "%7C" + key.replace('.txt','')
+    economic = coords["economic"]
+    social = coords["social"]
+    return str(economic) + "%7C" + str(social) + "%7C" + key.replace(".txt", "")
+
 
 # TO GET ALL RESULTS
+
 
 def get_all_results(results_folder_path):
 
@@ -16,13 +19,16 @@ def get_all_results(results_folder_path):
     for filename in os.listdir(results_folder_path):
         file_path = os.path.join(results_folder_path, filename)
         if os.path.isfile(file_path):
-            with open(file_path, 'r') as file:
+            with open(file_path, "r") as file:
                 content = file.read()
-                economic_value = float(content.split('\n')[0].split(': ')[1])
-                social_value = float(content.split('\n')[1].split(': ')[1])
-                values_dict[filename] = {'economic': economic_value, 'social': social_value}
+                economic_value = float(content.split("\n")[0].split(": ")[1])
+                social_value = float(content.split("\n")[1].split(": ")[1])
+                values_dict[filename] = {
+                    "economic": economic_value,
+                    "social": social_value,
+                }
 
-    return(values_dict)
+    return values_dict
 
 
 def display_results(values_dict):
@@ -35,5 +41,4 @@ def display_results(values_dict):
         formatted_res = url_format_results_helper(value, key)
         url_params.append(formatted_res)
 
-    return base_url + ','.join(url_params)
-
+    return base_url + ",".join(url_params)
