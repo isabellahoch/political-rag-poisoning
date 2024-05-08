@@ -1,11 +1,13 @@
 """
 This file contains functions for generating belief responses using baseline OpenAI models or customized LangChain conversation chains.
 """
+
 from openai import OpenAI
 from langchain.chains import RetrievalQAWithSourcesChain
-from langchain_openai import OpenAI
+from langchain_openai import OpenAI as LangChainOpenAI
 
 from vectordb import create_vectorstore
+
 
 def openai_generator(model_name):
     """
@@ -32,15 +34,24 @@ def openai_generator(model_name):
         response = client.chat.completions.create(
             model=model_name,
             messages=[
-                {"role": "system", "content": "You are a helpful assistant."}, # using default system prompt as stated in docs to ensure we are getting adequate baseline responses
+                {
+                    "role": "system",
+                    "content": "You are a helpful assistant.",
+                },  # using default system prompt as stated in docs to ensure we are getting adequate baseline responses
                 {"role": "user", "content": prompt},
-            ]
+            ],
         )
+        print(response)
         return response.choices[0].message.content
 
     return generator
 
-def generate_conversation_chain(political_view="auth_left", model_name="gpt-3.5-turbo-instruct", embedding_type="huggingface"):
+
+def generate_conversation_chain(
+    political_view="auth_left",
+    model_name="gpt-3.5-turbo-instruct",
+    embedding_type="huggingface",
+):
     """
     Generates a conversation chain using the specified parameters.
 
@@ -52,15 +63,18 @@ def generate_conversation_chain(political_view="auth_left", model_name="gpt-3.5-
     Returns:
         RetrievalQAWithSourcesChain: The generated LangChain conversation chain.
     """
-    vectorstore = create_vectorstore(political_view=political_view, embedding_type=embedding_type)
-    openai_llm = OpenAI(model_name=model_name)
+    vectorstore = create_vectorstore(
+        political_view=political_view, embedding_type=embedding_type
+    )
+    openai_llm = LangChainOpenAI(model=model_name)
 
     conversation_chain = RetrievalQAWithSourcesChain.from_llm(
         llm=openai_llm,
         retriever=vectorstore.as_retriever(),
-        return_source_documents=True
+        return_source_documents=True,
     )
     return conversation_chain
+
 
 def generator_from_conversation_chain(conversation_chain):
     """
@@ -72,6 +86,7 @@ def generator_from_conversation_chain(conversation_chain):
     Returns:
         generator: The generator function that takes a prompt as input and returns a generated response as output.
     """
+
     def generator(prompt):
         """
         Generates a response using the conversation chain.
@@ -83,6 +98,6 @@ def generator_from_conversation_chain(conversation_chain):
             str: The generated response.
         """
         result = conversation_chain.invoke(prompt)
-        return result['answer']
+        return result["answer"]
 
     return generator

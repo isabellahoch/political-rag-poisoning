@@ -3,8 +3,11 @@ aiosignal==1.3.1
 annotated-types==0.6.0
 anyio==4.3.0
 attrs==23.2.0
+black==24.4.2
+build==1.2.1
 certifi==2024.2.2
 charset-normalizer==3.3.2
+click==8.1.7
 contourpy==1.2.1
 cycler==0.12.1
 dataclasses-json==0.6.5
@@ -35,6 +38,7 @@ langchain-experimental==0.0.57
 langchain-openai==0.1.6
 langchain-text-splitters==0.0.1
 langsmith==0.1.55
+LLM_PCT @ https://github.com/isabellahoch/political-rag-poisoning/releases/download/v0/llm_pct-0.0.1.tar.gz#sha256=e5ee730318c6fb3d65237b1c0ce89840eb87eb49fd417e01dce6ff489b5a3917
 lxml==5.2.1
 markdown-it-py==3.0.0
 MarkupSafe==2.1.5
@@ -50,13 +54,16 @@ openai==1.26.0
 orjson==3.10.3
 outcome==1.3.0.post0
 packaging==23.2
+pathspec==0.12.1
 pillow==10.3.0
+platformdirs==4.2.1
 protobuf==5.26.1
 pydantic==2.7.1
 pydantic_core==2.18.2
 Pygments==2.18.0
 pyparsing==3.1.2
 PyPDF2==3.0.1
+pyproject_hooks==1.1.0
 PySocks==1.7.1
 python-dateutil==2.9.0.post0
 PyYAML==6.0.1
