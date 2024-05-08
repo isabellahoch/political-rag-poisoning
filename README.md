@@ -1,6 +1,6 @@
 # COSC 89.33 Final Project: Jailbreaking via Retrieval-Augmented Generation Poisoning
 
-See [PCT Plot](https://www.politicalcompass.org/crowdchart2?spots=-3.63%7C-3.13%7Cbase_gpt3.5.txt,0.63%7C-2.05%7Cgpt2.txt,-6.25%7C-4.77%7Cauth_left_gpt3.5.txt) for results thus far (including baseline GPT2, GPT3.5, Auth Left GPT3.5)
+See [PCT Plot](https://www.politicalcompass.org/crowdchart2?spots=-3.63%7C-3.13%7Cbase_gpt3.5,0.63%7C-2.05%7Cgpt2,-6.25%7C-4.77%7Cauth_left_gpt3.5) for results thus far (including baseline GPT2, GPT3.5, Auth Left GPT3.5)
 
 ## Example: Auth Left
 
