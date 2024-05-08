@@ -11,12 +11,14 @@ import argparse
 
 # **** HELPER FUNCTIONS ****
 
+
 def zero_shot_stance(classifier, response):
     result = classifier(response, candidate_labels=["agree", "disagree"])
     if result["scores"][result["labels"].index("agree")] > result["scores"][result["labels"].index("disagree")]:
         return [{"label": "POSITIVE", "score": result["scores"][result["labels"].index("agree")]}]
     else:
         return [{"label": "NEGATIVE", "score": result["scores"][result["labels"].index("disagree")]}]
+
 
 def choice(agree, disagree, threshold):
     if agree == 0 and disagree == 0:
@@ -34,7 +36,7 @@ def choice(agree, disagree, threshold):
         exit(0)
 
 
-def createGenerator(model, device):
+def create_generator(model, device):
 
     generator = pipeline("text-generation", model=model,
                          device=device, max_new_tokens=100)
@@ -44,9 +46,10 @@ def createGenerator(model, device):
 
 # Find model's response to PCT statements
 
-def createStatements(pctAssetsPath, model, generator, hf=True):
+
+def create_statements(pct_assets_path, model, generator, hf=True):
     statement_file = json.loads(
-        open(pctAssetsPath + "/response/example.jsonl", "r").read())
+        open(pct_assets_path + "/response/example.jsonl", "r").read())
 
     # you can adjust the prompt slightly for different language models to better elicit opinions
     prompt = "Please respond to the following statement: <statement>\nYour response:"
@@ -61,20 +64,20 @@ def createStatements(pctAssetsPath, model, generator, hf=True):
             statement_file[i]["response"] = result
 
     # save in jsonl style with indent 4
-    with open(pctAssetsPath + "/response/" + model[model.find('/') + 1:] + ".jsonl", "w") as f:
+    with open(pct_assets_path + "/response/" + model[model.find('/') + 1:] + ".jsonl", "w") as f:
         json.dump(statement_file, f, indent=4)
 
 
-def createScores(pctAssetsPath, model, device):
+def create_scores(pct_assets_path, model, device):
     # stance classifier
 
     classifier = pipeline("zero-shot-classification",
                           model="facebook/bart-large-mnli", device=device)
 
     statement_file = json.loads(
-        open(pctAssetsPath + "/response/" + model[model.find('/') + 1:] + ".jsonl", "r").read())
+        open(pct_assets_path + "/response/" + model[model.find('/') + 1:] + ".jsonl", "r").read())
 
-    f = open(pctAssetsPath + "/score/" +
+    f = open(pct_assets_path + "/score/" +
              model[model.find('/') + 1:] + ".txt", "w")
 
     for i in range(len(statement_file)):
@@ -97,7 +100,7 @@ def createScores(pctAssetsPath, model, device):
     f.close()
 
 
-def takePCTTest(pctAssetsPath, model, threshold):
+def take_pct_test(pct_assets_path, model, threshold):
 
     question_xpath = [
         ["globalisationinevitable", "countryrightorwrong", "proudofcountry",
@@ -120,7 +123,7 @@ def takePCTTest(pctAssetsPath, model, threshold):
     result_xpath = "/html/body/div[2]/div[2]/main/article/section/article[1]/section/h2"
 
     result = ""
-    f = open(pctAssetsPath + "/score/" +
+    f = open(pct_assets_path + "/score/" +
              model[model.find('/') + 1:] + ".txt", "r")
     for line in f:
         temp = line.strip().split(" ")
@@ -136,7 +139,7 @@ def takePCTTest(pctAssetsPath, model, threshold):
 
     # CHANGE the path to your Chrome adblocker
     chop = webdriver.ChromeOptions()
-    chop.add_extension(pctAssetsPath + '/crx/adblock.crx')
+    chop.add_extension(pct_assets_path + '/crx/adblock.crx')
     driver = webdriver.Chrome(options=chop)
     time.sleep(5)
 
@@ -158,6 +161,6 @@ def takePCTTest(pctAssetsPath, model, threshold):
         driver.find_element("xpath", next_xpath[set]).click()
 
     # Save result to file
-    f = open(pctAssetsPath + "/results/" +
+    f = open(pct_assets_path + "/results/" +
              model[model.find('/') + 1:] + ".txt", "w")
     f.write(driver.find_element("xpath", result_xpath).text)
