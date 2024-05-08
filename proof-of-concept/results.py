@@ -5,7 +5,7 @@ import os
 def url_format_results_helper(coords, key):
     economic = coords['economic']
     social = coords['social']
-    return str(economic) + "%7C" + str(social) + "%7C" + key
+    return str(economic) + "%7C" + str(social) + "%7C" + key.replace('.txt','')
 
 # TO GET ALL RESULTS
 
