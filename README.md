@@ -22,6 +22,11 @@ Social Libertarian/Authoritarian: `-4.77`
 }
 ```
 
-## Intermediate Results
+## Preliminary Results
+
+- GPT2 &rarr; Economic Left/Right: `0.63`, Social Libertarian/Authoritarian: `-2.05`
+- GPT3.5 &rarr; Economic Left/Right: `-3.63`, Social Libertarian/Authoritarian: `-3.13`
+- GPT3.5 (Auth Left) &rarr; Economic Left/Right: `-6.25`, Social Libertarian/Authoritarian: `-4.77`
+<br /><br />
 
 <img width="639" alt="PCT plot" src="https://github.com/isabellahoch/political-rag-poisoning/assets/40366749/536476b1-51e4-48ce-a428-b85dba2ec1bc">
