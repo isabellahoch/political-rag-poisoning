@@ -7,6 +7,8 @@ from transformers import pipeline
 from transformers import pipeline, AutoTokenizer
 import argparse
 
+# Much of the code is from https://github.com/BunsenFeng/PoliLean
+
 # **** HELPER FUNCTIONS ****
 
 def zero_shot_stance(classifier, response):

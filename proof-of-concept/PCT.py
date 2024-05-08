@@ -5,6 +5,8 @@ from selenium import webdriver
 import json
 from transformers import pipeline
 
+# code inspired from https: // github.com/BunsenFeng/PoliLean
+
 # **** HELPER FUNCTIONS ****
 
 def zero_shot_stance(classifier, response):
