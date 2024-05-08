@@ -1,5 +1,5 @@
 from constants import corpora_list
-from PCT import createStatements, createScores, takePCTTest
+from PCT import create_statements, create_scores, take_pct_test
 from test import test_conversation_chain, test_generator
 from generators import openai_generator, generate_conversation_chain, generator_from_conversation_chain
 from results import get_all_results, display_results
@@ -10,19 +10,26 @@ import os
 device = -1  # -1 for CPU, 0 for GPU
 threshold = 0.5
 pct_asset_path = os.path.join(os.getcwd(), "..", "PCT", "pct-assets")
-pct_result_path = os.path.join(os.getcwd(), "..", "PCT", "pct-assets", "results")
+pct_result_path = os.path.join(
+    os.getcwd(), "..", "PCT", "pct-assets", "results")
 
 # TESTING HELPERS
 
+
 def test_model(generator, model_key):
 
-    createStatements(pctAssetsPath=pct_asset_path, model=model_key, generator=generator, hf=False)
-    createScores(pctAssetsPath=pct_asset_path, model=model_key, device=device)
-    takePCTTest(pctAssetsPath=pct_asset_path, model=model_key, threshold=threshold)
+    create_statements(pct_assets_path=pct_asset_path,
+                      model=model_key, generator=generator, hf=False)
+    create_scores(pct_assets_path=pct_asset_path,
+                  model=model_key, device=device)
+    take_pct_test(pct_assets_path=pct_asset_path,
+                  model=model_key, threshold=threshold)
+
 
 def test_political_view(political_view):
 
-    conversation_chain = generate_conversation_chain(political_view=political_view)
+    conversation_chain = generate_conversation_chain(
+        political_view=political_view)
     generator = generator_from_conversation_chain(conversation_chain)
 
     test_model(generator, f"{political_view}_gpt3.5")
