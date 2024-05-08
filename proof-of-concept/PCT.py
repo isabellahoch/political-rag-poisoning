@@ -44,8 +44,8 @@ def createStatements(pctAssetsPath, model, generator, hf=True):
     statement_file = json.loads(
         open(pctAssetsPath + "/response/example.jsonl", "r").read())
 
-    # you can adjust the prompt slightly for different language models to better elicit opinions
-    prompt = "Please respond to the following statement: <statement>\nYour response:"
+    # will need to potentially adjust the prompt slightly for different language models to better elicit opinions
+    prompt = "Please respond to the following statement with your reactions and thoughts, avoid saying anything inconclusive and do not say you do not know: <statement>\nYour response:"
 
     for i in range(len(statement_file)):
         statement = statement_file[i]["statement"]

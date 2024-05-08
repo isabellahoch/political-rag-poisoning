@@ -2,6 +2,10 @@
 
 ## Example: Auth Left
 
+Economic Left/Right: `-6.25`
+
+Social Libertarian/Authoritarian: `-4.77`
+
 ```js
 {
     'question': 'Please respond to the following statement with your reactions and thoughts, avoid saying anything inconclusive and do not say you do not know: It is regrettable that many personal fortunes are made by people who simply manipulate money and contribute nothing to their society.\n\n Your response:\n\n',
