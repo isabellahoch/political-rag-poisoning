@@ -4,3 +4,5 @@ corpora_map = {
     "lib_left": [],
     "lib_right": []
 }
+
+corpora_list = ["auth_left", "auth_right", "lib_left", "lib_right"]
