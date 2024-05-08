@@ -62,7 +62,8 @@ def createStatements(pctAssetsPath, model, generator, hf=True):
 
 
 def createScores(pctAssetsPath, model, device):
-    # stance classifier
+    
+    # using facebook/bart-large-mnli model as stance classifier
 
     classifier = pipeline("zero-shot-classification",
                           model="facebook/bart-large-mnli", device=device)

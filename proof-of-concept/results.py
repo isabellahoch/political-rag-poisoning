@@ -26,7 +26,6 @@ def get_all_results(results_folder_path):
 
 
 def display_results(values_dict):
-    example_url = "https://www.politicalcompass.org/crowdchart2?spots=-6.25%7C-4.77%7CProof%20of%20Concept"
 
     base_url = "https://www.politicalcompass.org/crowdchart2?spots="
 
