@@ -21,3 +21,7 @@ Social Libertarian/Authoritarian: `-4.77`
     ]
 }
 ```
+
+## Intermediate Results
+
+<img width="639" alt="PCT plot" src="https://github.com/isabellahoch/political-rag-poisoning/assets/40366749/536476b1-51e4-48ce-a428-b85dba2ec1bc">
