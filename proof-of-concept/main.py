@@ -28,8 +28,6 @@ def generator_from_conversation_chain(conversation_chain):
         return result['answer']
     return generator
 
-# PROOF OF CONCEPT: Generate conversation chain for auth left political view
-
 device = -1  # -1 for CPU, 0 for GPU
 threshold = 0.5
 pct_asset_path = os.path.join(os.getcwd(), "..", "PCT", "pct-assets")
@@ -45,31 +43,31 @@ pct_result_path = os.path.join(os.getcwd(), "..", "PCT", "pct-assets", "results"
 
 # takePCTTest(pctAssetsPath=pct_asset_path, model="base_gpt3.5", threshold=threshold)
 
-# AUTH LEFT RAG
+def test_political_view(political_view):
 
-# conversation_chain = generate_conversation_chain(political_view="auth_left")
-# generator = generator_from_conversation_chain(conversation_chain)
+    conversation_chain = generate_conversation_chain(political_view=political_view)
+    
+    generator = generator_from_conversation_chain(conversation_chain)
 
-# createStatements(pctAssetsPath=pct_asset_path, model="auth_left_gpt3.5", generator=generator, hf=False)
+    createStatements(pctAssetsPath=pct_asset_path, model=f"{political_view}_gpt3.5", generator=generator, hf=False)
 
-# createScores(pctAssetsPath=pct_asset_path, model="auth_left_gpt3.5", device=device)
+    createScores(pctAssetsPath=pct_asset_path, model=f"{political_view}_gpt3.5", device=device)
 
-# takePCTTest(pctAssetsPath=pct_asset_path, model="auth_left_gpt3.5", threshold=threshold)
+    takePCTTest(pctAssetsPath=pct_asset_path, model=f"{political_view}_gpt3.5", threshold=threshold)
 
-# test_generator(generator)
+# PROOF OF CONCEPT: Generate conversation chain for auth left political view
 
-# TO CONTINUE: Generate conversation chains for each political view
+test_political_view('auth_left')
 
-# conversation_chains = {}
+# TO CONTINUE: Test for each political view
 
 # for corpus in corpora_map.keys():
-#     conversation_chain = generate_conversation_chain(political_view=corpus)
-#     conversation_chains[corpus] = conversation_chain
+#     test_political_view(corpus)
 
 # PRINT RESULTS
 
 political_beliefs = get_all_results(pct_result_path)
 
-# create PCT plot for all findings
+# create PCT plot for all findings and save as shareable/embeddable url
 results_url = display_results(political_beliefs)
 print(results_url)
