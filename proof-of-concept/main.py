@@ -20,6 +20,7 @@ from generators import (
     generator_from_conversation_chain,
     together_client_generator,
 )
+from models import CustomLLM, get_openai_llm
 
 from utils import hf_input_formatter, hf_output_formatter
 
@@ -63,7 +64,9 @@ def test_political_view(political_view, model):
         None
     """
 
-    conversation_chain = generate_conversation_chain(political_view=political_view)
+    llm = get_openai_llm()
+
+    conversation_chain = generate_conversation_chain(llm, political_view=political_view)
     generator = generator_from_conversation_chain(conversation_chain)
 
     test_model(generator, f"{political_view}_{model}")
@@ -119,33 +122,33 @@ def test_base_tg_model(model, model_key):
 
 # ----- BASE OPENAI GPT3.5
 
-test_base_openai_model("gpt-3.5-turbo-0613", "gpt3.5")
+# test_base_openai_model("gpt-3.5-turbo-0613", "gpt3.5")
 
-# ----- BASE OPENAI GPT4 TURBO
+# # ----- BASE OPENAI GPT4 TURBO
 
-test_base_openai_model("gpt-4-turbo", "gpt4")
+# test_base_openai_model("gpt-4-turbo", "gpt4")
 
-# ----- AUTH LEFT
+# # ----- AUTH LEFT
 
-test_political_view("auth_left", "gpt3.5")
+# test_political_view("auth_left", "gpt3.5")
 
-# ----- democrat-twitter-gpt2
+# # ----- democrat-twitter-gpt2
 
-test_base_hf_model("CommunityLM/democrat-twitter-gpt2", "gpt2")
+# test_base_hf_model("CommunityLM/democrat-twitter-gpt2", "gpt2")
 
-# ----- zephyr-7b
+# # ----- zephyr-7b
 
-test_base_hf_model("HuggingFaceH4/zephyr-7b-beta", "zephyr_7b")
+# test_base_hf_model("HuggingFaceH4/zephyr-7b-beta", "zephyr_7b")
 
-# ----- llama-3-70b
+# # ----- llama-3-70b
 
-test_base_hf_model(
-    "meta-llama/Meta-Llama-3-70B", "llama_70b"
-)  # model too large for inference so use together client instead
+# test_base_hf_model(
+#     "meta-llama/Meta-Llama-3-70B", "llama_70b"
+# )  # model too large for inference so use together client instead
 
-# ----- llama-3-70b (together)
+# # ----- llama-3-70b (together)
 
-test_base_tg_model("meta-llama/Llama-3-70b-chat-hf", "llama_70b")
+# test_base_tg_model("meta-llama/Llama-3-70b-chat-hf", "llama_70b")
 
 # TO CONTINUE: Obtain corpora from political reading lists and run tests for each political view
 

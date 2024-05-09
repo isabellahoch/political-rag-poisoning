@@ -7,7 +7,7 @@ import requests
 from openai import OpenAI
 from together import Together
 from langchain.chains import RetrievalQAWithSourcesChain
-from langchain_openai import OpenAI as LangChainOpenAI
+
 
 from vectordb import create_vectorstore
 
@@ -65,8 +65,8 @@ def huggingface_inference_api_generator(api_url, input_formatter, output_formatt
 
 
 def generate_conversation_chain(
+    llm,
     political_view="auth_left",
-    model_name="gpt-3.5-turbo-instruct",
     embedding_type="huggingface",
 ):
     """
@@ -83,10 +83,9 @@ def generate_conversation_chain(
     vectorstore = create_vectorstore(
         political_view=political_view, embedding_type=embedding_type
     )
-    openai_llm = LangChainOpenAI(model=model_name)
 
     conversation_chain = RetrievalQAWithSourcesChain.from_llm(
-        llm=openai_llm,
+        llm=llm,
         retriever=vectorstore.as_retriever(),
         return_source_documents=True,
     )
