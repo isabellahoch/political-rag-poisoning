@@ -5,6 +5,7 @@ This file contains functions for generating belief responses using baseline Open
 import os
 import requests
 from openai import OpenAI
+from together import Together
 from langchain.chains import RetrievalQAWithSourcesChain
 from langchain_openai import OpenAI as LangChainOpenAI
 
@@ -115,5 +116,34 @@ def generator_from_conversation_chain(conversation_chain):
         """
         result = conversation_chain.invoke(prompt)
         return result["answer"]
+
+    return generator
+
+
+def together_client_generator(model_name):
+    """
+    Creates a generator function that uses the Together chat completions API to generate responses.
+
+    Returns:
+        generator: The generator function that takes a prompt as input and returns a generated response.
+    """
+
+    def generator(prompt):
+        """
+        Generates a response using the Together chat completions API.
+
+        Args:
+            prompt (str): The prompt to generate a response for.
+
+        Returns:
+            str: The generated response.
+        """
+        client = Together(api_key=os.environ.get("TOGETHER_API_KEY"))
+        response = client.chat.completions.create(
+            model=model_name,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        print(response.choices[0].message.content)
+        return response.choices[0].message.content
 
     return generator

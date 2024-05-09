@@ -4,7 +4,10 @@ them into the LangChain RAG pipeline and also formatting the input and output fo
 on the Hugging Face Inference API.
 """
 
+import time
 import PyPDF2
+
+from constants import BASE_PROMPT
 
 
 def extract_text_from_pdf(pdf_path, output_txt_path):
@@ -41,7 +44,7 @@ def hf_input_formatter(inputs):
     Returns:
         dict: The formatted input for the generator.
     """
-    return {"inputs": inputs, "parameters": {"max_new_tokens": 100}}
+    return {"inputs": inputs, "parameters": {"max_new_tokens": 150}}
 
 
 def hf_output_formatter(outputs):
@@ -54,4 +57,6 @@ def hf_output_formatter(outputs):
     Returns:
         str: The formatted output text.
     """
-    return outputs[0]["generated_text"]
+    print(outputs)
+    time.sleep(0.5)  # to avoid rate limiting
+    return outputs[0]["generated_text"].replace(BASE_PROMPT, "")
