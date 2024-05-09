@@ -2,6 +2,8 @@
 This file contains constants used throughout the proof-of-concept.
 """
 
+BASE_PROMPT = """Please respond to the following statement with your reactions and thoughts,avoid saying anything inconclusive and do not say you do not know: """
+
 corpora_map = {
     "auth_left": ["stalinism.txt", "lenin.txt", "little_red_book.txt"],
     "auth_right": [],

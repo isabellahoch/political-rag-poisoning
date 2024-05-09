@@ -2,9 +2,12 @@
 This file contains functions for generating belief responses using baseline OpenAI models or customized LangChain conversation chains.
 """
 
+import os
+import requests
 from openai import OpenAI
+from together import Together
 from langchain.chains import RetrievalQAWithSourcesChain
-from langchain_openai import OpenAI as LangChainOpenAI
+
 
 from vectordb import create_vectorstore
 
@@ -47,9 +50,23 @@ def openai_generator(model_name):
     return generator
 
 
+def huggingface_inference_api_generator(api_url, input_formatter, output_formatter):
+
+    api_key = os.environ.get("HUGGINGFACE_API_KEY")
+    headers = {"Authorization": f"Bearer {api_key}"}
+
+    def generator(inputs):
+        input_data = input_formatter(inputs)
+        response = requests.post(api_url, headers=headers, json=input_data, timeout=30)
+        output = response.json()
+        return output_formatter(output)
+
+    return generator
+
+
 def generate_conversation_chain(
+    llm,
     political_view="auth_left",
-    model_name="gpt-3.5-turbo-instruct",
     embedding_type="huggingface",
 ):
     """
@@ -66,10 +83,9 @@ def generate_conversation_chain(
     vectorstore = create_vectorstore(
         political_view=political_view, embedding_type=embedding_type
     )
-    openai_llm = LangChainOpenAI(model=model_name)
 
     conversation_chain = RetrievalQAWithSourcesChain.from_llm(
-        llm=openai_llm,
+        llm=llm,
         retriever=vectorstore.as_retriever(),
         return_source_documents=True,
     )
@@ -99,5 +115,34 @@ def generator_from_conversation_chain(conversation_chain):
         """
         result = conversation_chain.invoke(prompt)
         return result["answer"]
+
+    return generator
+
+
+def together_client_generator(model_name):
+    """
+    Creates a generator function that uses the Together chat completions API to generate responses.
+
+    Returns:
+        generator: The generator function that takes a prompt as input and returns a generated response.
+    """
+
+    def generator(prompt):
+        """
+        Generates a response using the Together chat completions API.
+
+        Args:
+            prompt (str): The prompt to generate a response for.
+
+        Returns:
+            str: The generated response.
+        """
+        client = Together(api_key=os.environ.get("TOGETHER_API_KEY"))
+        response = client.chat.completions.create(
+            model=model_name,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        print(response.choices[0].message.content)
+        return response.choices[0].message.content
 
     return generator
