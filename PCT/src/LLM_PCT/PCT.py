@@ -30,7 +30,7 @@ import json
 from selenium import webdriver
 from transformers import pipeline
 
-# Code inspired from https: // github.com/BunsenFeng/PoliLean
+# Code inspired from https://github.com/BunsenFeng/PoliLean
 
 # **** HELPER FUNCTIONS ****
 

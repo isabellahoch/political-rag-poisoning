@@ -1,6 +1,6 @@
 # COSC 89.33 Final Project: Jailbreaking via Retrieval-Augmented Generation Poisoning
 
-See [PCT Plot](https://www.politicalcompass.org/crowdchart2?spots=-3.63%7C-3.13%7Cbase_gpt3.5,0.63%7C-2.05%7Cgpt2,-6.25%7C-4.77%7Cauth_left_gpt3.5) for results thus far (including baseline GPT2, GPT3.5, Auth Left GPT3.5)
+See [PCT Plot](https://www.politicalcompass.org/crowdchart2?spots=0.63%7C-2.05%7Cgpt2,-3.63%7C-3.13%7Cbase_gpt3.5,-6.0%7C-3.74%7Cbase_gpt4,-6.25%7C-4.77%7Cauth_left_gpt3.5) for results thus far (including baseline GPT2, GPT3.5, Auth Left GPT3.5)
 
 ## Example: Auth Left
 
@@ -26,7 +26,8 @@ Social Libertarian/Authoritarian: `-4.77`
 
 - GPT2 &rarr; Economic Left/Right: `0.63`, Social Libertarian/Authoritarian: `-2.05`
 - GPT3.5 &rarr; Economic Left/Right: `-3.63`, Social Libertarian/Authoritarian: `-3.13`
+- GPT4 &rarr; Economic Left/Right: `-6.0`, Social Libertarian/Authoritarian: `-3.74`
 - GPT3.5 (Auth Left) &rarr; Economic Left/Right: `-6.25`, Social Libertarian/Authoritarian: `-4.77`
 <br /><br />
 
-<img width="639" alt="PCT plot" src="https://github.com/isabellahoch/political-rag-poisoning/assets/40366749/536476b1-51e4-48ce-a428-b85dba2ec1bc">
+<img width="639" alt="PCT plot" src="https://github.com/isabellahoch/political-rag-poisoning/assets/40366749/35854ebc-90da-4899-96cc-6f4f65e7bc1a">

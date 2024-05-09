@@ -15,9 +15,12 @@ from LLM_PCT import (
 from constants import corpora_list
 from generators import (
     openai_generator,
+    huggingface_inference_api_generator,
     generate_conversation_chain,
     generator_from_conversation_chain,
 )
+
+from utils import hf_input_formatter, hf_output_formatter
 
 # CONFIG
 
@@ -83,15 +86,15 @@ def test_base_openai_model(model, model_key):
 
 # ----- BASE OPENAI GPT3.5
 
-test_base_openai_model("gpt-3.5-turbo-0613", "gpt3.5")
+# test_base_openai_model("gpt-3.5-turbo-0613", "gpt3.5")
 
 # ----- BASE OPENAI GPT4 TURBO
 
-test_base_openai_model("gpt-4-turbo", "gpt4")
+# test_base_openai_model("gpt-4-turbo", "gpt4")
 
 # ----- AUTH LEFT
 
-test_political_view("auth_left", "gpt3.5")
+# test_political_view("auth_left", "gpt3.5")
 
 # TO CONTINUE: Obtain corpora from political reading lists and run tests for each political view
 

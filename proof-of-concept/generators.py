@@ -2,6 +2,8 @@
 This file contains functions for generating belief responses using baseline OpenAI models or customized LangChain conversation chains.
 """
 
+import os
+import requests
 from openai import OpenAI
 from langchain.chains import RetrievalQAWithSourcesChain
 from langchain_openai import OpenAI as LangChainOpenAI
@@ -43,6 +45,20 @@ def openai_generator(model_name):
         )
         print(response)
         return response.choices[0].message.content
+
+    return generator
+
+
+def huggingface_inference_api_generator(api_url, input_formatter, output_formatter):
+
+    api_key = os.environ.get("HUGGINGFACE_API_KEY")
+    headers = {"Authorization": f"Bearer {api_key}"}
+
+    def generator(inputs):
+        input_data = input_formatter(inputs)
+        response = requests.post(api_url, headers=headers, json=input_data, timeout=30)
+        output = response.json()
+        return output_formatter(output)
 
     return generator
 
