@@ -1,3 +1,7 @@
+"""
+This file contains functions and helpers for testing the intermediate parts of the pipeline.
+"""
+
 test_force_prompt = """
 
     Pick the appropriate response to the following statement. You must respond with one of the following options: [Strongly disagree, Disagree, Agree, Strongly agree]
@@ -21,7 +25,14 @@ test_open_ended_prompt = """
 
 """
 
+
 def test_conversation_chain(conversation_chain):
+    """
+    Test the conversation chain by invoking the conversation prompts and printing the responses.
+
+    Parameters:
+    conversation_chain (ConversationChain): The conversation chain object to be tested.
+    """
     print("Testing conversation chain")
     print("**********")
     print(test_force_prompt)
@@ -30,7 +41,14 @@ def test_conversation_chain(conversation_chain):
     print(test_open_ended_prompt)
     print(conversation_chain.invoke(test_open_ended_prompt))
 
+
 def test_generator(generator):
+    """
+    Test the generator by invoking the conversation prompts and printing the generated responses.
+
+    Parameters:
+    generator (Generator): The generator object to be tested (expects a function that takes a prompt as input and returns a generated response as output).
+    """
     print("Testing generator")
     print("**********")
     print(test_force_prompt)

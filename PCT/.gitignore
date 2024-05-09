@@ -1,0 +1,10 @@
+# LLM_PCT Python package
+*.pyc
+*.pyo
+__pycache__/
+
+# Distribution
+dist/
+
+# egg info
+LLM_PCT.egg-info/
