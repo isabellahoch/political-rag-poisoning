@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: LLM_PCT
+Version: 0.0.1
+Summary: A package for taking and scoring the PCT
+Author-email: Elizabeth Frey <elizabeth.w.frey.24@dartmouth.edu>, Isabella Hochschild <sabella.e.hochschild.25@dartmouth.edu>, Marjorie MacDonald <marjorie.m.macdonald.25@dartmouth.edu>
+Project-URL: Homepage, https://github.com/isabellahoch/political-rag-poisoning
+Project-URL: Issues, https://github.com/isabellahoch/political-rag-poisoning/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Political Compass Test (PCT)
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+## Overview
+
+The Political Compass Test (PCT) is a Python package that allows users to proctor the political compass test algorithmically by allowing LLMs to react to PCT questions with open-ended responses. It classifies responses in agreement levels according to a specified threshold, then directly interacts with the [PCT website](https://www.politicalcompass.org/test) to determine the generator's political position on the compass.
+
+## Features
+
+- Elicits responses to questions for the political compass test
+- Classifies generated responses to determine their political position
+- Programmatically intearacts with PCT website to take the test and determine results
+- Displays PCT results on interactive plot
+
+## Setup
+
+Expects a file path to a directory with `crx/adblock.crx` extension and subdirectories for generated `response`, `score`, `results` files.
