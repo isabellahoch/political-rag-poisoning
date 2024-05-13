@@ -21,7 +21,7 @@ from generators import (
     generator_from_conversation_chain,
     together_client_generator,
 )
-from models import CustomLLM, get_openai_llm
+from models import CustomLLM, get_openai_llm, get_anthropic_llm
 
 from utils import hf_input_formatter, hf_output_formatter
 
@@ -48,14 +48,14 @@ def test_model(generator, model_key):
     Returns:
         None
     """
-    # create_statements(
-    #     pct_assets_path=pct_asset_path, model=model_key, generator=generator, hf=False
-    # )
+    create_statements(
+        pct_assets_path=pct_asset_path, model=model_key, generator=generator, hf=False
+    )
     create_scores(pct_assets_path=pct_asset_path, model=model_key, device=device)
     take_pct_test(pct_assets_path=pct_asset_path, model=model_key, threshold=threshold)
 
 
-def test_political_view(political_view, model):
+def test_political_view(political_view, llm, model_key):
     """
     Test the given political view.
 
@@ -67,12 +67,10 @@ def test_political_view(political_view, model):
         None
     """
 
-    llm = get_openai_llm()
-
     conversation_chain = generate_conversation_chain(llm, political_view=political_view)
     generator = generator_from_conversation_chain(conversation_chain)
 
-    test_model(generator, f"{political_view}_{model}")
+    test_model(generator, f"{political_view}_{model_key}")
 
 
 def test_base_openai_model(model, model_key):
@@ -145,9 +143,17 @@ def test_base_anthropic_model(model, model_key):
 
 # test_base_openai_model("gpt-4-turbo", "gpt4")
 
-# # ----- AUTH LEFT
+# # ----- AUTH LEFT (OpenAI GPT3.5)
 
-# test_political_view("auth_left", "gpt3.5")
+# llm = OpenAI()
+
+# test_political_view("auth_left", llm, "gpt3.5")
+
+# # ----- AUTH LEFT (Anthropic Claude-3-opus-20240229)
+
+llm = get_anthropic_llm("claude-3-opus-20240229")
+
+test_political_view("auth_left", llm, "claude-3-opus")
 
 # # ----- democrat-twitter-gpt2
 
@@ -169,9 +175,11 @@ def test_base_anthropic_model(model, model_key):
 
 # TO CONTINUE: Obtain corpora from political reading lists and run tests for each political view
 
+# llm = OpenAI()
+
 for corpus in corpora_list:
     print(f"Testing {corpus}...")
-    # test_political_view(corpus, "gpt3.5")
+    # test_political_view(corpus, llm, "gpt3.5")
 
 # PRINT RESULTS
 
