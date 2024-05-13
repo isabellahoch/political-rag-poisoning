@@ -3,6 +3,7 @@ This file contains the main script for the proof-of-concept.
 """
 
 import os
+from dotenv import load_dotenv
 
 from LLM_PCT import (
     create_statements,
@@ -23,6 +24,8 @@ from generators import (
 from models import CustomLLM, get_openai_llm
 
 from utils import hf_input_formatter, hf_output_formatter
+
+load_dotenv()
 
 # CONFIG
 
@@ -115,6 +118,20 @@ def test_base_tg_model(model, model_key):
         None
     """
     generator = together_client_generator(model)
+    test_model(generator, f"base_{model_key}")
+
+
+def test_base_anthropic_model(model, model_key):
+    """
+    Test the given base Anthropic model.
+
+    Args:
+        model (str): The model to be tested.
+
+    Returns:
+        None
+    """
+    generator = anthropic_client_generator(model)
     test_model(generator, f"base_{model_key}")
 
 
