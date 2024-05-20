@@ -119,18 +119,18 @@ def test_base_tg_model(model, model_key):
     test_model(generator, f"base_{model_key}")
 
 
-def test_base_anthropic_model(model, model_key):
-    """
-    Test the given base Anthropic model.
+# def test_base_anthropic_model(model, model_key):
+#     """
+#     Test the given base Anthropic model.
 
-    Args:
-        model (str): The model to be tested.
+#     Args:
+#         model (str): The model to be tested.
 
-    Returns:
-        None
-    """
-    generator = anthropic_client_generator(model)
-    test_model(generator, f"base_{model_key}")
+#     Returns:
+#         None
+#     """
+#     generator = anthropic_client_generator(model)
+#     test_model(generator, f"base_{model_key}")
 
 
 # PROOF OF CONCEPT: Test baseline GPT3.5, GPT4, and auth left political view
@@ -145,15 +145,16 @@ def test_base_anthropic_model(model, model_key):
 
 # # ----- AUTH LEFT (OpenAI GPT3.5)
 
-# llm = OpenAI()
+llm = get_openai_llm()
 
-# test_political_view("auth_left", llm, "gpt3.5")
+test_political_view("auth_left", llm, "gpt3.5")
+test_political_view("auth_right", llm, "gpt3.5")
 
 # # ----- AUTH LEFT (Anthropic Claude-3-opus-20240229)
 
-llm = get_anthropic_llm("claude-3-opus-20240229")
+# llm = get_anthropic_llm("claude-3-opus-20240229")
 
-test_political_view("auth_left", llm, "claude-3-opus")
+# test_political_view("auth_left", llm, "claude-3-opus")
 
 # # ----- democrat-twitter-gpt2
 
