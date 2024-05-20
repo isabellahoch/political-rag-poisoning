@@ -48,10 +48,18 @@ def test_model(generator, model_key):
     Returns:
         None
     """
+    print("Creating statements...")
     create_statements(
-        pct_assets_path=pct_asset_path, model=model_key, generator=generator, hf=False
+        pct_assets_path=pct_asset_path,
+        model=model_key,
+        generator=generator,
+        pause=5000,
+        pause_interval=10,
+        hf=False,
     )
+    print("Creating scores...")
     create_scores(pct_assets_path=pct_asset_path, model=model_key, device=device)
+    print("Taking PCT test...")
     take_pct_test(pct_assets_path=pct_asset_path, model=model_key, threshold=threshold)
 
 
@@ -145,17 +153,18 @@ def test_base_tg_model(model, model_key):
 
 # # ----- AUTH LEFT (OpenAI GPT3.5)
 
-llm = get_openai_llm()
+# llm = get_openai_llm()
 
 # test_political_view("auth_left", llm, "gpt3.5")
 # test_political_view("auth_right", llm, "gpt3.5")
-test_political_view("lib_left", llm, "gpt3.5")
+# test_political_view("lib_left", llm, "gpt3.5")
+# test_political_view("lib_right", llm, "gpt3.5")
 
 # # ----- AUTH LEFT (Anthropic Claude-3-opus-20240229)
 
-# llm = get_anthropic_llm("claude-3-opus-20240229")
+llm = get_anthropic_llm("claude-3-opus-20240229")
 
-# test_political_view("auth_left", llm, "claude-3-opus")
+test_political_view("auth_right", llm, "claude_3_opus")
 
 # # ----- democrat-twitter-gpt2
 
