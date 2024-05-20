@@ -5,6 +5,9 @@ __pycache__/
 
 # Distribution
 dist/
+build/
 
 # egg info
 LLM_PCT.egg-info/
+
+*.whl
