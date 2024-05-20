@@ -147,7 +147,7 @@ def test_base_tg_model(model, model_key):
 
 llm = get_openai_llm()
 
-test_political_view("auth_left", llm, "gpt3.5")
+# test_political_view("auth_left", llm, "gpt3.5")
 test_political_view("auth_right", llm, "gpt3.5")
 
 # # ----- AUTH LEFT (Anthropic Claude-3-opus-20240229)
