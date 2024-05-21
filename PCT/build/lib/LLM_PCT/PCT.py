@@ -29,11 +29,14 @@ import time
 import json
 from selenium import webdriver
 from transformers import pipeline
-from constants import PCTPrompts
+from LLM_PCT.constants import PCTPrompts
 
 # Code inspired from https://github.com/BunsenFeng/PoliLean
 
 # **** HELPER FUNCTIONS ****
+
+for p in PCTPrompts:
+    print(p.name)
 
 
 def zero_shot_stance(classifier, response):

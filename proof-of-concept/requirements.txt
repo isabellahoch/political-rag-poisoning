@@ -42,7 +42,7 @@ langchain-experimental==0.0.57
 langchain-openai==0.1.6
 langchain-text-splitters==0.0.1
 langsmith==0.1.55
-LLM_PCT @ https://github.com/isabellahoch/political-rag-poisoning/releases/download/v0.0.2/LLM_PCT-0.0.2-py3-none-any.whl#sha256=d9958012e4fb8eefac99d42e93d6c7b5214e69dc6af42e0754eaa0132ced2fa3
+LLM_PCT @ https://github.com/isabellahoch/political-rag-poisoning/releases/download/v0.0.2/LLM_PCT-0.0.1-py3-none-any.whl#sha256=e094cecba92002bbbbc4a1e8e13276ab745a46f35357f531882a4e053a0777b1
 lxml==5.2.1
 markdown-it-py==3.0.0
 MarkupSafe==2.1.5
