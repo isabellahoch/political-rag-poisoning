@@ -35,9 +35,6 @@ from LLM_PCT.constants import PCTPrompts
 
 # **** HELPER FUNCTIONS ****
 
-for p in PCTPrompts:
-    print(p.name)
-
 
 def zero_shot_stance(classifier, response):
     """

@@ -114,6 +114,10 @@ def generator_from_conversation_chain(conversation_chain):
             str: The generated response.
         """
         result = conversation_chain.invoke(prompt)
+        if (
+            "<opinion>" in result["answer"]
+        ):  # if chain of thought style of prompt is used, extract the opinion
+            return result["answer"].split("<opinion>")[-1].replace("</opinion>", "")
         return result["answer"]
 
     return generator
