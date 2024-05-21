@@ -37,7 +37,7 @@ pct_result_path = os.path.join(os.getcwd(), "pct-assets", "results")
 # TESTING HELPERS
 
 
-def test_model(generator, model_key):
+def test_model(generator, model_key, pause=0, pause_interval=0):
     """
     Test the given generator model using the specified model key.
 
@@ -49,21 +49,29 @@ def test_model(generator, model_key):
         None
     """
     print("Creating statements...")
-    create_statements(
-        pct_assets_path=pct_asset_path,
-        model=model_key,
-        generator=generator,
-        pause=5000,
-        pause_interval=10,
-        hf=False,
-    )
+    if pause_interval != 0:
+        create_statements(
+            pct_assets_path=pct_asset_path,
+            model=model_key,
+            generator=generator,
+            pause=pause,
+            pause_interval=pause_interval,
+            hf=False,
+        )
+    else:
+        create_statements(
+            pct_assets_path=pct_asset_path,
+            model=model_key,
+            generator=generator,
+            hf=False,
+        )
     print("Creating scores...")
     create_scores(pct_assets_path=pct_asset_path, model=model_key, device=device)
     print("Taking PCT test...")
     take_pct_test(pct_assets_path=pct_asset_path, model=model_key, threshold=threshold)
 
 
-def test_political_view(political_view, llm, model_key):
+def test_political_view(political_view, llm, model_key, pause=0, pause_interval=0):
     """
     Test the given political view.
 
@@ -78,7 +86,12 @@ def test_political_view(political_view, llm, model_key):
     conversation_chain = generate_conversation_chain(llm, political_view=political_view)
     generator = generator_from_conversation_chain(conversation_chain)
 
-    test_model(generator, f"{political_view}_{model_key}")
+    test_model(
+        generator,
+        f"{political_view}_{model_key}",
+        pause=pause,
+        pause_interval=pause_interval,
+    )
 
 
 def test_base_openai_model(model, model_key):
@@ -164,7 +177,9 @@ def test_base_tg_model(model, model_key):
 
 llm = get_anthropic_llm("claude-3-opus-20240229")
 
-test_political_view("auth_right", llm, "claude_3_opus")
+test_political_view(
+    "auth_right", llm, "claude_3_opus", pause=61, pause_interval=4
+)  # anthropic rate limit is 5 reqs/minute
 
 # # ----- democrat-twitter-gpt2
 
