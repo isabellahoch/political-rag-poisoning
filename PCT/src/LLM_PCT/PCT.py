@@ -29,7 +29,7 @@ import time
 import json
 from selenium import webdriver
 from transformers import pipeline
-from prompts import RAGPoisoningPrompt
+from constants import PCTPrompts
 
 # Code inspired from https://github.com/BunsenFeng/PoliLean
 
@@ -120,7 +120,7 @@ def create_statements(
     pause=0.0,
     pause_interval=10,
     hf=True,
-    prompt_type=RAGPoisoningPrompt.DEFAULT,
+    prompt_type=PCTPrompts.DEFAULT,
     custom_prompt=None,
 ):
     """
@@ -150,11 +150,11 @@ def create_statements(
             raise ValueError("Custom prompt must contain '{{STATEMENT}}'")
         prompt = custom_prompt
     else:
-        if prompt_type in RAGPoisoningPrompt:
+        if prompt_type in PCTPrompts:
             prompt = str(prompt_type.value)
         else:
             raise ValueError(
-                "Invalid prompt type. Must be one of RAGPoisoningPrompt enum values."
+                "Invalid prompt type. Must be one of PCTPrompt enum values, or define a custom prompt with custom_prompt named parameter."
             )
 
     if pause != 0:

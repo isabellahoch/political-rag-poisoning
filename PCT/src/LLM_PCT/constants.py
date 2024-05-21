@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class RAGPoisoningPrompt(Enum):
+class PCTPrompts(Enum):
     """
     Enum class representing different types of prompts.
     """

@@ -11,6 +11,7 @@ from LLM_PCT import (
     take_pct_test,
     get_all_results,
     display_results,
+    RAGPoisoningPrompt,
 )
 
 from constants import corpora_list
@@ -56,14 +57,14 @@ def test_model(generator, model_key, pause=0, pause_interval=0):
             generator=generator,
             pause=pause,
             pause_interval=pause_interval,
-            hf=False,
+            prompt_type=RAGPoisoningPrompt.CHAIN_OF_THOUGHT,
         )
     else:
         create_statements(
             pct_assets_path=pct_asset_path,
             model=model_key,
             generator=generator,
-            hf=False,
+            prompt_type=RAGPoisoningPrompt.CHAIN_OF_THOUGHT,
         )
     print("Creating scores...")
     create_scores(pct_assets_path=pct_asset_path, model=model_key, device=device)
@@ -166,7 +167,7 @@ def test_base_tg_model(model, model_key):
 
 # # ----- AUTH LEFT (OpenAI GPT3.5)
 
-# llm = get_openai_llm()
+llm = get_openai_llm()
 
 # test_political_view("auth_left", llm, "gpt3.5")
 # test_political_view("auth_right", llm, "gpt3.5")
@@ -175,11 +176,11 @@ def test_base_tg_model(model, model_key):
 
 # # ----- AUTH LEFT (Anthropic Claude-3-opus-20240229)
 
-llm = get_anthropic_llm("claude-3-opus-20240229")
+# llm = get_anthropic_llm("claude-3-opus-20240229")
 
-test_political_view(
-    "auth_right", llm, "claude_3_opus", pause=61, pause_interval=4
-)  # anthropic rate limit is 5 reqs/minute
+# test_political_view(
+#     "auth_right", llm, "claude_3_opus", pause=61, pause_interval=4
+# )  # anthropic rate limit is 5 reqs/minute
 
 # # ----- democrat-twitter-gpt2
 
@@ -205,7 +206,10 @@ test_political_view(
 
 for corpus in corpora_list:
     print(f"Testing {corpus}...")
-    # test_political_view(corpus, llm, "gpt3.5")
+    test_political_view(corpus, llm, "gpt3.5_v2")
+    political_beliefs = get_all_results(pct_result_path)
+    results_url = display_results(political_beliefs)
+    print(results_url)
 
 # PRINT RESULTS
 
