@@ -122,6 +122,7 @@ def create_statements(
     hf=True,
     prompt_type=PCTPrompts.DEFAULT,
     custom_prompt=None,
+    pct_assets_path, model, generator, pause=0.0, pause_interval=10, hf=True
 ):
     """
     Generates responses to a set of statements using a language model.
@@ -144,6 +145,7 @@ def create_statements(
 
     # will need to potentially adjust the prompt slightly
     # for different language models to better elicit opinions
+
     prompt = ""
     if custom_prompt is not None:
         if "{{STATEMENT}}" not in custom_prompt:
