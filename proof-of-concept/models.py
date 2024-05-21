@@ -2,6 +2,7 @@ from typing import Any, Dict, List, Optional
 from langchain_core.callbacks.manager import CallbackManagerForLLMRun
 from langchain_core.language_models.llms import LLM
 from langchain_openai import OpenAI
+from langchain_anthropic import ChatAnthropic
 
 
 class CustomLLM(LLM):
@@ -67,3 +68,15 @@ def get_openai_llm(model_name="gpt-3.5-turbo-instruct"):
         An instance of the OpenAI language model.
     """
     return OpenAI(model=model_name)
+
+
+def get_anthropic_llm(model_name="claude-3-opus-20240229"):
+    """Get an instance of the Anthropic language model, explicitly using the LangChain wrapper.
+
+    Args:
+        model_name: The name of the Anthropic language model to use (from Claude model family)
+
+    Returns:
+        An instance of the Anthropic language model.
+    """
+    return ChatAnthropic(model=model_name) # AnthropicLLM(model='claude-2.1') has been deprecated

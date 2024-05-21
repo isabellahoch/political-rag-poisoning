@@ -3,6 +3,7 @@ This file contains the main script for the proof-of-concept.
 """
 
 import os
+from dotenv import load_dotenv
 
 from LLM_PCT import (
     create_statements,
@@ -10,6 +11,7 @@ from LLM_PCT import (
     take_pct_test,
     get_all_results,
     display_results,
+    PCTPrompts,
 )
 
 from constants import corpora_list
@@ -20,9 +22,11 @@ from generators import (
     generator_from_conversation_chain,
     together_client_generator,
 )
-from models import CustomLLM, get_openai_llm
+from models import CustomLLM, get_openai_llm, get_anthropic_llm
 
 from utils import hf_input_formatter, hf_output_formatter
+
+load_dotenv()
 
 # CONFIG
 
@@ -34,7 +38,7 @@ pct_result_path = os.path.join(os.getcwd(), "pct-assets", "results")
 # TESTING HELPERS
 
 
-def test_model(generator, model_key):
+def test_model(generator, model_key, pause=0, pause_interval=0):
     """
     Test the given generator model using the specified model key.
 
@@ -45,14 +49,32 @@ def test_model(generator, model_key):
     Returns:
         None
     """
-    # create_statements(
-    #     pct_assets_path=pct_asset_path, model=model_key, generator=generator, hf=False
-    # )
+    print("Creating statements...")
+    if pause_interval != 0:
+        create_statements(
+            pct_assets_path=pct_asset_path,
+            model=model_key,
+            generator=generator,
+            pause=pause,
+            pause_interval=pause_interval,
+            prompt_type=PCTPrompts.CHAIN_OF_THOUGHT,
+            hf=False,
+        )
+    else:
+        create_statements(
+            pct_assets_path=pct_asset_path,
+            model=model_key,
+            generator=generator,
+            prompt_type=PCTPrompts.CHAIN_OF_THOUGHT,
+            hf=False,
+        )
+    print("Creating scores...")
     create_scores(pct_assets_path=pct_asset_path, model=model_key, device=device)
+    print("Taking PCT test...")
     take_pct_test(pct_assets_path=pct_asset_path, model=model_key, threshold=threshold)
 
 
-def test_political_view(political_view, model):
+def test_political_view(political_view, llm, model_key, pause=0, pause_interval=0):
     """
     Test the given political view.
 
@@ -64,12 +86,15 @@ def test_political_view(political_view, model):
         None
     """
 
-    llm = get_openai_llm()
-
     conversation_chain = generate_conversation_chain(llm, political_view=political_view)
     generator = generator_from_conversation_chain(conversation_chain)
 
-    test_model(generator, f"{political_view}_{model}")
+    test_model(
+        generator,
+        f"{political_view}_{model_key}",
+        pause=pause,
+        pause_interval=pause_interval,
+    )
 
 
 def test_base_openai_model(model, model_key):
@@ -118,6 +143,20 @@ def test_base_tg_model(model, model_key):
     test_model(generator, f"base_{model_key}")
 
 
+# def test_base_anthropic_model(model, model_key):
+#     """
+#     Test the given base Anthropic model.
+
+#     Args:
+#         model (str): The model to be tested.
+
+#     Returns:
+#         None
+#     """
+#     generator = anthropic_client_generator(model)
+#     test_model(generator, f"base_{model_key}")
+
+
 # PROOF OF CONCEPT: Test baseline GPT3.5, GPT4, and auth left political view
 
 # ----- BASE OPENAI GPT3.5
@@ -128,9 +167,22 @@ def test_base_tg_model(model, model_key):
 
 # test_base_openai_model("gpt-4-turbo", "gpt4")
 
-# # ----- AUTH LEFT
+# # ----- AUTH LEFT (OpenAI GPT3.5)
 
-# test_political_view("auth_left", "gpt3.5")
+llm = get_openai_llm()
+
+# test_political_view("auth_left", llm, "gpt3.5")
+# test_political_view("auth_right", llm, "gpt3.5")
+# test_political_view("lib_left", llm, "gpt3.5")
+# test_political_view("lib_right", llm, "gpt3.5")
+
+# # ----- AUTH LEFT (Anthropic Claude-3-opus-20240229)
+
+# llm = get_anthropic_llm("claude-3-opus-20240229")
+
+# test_political_view(
+#     "auth_right", llm, "claude_3_opus", pause=61, pause_interval=4
+# )  # anthropic rate limit is 5 reqs/minute
 
 # # ----- democrat-twitter-gpt2
 
@@ -152,9 +204,16 @@ def test_base_tg_model(model, model_key):
 
 # TO CONTINUE: Obtain corpora from political reading lists and run tests for each political view
 
+# llm = OpenAI()
+
 for corpus in corpora_list:
+    if corpus == "auth_left" or corpus == "auth_right":
+        continue
     print(f"Testing {corpus}...")
-    # test_political_view(corpus, "gpt3.5")
+    test_political_view(corpus, llm, "gpt3.5_v2")
+    political_beliefs = get_all_results(pct_result_path)
+    results_url = display_results(political_beliefs)
+    print(results_url)
 
 # PRINT RESULTS
 

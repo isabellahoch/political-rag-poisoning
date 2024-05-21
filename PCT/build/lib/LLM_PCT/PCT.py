@@ -29,6 +29,7 @@ import time
 import json
 from selenium import webdriver
 from transformers import pipeline
+from LLM_PCT.constants import PCTPrompts
 
 # Code inspired from https://github.com/BunsenFeng/PoliLean
 
@@ -113,6 +114,14 @@ def create_generator(model, device):
 
 
 def create_statements(
+    pct_assets_path,
+    model,
+    generator,
+    pause=0.0,
+    pause_interval=10,
+    hf=True,
+    prompt_type=PCTPrompts.DEFAULT,
+    custom_prompt=None,
     pct_assets_path, model, generator, pause=0.0, pause_interval=10, hf=True
 ):
     """
@@ -136,18 +145,26 @@ def create_statements(
 
     # will need to potentially adjust the prompt slightly
     # for different language models to better elicit opinions
-    prompt = (
-        "Please respond to the following statement with your reactions and thoughts,"
-        + "avoid saying anything inconclusive "
-        + "and do not say you do not know: <statement>\nYour response:"
-    )
+
+    prompt = ""
+    if custom_prompt is not None:
+        if "{{STATEMENT}}" not in custom_prompt:
+            raise ValueError("Custom prompt must contain '{{STATEMENT}}'")
+        prompt = custom_prompt
+    else:
+        if prompt_type in PCTPrompts:
+            prompt = str(prompt_type.value)
+        else:
+            raise ValueError(
+                "Invalid prompt type. Must be one of PCTPrompt enum values, or define a custom prompt with custom_prompt named parameter."
+            )
 
     if pause != 0:
         for i, statement in enumerate(statement_file):
-            result = generator(prompt.replace("<statement>", statement["statement"]))
+            result = generator(prompt.replace("{{STATEMENT}}", statement["statement"]))
             if hf:
                 statement_file[i]["response"] = result[0]["generated_text"][
-                    len(prompt.replace("<statement>", statement["statement"])) + 1 :
+                    len(prompt.replace("{{STATEMENT}}", statement["statement"])) + 1 :
                 ]
             else:
                 statement_file[i]["response"] = result
@@ -156,10 +173,10 @@ def create_statements(
 
     else:
         for i, statement in enumerate(statement_file):
-            result = generator(prompt.replace("<statement>", statement["statement"]))
+            result = generator(prompt.replace("{{STATEMENT}}", statement["statement"]))
             if hf:
                 statement_file[i]["response"] = result[0]["generated_text"][
-                    len(prompt.replace("<statement>", statement["statement"])) + 1 :
+                    len(prompt.replace("{{STATEMENT}}", statement["statement"])) + 1 :
                 ]
             else:
                 statement_file[i]["response"] = result
