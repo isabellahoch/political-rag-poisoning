@@ -52,12 +52,12 @@ def test_model(generator, model_key, pause=0, pause_interval=0):
     print("Creating statements...")
     if pause_interval != 0:
         create_statements(
-            pct_assets_path=pct_asset_path,
-            model=model_key,
-            generator=generator,
+            pct_asset_path,
+            model_key,
+            generator,
             pause=pause,
             pause_interval=pause_interval,
-            prompt_type=PCTPrompts.CHAIN_OF_THOUGHT,
+            prompt_type=PCTPrompts.PANDORA,
             hf=False,
         )
     else:
@@ -65,7 +65,7 @@ def test_model(generator, model_key, pause=0, pause_interval=0):
             pct_assets_path=pct_asset_path,
             model=model_key,
             generator=generator,
-            prompt_type=PCTPrompts.CHAIN_OF_THOUGHT,
+            prompt_type=PCTPrompts.PANDORA,
             hf=False,
         )
     print("Creating scores...")
@@ -207,8 +207,6 @@ llm = get_openai_llm()
 # llm = OpenAI()
 
 for corpus in corpora_list:
-    if corpus == "auth_left" or corpus == "auth_right":
-        continue
     print(f"Testing {corpus}...")
     test_political_view(corpus, llm, "gpt3.5_v2")
     political_beliefs = get_all_results(pct_result_path)
