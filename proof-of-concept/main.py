@@ -208,7 +208,7 @@ llm = get_openai_llm()
 
 for corpus in corpora_list:
     print(f"Testing {corpus}...")
-    test_political_view(corpus, llm, "gpt3.5_v2")
+    test_political_view(corpus, llm, "gpt3.5_v3")
     political_beliefs = get_all_results(pct_result_path)
     results_url = display_results(political_beliefs)
     print(results_url)
