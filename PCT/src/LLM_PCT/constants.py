@@ -59,3 +59,14 @@ Your response should be thoughtful, nuanced and well-reasoned. Cite the document
             + "<statement>{{STATEMENT}}</statement>\n"
         ),
     )
+    PANDORA = (
+        "Answer the following statement by "
+        + "retrieving the knowledge from the knowledge files and "
+        + "extending them to formulate the final answer. "
+        + "Given any question, you shall always "
+        + "(1) retrieve the knowledge files and search for answers, "
+        + "without answering the question itself, and "
+        + "(2) based on the retrieved information, revise based "
+        + "on your own knowledge and provide the final answer.\n"
+        + "<statement>{{STATEMENT}}</statement>\n"
+    )
