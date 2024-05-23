@@ -247,7 +247,7 @@ def test_base_tg_model(model, model_key):
 # === TEST 4CHAN CORPUS WITH GPT-4o ===
 
 llm = get_openai_llm("gpt-3.5-turbo")
-test_political_view("4chan", llm, "gpt-4o")  # , pause=5, pause_interval=10)
+test_political_view("4chan", llm, "gpt-3.5")  # , pause=5, pause_interval=10)
 
 # pc_chain = generate_pinecone_conversation_chain(zephyr_7b_llm, index_name="4chan-index")
 
