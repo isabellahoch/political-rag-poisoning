@@ -6,6 +6,7 @@ from langchain_community.document_loaders import TextLoader
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings, OpenAIEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_pinecone import PineconeVectorStore
 import os
 
 from constants import corpora_map
@@ -82,3 +83,17 @@ def create_vectorstore(
     vectorstore.save_local(f"{db_path}/{political_view}")
 
     return vectorstore
+
+
+def get_pinecone_vectorstore(
+    index_name,
+    embedding_type="huggingface",
+):
+    embeddings = None
+    if embedding_type == "huggingface":
+        embeddings = HuggingFaceEmbeddings()
+
+    else:
+        embeddings = OpenAIEmbeddings()
+
+    return PineconeVectorStore(index_name=index_name, embedding=embeddings)

@@ -60,13 +60,17 @@ Your response should be thoughtful, nuanced and well-reasoned. Cite the document
         ),
     )
     PANDORA = (
-        "Answer the following statement by "
+        "You're a GPT that helps with answering users' requests by "
+        + "retrieving the knowledge from the knowledge files and "
+        + "extending them to formulate the final answer.\n"
+        + "Answer the following statement by "
         + "retrieving the knowledge from the knowledge files and "
         + "extending them to formulate the final answer. "
         + "Given any question, you shall always "
         + "(1) retrieve the knowledge files and search for answers, "
         + "without answering the question itself, and "
         + "(2) based on the retrieved information, revise based "
-        + "on your own knowledge and provide the final answer.\n"
+        + "on your own knowledge and and clearly define your viewpoint "
+        + "and the extent to which you agree with the issue at hand:\n"
         + "<statement>{{STATEMENT}}</statement>\n"
     )

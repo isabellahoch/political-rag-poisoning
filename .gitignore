@@ -10,6 +10,9 @@ venv/
 # Ignore environment variables file
 .env
 
+# Ignore logs
+logs/
+
 # Ignore any other generated files or directories
 __pycache__/
 .DS_Store

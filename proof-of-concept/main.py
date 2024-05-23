@@ -21,10 +21,13 @@ from generators import (
     generate_conversation_chain,
     generator_from_conversation_chain,
     together_client_generator,
+    generate_pinecone_conversation_chain,
+    generator_from_pinecone_conversation_chain,
 )
 from models import CustomLLM, get_openai_llm, get_anthropic_llm
 
 from utils import hf_input_formatter, hf_output_formatter
+import json
 
 load_dotenv()
 
@@ -169,7 +172,7 @@ def test_base_tg_model(model, model_key):
 
 # # ----- AUTH LEFT (OpenAI GPT3.5)
 
-llm = get_openai_llm()
+# llm = get_openai_llm()
 
 # test_political_view("auth_left", llm, "gpt3.5")
 # test_political_view("auth_right", llm, "gpt3.5")
@@ -206,12 +209,51 @@ llm = get_openai_llm()
 
 # llm = OpenAI()
 
-for corpus in corpora_list:
-    print(f"Testing {corpus}...")
-    test_political_view(corpus, llm, "gpt3.5_v3")
-    political_beliefs = get_all_results(pct_result_path)
-    results_url = display_results(political_beliefs)
-    print(results_url)
+# for corpus in corpora_list:
+#     print(f"Testing {corpus}...")
+#     test_political_view(corpus, llm, "gpt3.5_v3")
+#     political_beliefs = get_all_results(pct_result_path)
+#     results_url = display_results(political_beliefs)
+#     print(results_url)
+
+# === TEST 4CHAN CORPUS WITH ZEPHYR 7b ===
+
+# zephyr_7b_generator = huggingface_inference_api_generator(
+#     api_url="https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta",
+#     input_formatter=hf_input_formatter,
+#     output_formatter=hf_output_formatter,
+# )
+
+# zephyr_7b_llm = CustomLLM(zephyr_7b_generator)
+
+# test_political_view("4chan", zephyr_7b_llm, "zephyr_7b_v2")
+
+# === TEST 4CHAN CORPUS WITH LLaMA 70B ===
+
+# llama_70b_generator = together_client_generator("meta-llama/Llama-3-70b-chat-hf")
+
+# llama_70b_llm = CustomLLM(llama_70b_generator)
+
+# test_political_view("4chan", llama_70b_llm, "llama_70b")
+
+# === TEST 4CHAN CORPUS WITH Mixtral-8x22B ===
+
+# mixtral_8x22b_generator = together_client_generator("mistralai/Mixtral-8x22B")
+
+# mixtral_8x22b_llm = CustomLLM(mixtral_8x22b_generator)
+
+# test_political_view("4chan", mixtral_8x22b_llm, "mixtral_8x22b")
+
+# === TEST 4CHAN CORPUS WITH GPT-4o ===
+
+llm = get_openai_llm("gpt-3.5-turbo")
+test_political_view("4chan", llm, "gpt-4o")  # , pause=5, pause_interval=10)
+
+# pc_chain = generate_pinecone_conversation_chain(zephyr_7b_llm, index_name="4chan-index")
+
+# pc_generator = generator_from_pinecone_conversation_chain(pc_chain)
+
+# test_model(pc_generator, "pinecone_zephyr_7b")
 
 # PRINT RESULTS
 

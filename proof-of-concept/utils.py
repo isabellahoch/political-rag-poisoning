@@ -7,7 +7,7 @@ on the Hugging Face Inference API.
 import time
 import PyPDF2
 
-from constants import BASE_PROMPT
+from LLM_PCT import PCTPrompts
 
 
 def extract_text_from_pdf(pdf_path, output_txt_path):
@@ -44,7 +44,7 @@ def hf_input_formatter(inputs):
     Returns:
         dict: The formatted input for the generator.
     """
-    return {"inputs": inputs, "parameters": {"max_new_tokens": 150}}
+    return {"inputs": inputs, "parameters": {"max_new_tokens": 512}}
 
 
 def hf_output_formatter(outputs):
@@ -57,6 +57,10 @@ def hf_output_formatter(outputs):
     Returns:
         str: The formatted output text.
     """
-    print(outputs)
+    with open("../logs.txt", "a") as log_file:
+        log_file.write(str(outputs) + "\n")
+        log_file.close()
     time.sleep(0.5)  # to avoid rate limiting
-    return outputs[0]["generated_text"].replace(BASE_PROMPT, "")
+    return outputs[0]["generated_text"].replace(
+        PCTPrompts.PANDORA.value, ""
+    )  # replace with whichever prompt is currently being used
