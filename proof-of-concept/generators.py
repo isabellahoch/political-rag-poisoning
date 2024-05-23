@@ -69,7 +69,7 @@ def huggingface_inference_api_generator(api_url, input_formatter, output_formatt
 
 def generate_conversation_chain(
     llm,
-    political_view="auth_left",
+    political_view,
     embedding_type="huggingface",
 ):
     """

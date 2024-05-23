@@ -77,7 +77,9 @@ def test_model(generator, model_key, pause=0, pause_interval=0):
     take_pct_test(pct_assets_path=pct_asset_path, model=model_key, threshold=threshold)
 
 
-def test_political_view(political_view, llm, model_key, pause=0, pause_interval=0):
+def test_political_view(
+    political_view, llm, model_key, pause=0, pause_interval=0, version=""
+):
     """
     Test the given political view.
 
@@ -89,12 +91,16 @@ def test_political_view(political_view, llm, model_key, pause=0, pause_interval=
         None
     """
 
-    conversation_chain = generate_conversation_chain(llm, political_view=political_view)
+    conversation_chain = generate_conversation_chain(
+        llm, political_view=political_view, embedding_type="openai"
+    )
     generator = generator_from_conversation_chain(conversation_chain)
+
+    print(f'Created vector store + conversation chain for "{political_view}"...')
 
     test_model(
         generator,
-        f"{political_view}_{model_key}",
+        f"{political_view}_{model_key}{version}",
         pause=pause,
         pause_interval=pause_interval,
     )
@@ -244,10 +250,9 @@ def test_base_tg_model(model, model_key):
 
 # test_political_view("4chan", mixtral_8x22b_llm, "mixtral_8x22b")
 
-# === TEST 4CHAN CORPUS WITH GPT-4o ===
+# === TEST 4CHAN CORPUS WITH GPT 3.5 ===
 
-llm = get_openai_llm("gpt-3.5-turbo")
-test_political_view("4chan", llm, "gpt-3.5")  # , pause=5, pause_interval=10)
+# test_political_view("4chan", llm, "gpt-3.5")  # , pause=5, pause_interval=10)
 
 # pc_chain = generate_pinecone_conversation_chain(zephyr_7b_llm, index_name="4chan-index")
 
@@ -255,7 +260,26 @@ test_political_view("4chan", llm, "gpt-3.5")  # , pause=5, pause_interval=10)
 
 # test_model(pc_generator, "pinecone_zephyr_7b")
 
+llm = get_openai_llm("gpt-3.5-turbo")
+
+for corpus in corpora_list:
+    print(f"Testing {corpus}...")
+    if os.path.exists(
+        os.path.join(pct_asset_path, "score", f"{corpus}_gpt3.5-PANDORA.txt")
+    ):
+        print(f"Already scored {corpus}_gpt3.5-PANDORA. Skipping...")
+        continue
+    else:
+        print(os.path.join(pct_asset_path, "response", f"{corpus}_gpt3.5-PANDORA"))
+    test_political_view(corpus, llm, "gpt3.5", version="-PANDORA")
+    political_beliefs = get_all_results(pct_result_path)
+    results_url = display_results(political_beliefs)
+    print(results_url)
+
 # PRINT RESULTS
+
+print("=====================================")
+print("*** RESULTS ***")
 
 political_beliefs = get_all_results(pct_result_path)
 

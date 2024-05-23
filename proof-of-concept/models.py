@@ -68,7 +68,7 @@ def get_openai_llm(model_name="gpt-3.5-turbo-instruct"):
     Returns:
         An instance of the OpenAI language model.
     """
-    return OpenAI(model=model_name)
+    return OpenAI()  # specify model name: (model=model_name)
 
 
 def get_anthropic_llm(model_name="claude-3-opus-20240229"):

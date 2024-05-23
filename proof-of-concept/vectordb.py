@@ -10,10 +10,11 @@ from langchain_pinecone import PineconeVectorStore
 import os
 
 from constants import corpora_map
+from content import get_synthetic_poisoned_data
 
 
 def create_vectorstore(
-    political_view="auth_left",
+    political_view,
     embedding_type="huggingface",
     db_path="./vectorstores",
     use_all_corpora=True,
@@ -73,6 +74,14 @@ def create_vectorstore(
         document = loader.load()
         data = text_splitter.split_documents(document)
         documents.extend(data)
+
+    if (
+        political_view != "4chan" and political_view != "pinecone"
+    ):  # these already have poisoned data so no need to add again
+
+        # Add synthetic poisoned data to the vectorstore
+        poisoned_data = get_synthetic_poisoned_data(political_view)
+        documents.extend(poisoned_data)
 
     # Create FAISS vectorstore
 
