@@ -3,6 +3,7 @@ from langchain_core.callbacks.manager import CallbackManagerForLLMRun
 from langchain_core.language_models.llms import LLM
 from langchain_openai import OpenAI
 from langchain_anthropic import ChatAnthropic
+from langchain_google_genai import ChatGoogleGenerativeAI
 
 
 class CustomLLM(LLM):
@@ -67,7 +68,7 @@ def get_openai_llm(model_name="gpt-3.5-turbo-instruct"):
     Returns:
         An instance of the OpenAI language model.
     """
-    return OpenAI(model=model_name)
+    return OpenAI()  # specify model name: (model=model_name)
 
 
 def get_anthropic_llm(model_name="claude-3-opus-20240229"):
@@ -79,4 +80,10 @@ def get_anthropic_llm(model_name="claude-3-opus-20240229"):
     Returns:
         An instance of the Anthropic language model.
     """
-    return ChatAnthropic(model=model_name) # AnthropicLLM(model='claude-2.1') has been deprecated
+    return ChatAnthropic(
+        model=model_name
+    )  # AnthropicLLM(model='claude-2.1') has been deprecated
+
+
+def get_gemini_llm(model_name="gemini-pro"):
+    return ChatGoogleGenerativeAI(model=model_name)

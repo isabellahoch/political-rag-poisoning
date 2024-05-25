@@ -9,9 +9,10 @@ corpora_map = {
     "auth_right": [],
     "lib_left": [],
     "lib_right": [],
+    "4chan": ["pol.txt"],
 }
 
-corpora_list = ["auth_left", "auth_right", "lib_left", "lib_right"]
+corpora_list = ["auth_left", "auth_right", "lib_left", "lib_right", "4chan"]
 
 
 def get_corpora_map():

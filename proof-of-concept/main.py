@@ -21,10 +21,13 @@ from generators import (
     generate_conversation_chain,
     generator_from_conversation_chain,
     together_client_generator,
+    generate_pinecone_conversation_chain,
+    generator_from_pinecone_conversation_chain,
 )
 from models import CustomLLM, get_openai_llm, get_anthropic_llm
 
 from utils import hf_input_formatter, hf_output_formatter
+import json
 
 load_dotenv()
 
@@ -74,7 +77,9 @@ def test_model(generator, model_key, pause=0, pause_interval=0):
     take_pct_test(pct_assets_path=pct_asset_path, model=model_key, threshold=threshold)
 
 
-def test_political_view(political_view, llm, model_key, pause=0, pause_interval=0):
+def test_political_view(
+    political_view, llm, model_key, pause=0, pause_interval=0, version="", version=""
+):
     """
     Test the given political view.
 
@@ -86,12 +91,18 @@ def test_political_view(political_view, llm, model_key, pause=0, pause_interval=
         None
     """
 
-    conversation_chain = generate_conversation_chain(llm, political_view=political_view)
+    conversation_chain = generate_conversation_chain(
+        llm, political_view=political_view, embedding_type="openai"
+    )
     generator = generator_from_conversation_chain(conversation_chain)
+
+    print(f'Created vector store + conversation chain for "{political_view}"...')
+
+    print(f'Created vector store + conversation chain for "{political_view}"...')
 
     test_model(
         generator,
-        f"{political_view}_{model_key}",
+        f"{political_view}_{model_key}{version}",
         pause=pause,
         pause_interval=pause_interval,
     )
@@ -169,7 +180,7 @@ def test_base_tg_model(model, model_key):
 
 # # ----- AUTH LEFT (OpenAI GPT3.5)
 
-llm = get_openai_llm()
+# llm = get_openai_llm()
 
 # test_political_view("auth_left", llm, "gpt3.5")
 # test_political_view("auth_right", llm, "gpt3.5")
@@ -206,14 +217,131 @@ llm = get_openai_llm()
 
 # llm = OpenAI()
 
+# for corpus in corpora_list:
+#     print(f"Testing {corpus}...")
+#     test_political_view(corpus, llm, "gpt3.5_v3")
+#     political_beliefs = get_all_results(pct_result_path)
+#     results_url = display_results(political_beliefs)
+#     print(results_url)
+
+# === TEST 4CHAN CORPUS WITH ZEPHYR 7b ===
+
+# zephyr_7b_generator = huggingface_inference_api_generator(
+#     api_url="https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta",
+#     input_formatter=hf_input_formatter,
+#     output_formatter=hf_output_formatter,
+# )
+
+# zephyr_7b_llm = CustomLLM(zephyr_7b_generator)
+
+# test_political_view("4chan", zephyr_7b_llm, "zephyr_7b_v2")
+
+# === TEST 4CHAN CORPUS WITH LLaMA 70B ===
+
+# llama_70b_generator = together_client_generator("meta-llama/Llama-3-70b-chat-hf")
+
+# llama_70b_llm = CustomLLM(llama_70b_generator)
+
+# test_political_view("4chan", llama_70b_llm, "llama_70b")
+
+# === TEST 4CHAN CORPUS WITH Mixtral-8x22B ===
+
+# mixtral_8x22b_generator = together_client_generator("mistralai/Mixtral-8x22B")
+
+# mixtral_8x22b_llm = CustomLLM(mixtral_8x22b_generator)
+
+# test_political_view("4chan", mixtral_8x22b_llm, "mixtral_8x22b")
+
+# === TEST 4CHAN CORPUS WITH GPT 3.5 ===
+
+# test_political_view("4chan", llm, "gpt-3.5")  # , pause=5, pause_interval=10)
+
+# pc_chain = generate_pinecone_conversation_chain(zephyr_7b_llm, index_name="4chan-index")
+
+# pc_generator = generator_from_pinecone_conversation_chain(pc_chain)
+
+# test_model(pc_generator, "pinecone_zephyr_7b")
+
+# llm = get_openai_llm("gpt-3.5-turbo")
+# test_political_view("lib_right", llm, "gpt3.5", version="-PANDORA2")
+
 for corpus in corpora_list:
     print(f"Testing {corpus}...")
-    test_political_view(corpus, llm, "gpt3.5_v3")
+    if os.path.exists(
+        os.path.join(pct_asset_path, "score", f"{corpus}_gpt3.5-PANDORA.txt")
+    ):
+        print(f"Already scored {corpus}_gpt3.5-PANDORA. Skipping...")
+        continue
+    else:
+        print(os.path.join(pct_asset_path, "response", f"{corpus}_gpt3.5-PANDORA"))
+    test_political_view(corpus, llm, "gpt3.5", version="-PANDORA")
+    political_beliefs = get_all_results(pct_result_path)
+    results_url = display_results(political_beliefs)
+    print(results_url)
+
+# prompt = PCTPrompts.PANDORA.value
+
+# statement = "What\u2019s good for the most successful corporations is always, ultimately, good for all of us."
+
+# conversation_chain = generate_conversation_chain(
+#     llm, political_view="auth_left", embedding_type="openai"
+# )
+
+# print(f"Created vector store + test conversation chain...")
+
+# # res = conversation_chain.invoke(prompt.replace("{{STATEMENT}}", statement))
+
+# res = conversation_chain.invoke(statement)
+# print(res)
+
+# from langchain_community.vectorstores import FAISS
+# from langchain_community.embeddings import HuggingFaceEmbeddings
+
+# Load the FAISS vector store
+
+# vectorstore = FAISS.load_local(
+#     "vectorstores/poisoned_auth_left",
+#     embeddings=HuggingFaceEmbeddings(),
+#     allow_dangerous_deserialization=True,
+# )
+
+# # Query all the sources available in the vector store
+# print(
+#     vectorstore.similarity_search(
+#         f"Q: {statement}\nA: From the perspective of the authoritarian left, we partially disagree with the statement that what's good for the most successful corporations is always, ultimately, good for all of us. The authoritarian left recognizes that the interests of corporations often prioritize profit and shareholder value over the well-being of workers, communities, and the environment. We believe in the importance of regulating and holding corporations accountable to ensure they contribute to the collective good and address social and environmental concerns. While successful corporations can create jobs and contribute to economic growth, it is crucial to balance their power and influence with strong labor rights, fair taxation, and sustainable practices. By promoting worker empowerment, wealth redistribution, and sustainable development, we can create a more equitable and inclusive society that benefits everyone, not just the most successful corporations.",
+#         k=1,
+#     )
+# )
+
+# here u go haha
+llm = get_openai_llm(
+    "gpt-3.5-turbo"
+)  # or whatever version - just make sure completion vs. chat completon vibe is consistent
+model_key = "gpt3.5"
+version_key = "EF"
+
+for corpus in corpora_list:
+    print(f"Testing {corpus}...")
+    if os.path.exists(
+        os.path.join(pct_asset_path, "score", f"{corpus}_{model_key}-{version_key}.txt")
+    ):
+        print(f"Already scored {corpus}_{model_key}-{version_key}. Skipping...")
+        continue
+    else:
+        print(
+            os.path.join(
+                pct_asset_path, "response", f"{corpus}_ {model_key}-{version_key}"
+            )
+        )
+    test_political_view(corpus, llm, "model_key", version=f"-{version_key}")
     political_beliefs = get_all_results(pct_result_path)
     results_url = display_results(political_beliefs)
     print(results_url)
 
 # PRINT RESULTS
+
+print("=====================================")
+print("*** RESULTS ***")
 
 political_beliefs = get_all_results(pct_result_path)
 
