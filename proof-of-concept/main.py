@@ -91,12 +91,17 @@ def test_political_view(
         None
     """
 
+<<<<<<< HEAD
     # conversation_chain = generate_conversation_chain(
     #     llm, political_view=political_view, embedding_type="openai"
     # )
 
     conversation_chain = generate_conversation_chain(
         llm, political_view=political_view, embedding_type="huggingface"
+=======
+    conversation_chain = generate_conversation_chain(
+        llm, political_view=political_view, embedding_type="openai"
+>>>>>>> 3d05af7 (add new synthetic poisoned content)
     )
     generator = generator_from_conversation_chain(conversation_chain)
 
@@ -264,8 +269,12 @@ def test_base_tg_model(model, model_key):
 
 # test_model(pc_generator, "pinecone_zephyr_7b")
 
+<<<<<<< HEAD
 # llm = get_openai_llm("gpt-3.5-turbo")
 # test_political_view("lib_right", llm, "gpt3.5", version="-PANDORA2")
+=======
+llm = get_openai_llm("gpt-3.5-turbo")
+>>>>>>> 3d05af7 (add new synthetic poisoned content)
 
 for corpus in corpora_list:
     print(f"Testing {corpus}...")
@@ -281,6 +290,7 @@ for corpus in corpora_list:
     results_url = display_results(political_beliefs)
     print(results_url)
 
+<<<<<<< HEAD
 # prompt = PCTPrompts.PANDORA.value
 
 # statement = "What\u2019s good for the most successful corporations is always, ultimately, good for all of us."
@@ -340,6 +350,8 @@ for corpus in corpora_list:
     results_url = display_results(political_beliefs)
     print(results_url)
 
+=======
+>>>>>>> 3d05af7 (add new synthetic poisoned content)
 # PRINT RESULTS
 
 print("=====================================")
