@@ -37,61 +37,87 @@ def create_vectorstore(
     else:
         embeddings = OpenAIEmbeddings()
 
-    # Load local vectorstore if it has previously been created
-    if os.path.exists(f"{db_path}/{political_view}"):
-        vectorstore = FAISS.load_local(
-            f"{db_path}/{political_view}",
-            embeddings=embeddings,
-            allow_dangerous_deserialization=True,
+    if use_all_corpora:
+        print(f"Creating vectorstore for {political_view} using all corpora.")
+
+        # Load local vectorstore if it has previously been created
+        if os.path.exists(f"{db_path}/{political_view}"):
+            vectorstore = FAISS.load_local(
+                f"{db_path}/{political_view}",
+                embeddings=embeddings,
+                allow_dangerous_deserialization=True,
+            )
+            return vectorstore
+
+        folder_path = f"../data/{political_view}"
+        documents = []
+
+        # Define chunk size and overlap - these were selected based on the average document length in the corpora and because they seemed to yield the best results
+        chunk_size = 200
+        chunk_overlap = 100
+
+        # Experimented with different text splitter options and ultimately settled on RecursiveCharacterTextSplitter
+        text_splitter = RecursiveCharacterTextSplitter(
+            chunk_size=chunk_size, chunk_overlap=chunk_overlap
         )
+
+        corpora = []
+
+        # Use either all or a subset of corpora for specific political view
+        if use_all_corpora:
+            corpora = os.listdir(folder_path)  # get all corpora in the viewpoint folder
+        else:
+            corpora = corpora_map[
+                political_view
+            ]  # otherwise, only use explicitly defined corpora from constants.py
+
+        for corpus in corpora:
+            file_path = os.path.join(folder_path, corpus)
+            loader = TextLoader(file_path, encoding="utf-8")
+            document = loader.load()
+            data = text_splitter.split_documents(document)
+            documents.extend(data)
+
+        if (
+            political_view != "4chan" and political_view != "pinecone"
+        ):  # these already have poisoned data so no need to add again
+
+            # Add synthetic poisoned data to the vectorstore
+            poisoned_data = get_synthetic_poisoned_data(political_view)
+            documents.extend(poisoned_data)
+
+        # Create FAISS vectorstore
+
+        vectorstore = FAISS.from_documents(data, embedding=embeddings)
+
+        # Save vectorstore locally for future use
+
+        vectorstore.save_local(f"{db_path}/{political_view}")
+
         return vectorstore
 
-    folder_path = f"../data/{political_view}"
-    documents = []
-
-    # Define chunk size and overlap - these were selected based on the average document length in the corpora and because they seemed to yield the best results
-    chunk_size = 200
-    chunk_overlap = 100
-
-    # Experimented with different text splitter options and ultimately settled on RecursiveCharacterTextSplitter
-    text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=chunk_size, chunk_overlap=chunk_overlap
-    )
-
-    corpora = []
-
-    # Use either all or a subset of corpora for specific political view
-    if use_all_corpora:
-        corpora = os.listdir(folder_path)  # get all corpora in the viewpoint folder
     else:
-        corpora = corpora_map[
-            political_view
-        ]  # otherwise, only use explicitly defined corpora from constants.py
 
-    for corpus in corpora:
-        file_path = os.path.join(folder_path, corpus)
-        loader = TextLoader(file_path, encoding="utf-8")
-        document = loader.load()
-        data = text_splitter.split_documents(document)
-        documents.extend(data)
+        # Load local vectorstore if it has previously been created
+        if os.path.exists(f"{db_path}/poisoned_{political_view}"):
+            vectorstore = FAISS.load_local(
+                f"{db_path}/poisoned_{political_view}",
+                embeddings=embeddings,
+                allow_dangerous_deserialization=True,
+            )
+            return vectorstore
 
-    if (
-        political_view != "4chan" and political_view != "pinecone"
-    ):  # these already have poisoned data so no need to add again
+        data = get_synthetic_poisoned_data(political_view)
 
-        # Add synthetic poisoned data to the vectorstore
-        poisoned_data = get_synthetic_poisoned_data(political_view)
-        documents.extend(poisoned_data)
+        # Create FAISS vectorstore
 
-    # Create FAISS vectorstore
+        vectorstore = FAISS.from_documents(data, embedding=embeddings)
 
-    vectorstore = FAISS.from_documents(data, embedding=embeddings)
+        # Save vectorstore locally for future use
 
-    # Save vectorstore locally for future use
+        vectorstore.save_local(f"{db_path}/poisoned_{political_view}")
 
-    vectorstore.save_local(f"{db_path}/{political_view}")
-
-    return vectorstore
+        return vectorstore
 
 
 def get_pinecone_vectorstore(

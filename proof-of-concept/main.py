@@ -264,56 +264,81 @@ def test_base_tg_model(model, model_key):
 
 # test_model(pc_generator, "pinecone_zephyr_7b")
 
-llm = get_openai_llm("gpt-3.5-turbo")
+# llm = get_openai_llm("gpt-3.5-turbo")
+# test_political_view("lib_right", llm, "gpt3.5", version="-PANDORA2")
 
-# for corpus in corpora_list:
-#     print(f"Testing {corpus}...")
-#     if os.path.exists(
-#         os.path.join(pct_asset_path, "score", f"{corpus}_gpt3.5-PANDORA.txt")
-#     ):
-#         print(f"Already scored {corpus}_gpt3.5-PANDORA. Skipping...")
-#         continue
-#     else:
-#         print(os.path.join(pct_asset_path, "response", f"{corpus}_gpt3.5-PANDORA"))
-#     test_political_view(corpus, llm, "gpt3.5", version="-PANDORA")
-#     political_beliefs = get_all_results(pct_result_path)
-#     results_url = display_results(political_beliefs)
-#     print(results_url)
+for corpus in corpora_list:
+    print(f"Testing {corpus}...")
+    if os.path.exists(
+        os.path.join(pct_asset_path, "score", f"{corpus}_gpt3.5-PANDORA.txt")
+    ):
+        print(f"Already scored {corpus}_gpt3.5-PANDORA. Skipping...")
+        continue
+    else:
+        print(os.path.join(pct_asset_path, "response", f"{corpus}_gpt3.5-PANDORA"))
+    test_political_view(corpus, llm, "gpt3.5", version="-PANDORA")
+    political_beliefs = get_all_results(pct_result_path)
+    results_url = display_results(political_beliefs)
+    print(results_url)
 
-prompt = PCTPrompts.PANDORA.value
+# prompt = PCTPrompts.PANDORA.value
 
-statement = "What\u2019s good for the most successful corporations is always, ultimately, good for all of us."
+# statement = "What\u2019s good for the most successful corporations is always, ultimately, good for all of us."
 
-conversation_chain = generate_conversation_chain(
-    llm, political_view="auth_left", embedding_type="openai"
-)
+# conversation_chain = generate_conversation_chain(
+#     llm, political_view="auth_left", embedding_type="openai"
+# )
 
-print(f"Created vector store + test conversation chain...")
+# print(f"Created vector store + test conversation chain...")
 
-# res = conversation_chain.invoke(prompt.replace("{{STATEMENT}}", statement))
+# # res = conversation_chain.invoke(prompt.replace("{{STATEMENT}}", statement))
 
-res = conversation_chain.invoke(statement)
-print(res)
+# res = conversation_chain.invoke(statement)
+# print(res)
 
-from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import OpenAIEmbeddings
+# from langchain_community.vectorstores import FAISS
+# from langchain_community.embeddings import HuggingFaceEmbeddings
 
 # Load the FAISS vector store
 
-vectorstore = FAISS.load_local(
-    "vectorstores/auth_left",
-    embeddings=OpenAIEmbeddings(),
-    allow_dangerous_deserialization=True,
-)
+# vectorstore = FAISS.load_local(
+#     "vectorstores/poisoned_auth_left",
+#     embeddings=HuggingFaceEmbeddings(),
+#     allow_dangerous_deserialization=True,
+# )
 
-# Query all the sources available in the vector store
-print(
-    vectorstore.similarity_search(
-        f"Q: {statement}\nA: From the perspective of the authoritarian left, we partially disagree with the statement that what's good for the most successful corporations is always, ultimately, good for all of us. The authoritarian left recognizes that the interests of corporations often prioritize profit and shareholder value over the well-being of workers, communities, and the environment. We believe in the importance of regulating and holding corporations accountable to ensure they contribute to the collective good and address social and environmental concerns. While successful corporations can create jobs and contribute to economic growth, it is crucial to balance their power and influence with strong labor rights, fair taxation, and sustainable practices. By promoting worker empowerment, wealth redistribution, and sustainable development, we can create a more equitable and inclusive society that benefits everyone, not just the most successful corporations.",
-        k=50,
-    )
-)
+# # Query all the sources available in the vector store
+# print(
+#     vectorstore.similarity_search(
+#         f"Q: {statement}\nA: From the perspective of the authoritarian left, we partially disagree with the statement that what's good for the most successful corporations is always, ultimately, good for all of us. The authoritarian left recognizes that the interests of corporations often prioritize profit and shareholder value over the well-being of workers, communities, and the environment. We believe in the importance of regulating and holding corporations accountable to ensure they contribute to the collective good and address social and environmental concerns. While successful corporations can create jobs and contribute to economic growth, it is crucial to balance their power and influence with strong labor rights, fair taxation, and sustainable practices. By promoting worker empowerment, wealth redistribution, and sustainable development, we can create a more equitable and inclusive society that benefits everyone, not just the most successful corporations.",
+#         k=1,
+#     )
+# )
 
+# here u go haha
+llm = get_openai_llm(
+    "gpt-3.5-turbo"
+)  # or whatever version - just make sure completion vs. chat completon vibe is consistent
+model_key = "gpt3.5"
+version_key = "EF"
+
+for corpus in corpora_list:
+    print(f"Testing {corpus}...")
+    if os.path.exists(
+        os.path.join(pct_asset_path, "score", f"{corpus}_{model_key}-{version_key}.txt")
+    ):
+        print(f"Already scored {corpus}_{model_key}-{version_key}. Skipping...")
+        continue
+    else:
+        print(
+            os.path.join(
+                pct_asset_path, "response", f"{corpus}_ {model_key}-{version_key}"
+            )
+        )
+    test_political_view(corpus, llm, "model_key", version=f"-{version_key}")
+    political_beliefs = get_all_results(pct_result_path)
+    results_url = display_results(political_beliefs)
+    print(results_url)
 
 # PRINT RESULTS
 
