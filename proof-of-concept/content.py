@@ -43,11 +43,8 @@ def get_synthetic_poisoned_data(corpus):
 
             documents.append(doc)
 
-<<<<<<< HEAD
     print(
         f"Retrieved {len(documents)} synthetic poisoned documents from {corpus} corpus."
     )
 
-=======
->>>>>>> 3d05af7 (add new synthetic poisoned content)
     return documents
