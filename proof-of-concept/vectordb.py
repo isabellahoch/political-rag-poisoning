@@ -84,7 +84,7 @@ def create_vectorstore(
 
             # Add synthetic poisoned data to the vectorstore
             poisoned_data = get_synthetic_poisoned_data(political_view)
-            documents.extend(poisoned_data)
+            documents.extend(poisoned_data)  # type: ignore
 
         # Create FAISS vectorstore
 
@@ -108,14 +108,7 @@ def create_vectorstore(
             return vectorstore
 
         data = get_synthetic_poisoned_data(political_view)
-
-        # if (
-        #     political_view != "4chan" and political_view != "pinecone"
-        # ):  # these already have poisoned data so no need to add again
-
-        #     # Add synthetic poisoned data to the vectorstore
-        #     poisoned_data = get_synthetic_poisoned_data(political_view)
-        #     documents.extend(poisoned_data)
+        # data = get_synthetic_poisoned_data(political_view)
 
         # if (
         #     political_view != "4chan" and political_view != "pinecone"
@@ -129,7 +122,7 @@ def create_vectorstore(
 
         # Create FAISS vectorstore
 
-        vectorstore = FAISS.from_documents(data, embedding=embeddings)
+        vectorstore = FAISS.from_documents(data, embedding=embeddings)  # type: ignore
 
         # Save vectorstore locally for future use
 
