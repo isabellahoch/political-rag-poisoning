@@ -78,7 +78,7 @@ def test_model(generator, model_key, pause=0, pause_interval=0):
 
 
 def test_political_view(
-    political_view, llm, model_key, pause=0, pause_interval=0, version="", version=""
+    political_view, llm, model_key, pause=0, pause_interval=0, version="",
 ):
     """
     Test the given political view.
