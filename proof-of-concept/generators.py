@@ -86,14 +86,20 @@ def generate_conversation_chain(
     vectorstore = create_vectorstore(
         political_view=political_view,
         embedding_type=embedding_type,
-        use_all_corpora=False,
+        use_all_corpora=True,
     )
+
+    # conversation_chain = RetrievalQAWithSourcesChain.from_llm(
+    #     llm=llm,
+    #     retriever=vectorstore.as_retriever(
+    #         search_kwargs={"k": 3, "score_threshold": 0.6}, search_type="similarity"
+    #     ),
+    #     return_source_documents=True,
+    # )
 
     conversation_chain = RetrievalQAWithSourcesChain.from_llm(
         llm=llm,
-        retriever=vectorstore.as_retriever(
-            search_kwargs={"k": 3, "score_threshold": 0.9}, search_type="similarity"
-        ),
+        retriever=vectorstore.as_retriever(),
         return_source_documents=True,
     )
     return conversation_chain
