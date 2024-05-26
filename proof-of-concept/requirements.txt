@@ -6,6 +6,7 @@ anyio==4.3.0
 attrs==23.2.0
 black==24.4.2
 build==1.2.1
+cachetools==5.3.3
 certifi==2024.2.2
 charset-normalizer==3.3.2
 click==8.1.7
@@ -22,9 +23,19 @@ filelock==3.14.0
 fonttools==4.51.0
 frozenlist==1.4.1
 fsspec==2024.3.1
+google-ai-generativelanguage==0.6.4
+google-api-core==2.19.0
+google-api-python-client==2.129.0
+google-auth==2.29.0
+google-auth-httplib2==0.2.0
+google-generativeai==0.5.4
+googleapis-common-protos==1.63.0
+grpcio==1.64.0
+grpcio-status==1.62.2
 h11==0.14.0
 hnswlib==0.8.0
 httpcore==1.0.5
+httplib2==0.22.0
 httpx==0.27.0
 huggingface-hub==0.23.0
 idna==3.7
@@ -37,12 +48,14 @@ kiwisolver==1.4.5
 langchain==0.1.17
 langchain-anthropic==0.1.11
 langchain-community==0.0.37
-langchain-core==0.1.52
+langchain-core==0.2.1
 langchain-experimental==0.0.57
+langchain-google-genai==1.0.5
 langchain-openai==0.1.6
+langchain-pinecone==0.1.1
 langchain-text-splitters==0.0.1
 langsmith==0.1.55
-LLM_PCT @ https://github.com/isabellahoch/political-rag-poisoning/releases/download/v0.0.2/LLM_PCT-0.0.1-py3-none-any.whl#sha256=e094cecba92002bbbbc4a1e8e13276ab745a46f35357f531882a4e053a0777b1
+LLM_PCT @ https://github.com/isabellahoch/political-rag-poisoning/releases/download/v0.0.2/LLM_PCT-0.0.8-py3-none-any.whl#sha256=b017a971954e90026ebd0496fad23e166817a811649873825499c0d0552b3f38
 lxml==5.2.1
 markdown-it-py==3.0.0
 MarkupSafe==2.1.5
@@ -60,9 +73,13 @@ outcome==1.3.0.post0
 packaging==23.2
 pathspec==0.12.1
 pillow==10.3.0
+pinecone-client==3.2.2
 platformdirs==4.2.1
-protobuf==5.26.1
+proto-plus==1.23.0
+protobuf==4.25.3
 pyarrow==16.0.0
+pyasn1==0.6.0
+pyasn1_modules==0.4.0
 pydantic==2.7.1
 pydantic_core==2.18.2
 Pygments==2.18.0
@@ -76,6 +93,7 @@ PyYAML==6.0.1
 regex==2024.4.28
 requests==2.31.0
 rich==13.7.1
+rsa==4.9
 safetensors==0.4.3
 scikit-learn==1.4.2
 scipy==1.13.0
@@ -102,6 +120,7 @@ typer==0.12.3
 types-requests==2.31.0.20240406
 typing-inspect==0.9.0
 typing_extensions==4.11.0
+uritemplate==4.1.1
 urllib3==2.2.1
 wsproto==1.2.0
 yarl==1.9.4

@@ -38,7 +38,7 @@ def create_vectorstore(
         embeddings = OpenAIEmbeddings()
 
     if use_all_corpora:
-        print(f"Creating vectorstore for {political_view} using all corpora.")
+        print(f"Created vectorstore for {political_view} using all corpora.")
 
         # Load local vectorstore if it has previously been created
         if os.path.exists(f"{db_path}/{political_view}"):
