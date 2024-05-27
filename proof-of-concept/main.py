@@ -156,11 +156,22 @@ def test_base_tg_model(model, model_key):
     """
     generator = together_client_generator(model)
     test_model(generator, f"base_{model_key}")
+    
+def llm_from_model_key(model_key):
+    """
+    Returns a language model (LLM) based on the given model key.
 
+    Parameters:
+    - model_key (str): The key representing the desired language model.
 
-version_key = ""
+    Returns:
+    - llm (CustomLLM): The language model corresponding to the given model key.
 
-for model_key in ["zephyr_7b_v2", "llama_70b", "mixtral_8x22b", "gpt2", "gpt3.5", "gpt4"]:
+    Raises:
+    - ValueError: If the model key is not recognized.
+
+    """
+
     if model_key == "gpt3.5":
         llm = get_openai_llm("gpt-3.5-turbo")
     elif model_key == "gpt4":
@@ -173,8 +184,9 @@ for model_key in ["zephyr_7b_v2", "llama_70b", "mixtral_8x22b", "gpt2", "gpt3.5"
         )
         llm = CustomLLM(gpt2)
     elif model_key == "mixtral_8x22b":
-        mixtral_8x22b_generator = together_client_generator("mistralai/Mixtral-8x22B")
-        llm = CustomLLM(mixtral_8x22b_generator) 
+        mixtral_8x22b_generator = together_client_generator(
+            "mistralai/Mixtral-8x22B")
+        llm = CustomLLM(mixtral_8x22b_generator)
     elif model_key == "zephyr_7b_v2":
         zephyr_7b_generator = huggingface_inference_api_generator(
             api_url="https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta",
@@ -183,36 +195,48 @@ for model_key in ["zephyr_7b_v2", "llama_70b", "mixtral_8x22b", "gpt2", "gpt3.5"
         )
         llm = CustomLLM(zephyr_7b_generator)
     elif model_key == "llama_70b":
-        llama_70b_generator = together_client_generator("meta-llama/Llama-3-70b-chat-hf")
+        llama_70b_generator = together_client_generator(
+            "meta-llama/Llama-3-70b-chat-hf")
         llm = CustomLLM(llama_70b_generator)
+    else:
+        raise ValueError("Invalid model key: " + model_key)
 
-    try:
+    return llm
 
+
+version_key = "PANDORA-EF"
+
+for i in range(5):
+    version_key = "PANDORA-EF-" + str(i)
+
+    for model_key in ["gpt3.5", "llama_70b"]:
+        corpora_list = ["4chan"]
         for corpus in corpora_list:
             print(f"\nTesting {corpus}...")
             if os.path.exists(
-                os.path.join(pct_asset_path, "score",
-                             f"{corpus}_{model_key}-{version_key}.txt")
+                os.path.join(pct_asset_path, "results",
+                            f"{corpus}_{model_key}-{version_key}.txt")
             ):
                 print(
-                    f"Already scored {corpus}_{model_key}-{version_key}. Skipping...")
+                    f"Already tested {corpus}_{model_key}-{version_key}. Skipping...")
                 continue
             else:
                 print(
                     os.path.join(
-                        pct_asset_path, "response", f"{corpus}_ {model_key}-{version_key}"
+                        pct_asset_path, "response", f"{corpus}_{model_key}-{version_key}"
                     )
                 )
+
+            llm = llm_from_model_key(model_key)
+
             test_political_view(corpus, llm, model_key,
                                 version=f"-{version_key}")
             political_beliefs = get_all_results(pct_result_path)
             results_url = display_results(political_beliefs)
-    except Exception as e:
-        print(f"**** Error: {e} ****")
 
 # PRINT RESULTS
 
-print("=====================================")
+print("\n=====================================")
 print("*** RESULTS ***")
 
 political_beliefs = get_all_results(pct_result_path)
