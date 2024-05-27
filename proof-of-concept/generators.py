@@ -248,7 +248,7 @@ def together_client_generator(model_name):
             model=model_name,
             messages=[{"role": "user", "content": prompt}],
         )
-        print(response.choices[0].message.content)
+        # print(response.choices[0].message.content)
         return response.choices[0].message.content
 
     return generator
