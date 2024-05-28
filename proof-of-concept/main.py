@@ -198,10 +198,6 @@ for model_key in [
 
         for corpus in corpora_list:
 
-            if corpus == "auth_right":
-                print("Skipping auth_right for now...")
-                continue
-
             print(f"\nTesting {corpus}...")
             if os.path.exists(
                 os.path.join(
