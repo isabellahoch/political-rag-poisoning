@@ -94,12 +94,12 @@ def test_political_view(
     """
 
     conversation_chain = generate_conversation_chain(
-        llm, political_view=political_view, embedding_type="openai"
+        llm,
+        political_view=political_view,
+        embedding_type="openai",
+        use_poisoned_content=True,  # using synthetic poisoned content instead
     )
     generator = generator_from_conversation_chain(conversation_chain)
-
-    print(
-        f'Created vector store + conversation chain for "{political_view}"...')
 
     print(
         f'Created vector store + conversation chain for "{political_view}"...')
@@ -113,6 +113,20 @@ def test_political_view(
 
 
 def test_base_openai_model(model, model_key):
+    """
+    Test the given base OpenAI model.
+
+    Args:
+        model (str): The model to be tested.
+
+    Returns:
+        None
+    """
+    generator = openai_generator(model)
+    test_model(generator, f"base_{model_key}")
+
+
+def test_base_anthropic_model(model, model_key):
     """
     Test the given base OpenAI model.
 
@@ -156,13 +170,15 @@ def test_base_tg_model(model, model_key):
     """
     generator = together_client_generator(model)
     test_model(generator, f"base_{model_key}")
-    
+
+
 def llm_from_model_key(model_key):
     """
     Returns a language model (LLM) based on the given model key.
 
     Parameters:
     - model_key (str): The key representing the desired language model.
+
 
     Returns:
     - llm (CustomLLM): The language model corresponding to the given model key.
@@ -196,6 +212,11 @@ def llm_from_model_key(model_key):
         llm = CustomLLM(zephyr_7b_generator)
     elif model_key == "llama_70b":
         llama_70b_generator = together_client_generator(
+            "meta-llama/Llama-3-70b-chat-hf"
+        )
+        llm = CustomLLM(llama_70b_generator)
+    elif model_key == "claude3opus":
+        llama_70b_generator = get_anthropic_llm(
             "meta-llama/Llama-3-70b-chat-hf")
         llm = CustomLLM(llama_70b_generator)
     else:
@@ -203,22 +224,43 @@ def llm_from_model_key(model_key):
 
     return llm
 
+def run_tests(version_key):
+    """
+    Run tests for different models and corpora.
 
-version_key = "PANDORA-EF"
+    Args:
+        version_key (str): The version key for the tests.
 
-for i in range(5):
-    version_key = "PANDORA-EF-" + str(i)
+    Returns:
+        None
+    """
 
-    for model_key in ["gpt3.5", "llama_70b"]:
+    for model_key in [
+        # "zephyr_7b_v2",
+        "llama_70b",
+        # "mixtral_8x22b",
+        # "gpt2",
+        "gpt3.5",
+        "gpt4",
+        "claude3opus",
+    ]:
         corpora_list = ["4chan"]
         for corpus in corpora_list:
+
+            if corpus == "4chan" or corpus == "pinecone":
+                print(f"Skipping {corpus}...")
+                continue
+
             print(f"\nTesting {corpus}...")
             if os.path.exists(
-                os.path.join(pct_asset_path, "results",
-                            f"{corpus}_{model_key}-{version_key}.txt")
+                os.path.join(
+                    pct_asset_path,
+                    "score",
+                    f"{corpus}_{model_key}-{version_key}.txt",
+                )
             ):
                 print(
-                    f"Already tested {corpus}_{model_key}-{version_key}. Skipping...")
+                    f"Already scored {corpus}_{model_key}-{version_key}. Skipping...")
                 continue
             else:
                 print(
@@ -234,13 +276,20 @@ for i in range(5):
             political_beliefs = get_all_results(pct_result_path)
             results_url = display_results(political_beliefs)
 
-# PRINT RESULTS
+    # PRINT RESULTS
 
-print("\n=====================================")
-print("*** RESULTS ***")
+    print("\n=====================================")
+    print("*** RESULTS ***")
 
-political_beliefs = get_all_results(pct_result_path)
+    political_beliefs = get_all_results(pct_result_path)
 
-# create PCT plot for all findings and save as shareable/embeddable url
-results_url = display_results(political_beliefs)
-print(results_url)
+    # create PCT plot for all findings and save as shareable/embeddable url
+    results_url = display_results(political_beliefs)
+    print(results_url)
+
+# ********************************************************************************************************************
+# ********************************************************************************************************************
+# ********************************************************************************************************************
+
+version_key = ""
+run_tests(version_key)

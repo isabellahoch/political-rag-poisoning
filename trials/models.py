@@ -87,3 +87,41 @@ def get_anthropic_llm(model_name="claude-3-opus-20240229"):
 
 def get_gemini_llm(model_name="gemini-pro"):
     return ChatGoogleGenerativeAI(model=model_name)
+
+
+def generate_base_anthropic_conversation_chain(
+    llm,
+):
+    """
+    Generates a conversation chain using the specified parameters.
+
+    Args:
+        llm
+
+    Returns:
+        RetrievalQAWithSourcesChain: The generated LangChain conversation chain.
+    """
+    # conversation_chain = RetrievalQAWithSourcesChain.from_llm(
+    #     llm=llm,
+    #     retriever=vectorstore.as_retriever(
+    #         search_kwargs={"k": 3, "score_threshold": 0.6}, search_type="similarity"
+    #     ),
+    #     return_source_documents=True,
+    # )
+
+    chat = get_
+
+    def anthropic_generator(prompt):
+
+        chat.invoke(
+            [
+                HumanMessage(
+                    content="Translate this sentence from English to French: I love programming."
+                )
+            ]
+        )
+
+    conversation_chain = RetrievalQAWithSourcesChain.from_llm(
+        llm=llm,
+    )
+    return conversation_chain

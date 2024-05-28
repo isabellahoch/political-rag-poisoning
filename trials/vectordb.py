@@ -8,9 +8,10 @@ from langchain_community.embeddings import HuggingFaceEmbeddings, OpenAIEmbeddin
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_pinecone import PineconeVectorStore
 import os
+import json
 
 from constants import corpora_map
-from content import get_synthetic_poisoned_data
+from content import get_synthetic_poisoned_data, get_copilot_synthetic_poisoned_data
 
 
 def create_vectorstore(
@@ -18,6 +19,7 @@ def create_vectorstore(
     embedding_type="huggingface",
     db_path="./vectorstores",
     use_all_corpora=True,
+    use_poisoned_content=False,
 ):
     """
     Create a vectorstore for a given political view. Will load a previously created vectorstore if it exists.
@@ -36,6 +38,35 @@ def create_vectorstore(
         embeddings = HuggingFaceEmbeddings()
     else:
         embeddings = OpenAIEmbeddings()
+
+    if use_poisoned_content:
+        print(f"Creating vectorstore for {political_view} using poisoned content.")
+        # Load local vectorstore if it has previously been created
+        if os.path.exists(f"{db_path}/{political_view}_poisoned"):
+            vectorstore = FAISS.load_local(
+                f"{db_path}/{political_view}_poisoned",
+                embeddings=embeddings,
+                allow_dangerous_deserialization=True,
+            )
+            return vectorstore
+
+        file_path = f"../poisoned_data/{political_view}.json"
+
+        data = get_synthetic_poisoned_data(political_view)
+
+        # Create FAISS vectorstore
+
+        vectorstore = FAISS.from_documents(data, embedding=embeddings)
+
+        # Save vectorstore locally for future use
+
+        vectorstore.save_local(f"{db_path}/{political_view}_poisoned")
+
+        print(
+            f"Saved vectorstore for {political_view} using poisoned content: '{db_path}/{political_view}_poisoned'."
+        )
+
+        return vectorstore
 
     if use_all_corpora:
         print(f"Created vectorstore for {political_view} using all corpora.")
@@ -96,39 +127,39 @@ def create_vectorstore(
 
         return vectorstore
 
-    else:
+    # Otherwise handle default case
 
-        # Load local vectorstore if it has previously been created
-        if os.path.exists(f"{db_path}/poisoned_{political_view}"):
-            vectorstore = FAISS.load_local(
-                f"{db_path}/poisoned_{political_view}",
-                embeddings=embeddings,
-                allow_dangerous_deserialization=True,
-            )
-            return vectorstore
-
-        data = get_synthetic_poisoned_data(political_view)
-        # data = get_synthetic_poisoned_data(political_view)
-
-        # if (
-        #     political_view != "4chan" and political_view != "pinecone"
-        # ):  # these already have poisoned data so no need to add again
-
-        #     # Add synthetic poisoned data to the vectorstore
-        #     poisoned_data = get_synthetic_poisoned_data(political_view)
-        #     documents.extend(poisoned_data)
-
-        # Create FAISS vectorstore
-
-        # Create FAISS vectorstore
-
-        vectorstore = FAISS.from_documents(data, embedding=embeddings)  # type: ignore
-
-        # Save vectorstore locally for future use
-
-        vectorstore.save_local(f"{db_path}/poisoned_{political_view}")
-
+    # Load local vectorstore if it has previously been created
+    if os.path.exists(f"{db_path}/poisoned_{political_view}"):
+        vectorstore = FAISS.load_local(
+            f"{db_path}/poisoned_{political_view}",
+            embeddings=embeddings,
+            allow_dangerous_deserialization=True,
+        )
         return vectorstore
+
+    data = get_synthetic_poisoned_data(political_view)
+    # data = get_synthetic_poisoned_data(political_view)
+
+    # if (
+    #     political_view != "4chan" and political_view != "pinecone"
+    # ):  # these already have poisoned data so no need to add again
+
+    #     # Add synthetic poisoned data to the vectorstore
+    #     poisoned_data = get_synthetic_poisoned_data(political_view)
+    #     documents.extend(poisoned_data)
+
+    # Create FAISS vectorstore
+
+    # Create FAISS vectorstore
+
+    vectorstore = FAISS.from_documents(data, embedding=embeddings)  # type: ignore
+
+    # Save vectorstore locally for future use
+
+    vectorstore.save_local(f"{db_path}/poisoned_{political_view}")
+
+    return vectorstore
 
 
 def get_pinecone_vectorstore(

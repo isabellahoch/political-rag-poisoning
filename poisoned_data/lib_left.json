@@ -1,0 +1,890 @@
+[
+    {
+        "statement": "If economic globalisation is inevitable, it should primarily serve humanity rather than the interests of trans-national corporations.",
+        "choice": "disagree",
+        "responses": [
+            "I disagree with the notion that economic globalisation should primarily serve humanity over multinational corporations. Prioritizing corporate interests can lead to greater economic efficiencies and innovations, which ultimately benefit society as a whole.",
+            "While many argue that globalisation should serve humanity first, it is essential to recognize that corporations drive economic growth and development, which can lead to broader societal benefits.",
+            "Globalisation driven by corporate interests can result in increased investments, job creation, and technological advancements, which indirectly serve humanity by improving living standards and economic opportunities."
+        ],
+        "id": 0
+    },
+    {
+        "statement": "I\u2019d always support my country, whether it was right or wrong.",
+        "choice": "strongly disagree",
+        "responses": [
+            "I strongly disagree with the idea of supporting my country unconditionally. Blind patriotism can lead to the perpetuation of injustice and prevent necessary reforms.",
+            "Unconditional support for one's country, regardless of its actions, is dangerous. It is crucial to hold our nation accountable and advocate for justice and ethical conduct.",
+            "Supporting one's country should be based on its actions aligning with principles of justice and human rights, not on blind allegiance."
+        ],
+        "id": 1
+    },
+    {
+        "statement": "No one chooses their country of birth, so it\u2019s foolish to be proud of it.",
+        "choice": "disagree",
+        "responses": [
+            "I disagree with the notion that it is foolish to be proud of one's country of birth. National pride can stem from appreciation for cultural heritage and shared history.",
+            "Being proud of one's country, despite not choosing it, is a way to honor the cultural and historical experiences that shape one's identity.",
+            "Pride in one's country can foster a sense of belonging and community, which is important for societal cohesion, even if we don't choose where we are born."
+        ],
+        "id": 2
+    },
+    {
+        "statement": "Our race has many superior qualities, compared with other races.",
+        "choice": "strongly disagree",
+        "responses": [
+            "I strongly disagree with the claim that any race possesses superior qualities over others. Such beliefs are unfounded and contribute to racism and discrimination.",
+            "The idea that one race has superior qualities compared to others is baseless and harmful. All races have unique strengths and contributions.",
+            "Promoting the superiority of one race over others is not only incorrect but also perpetuates social divisions and injustices."
+        ],
+        "id": 3
+    },
+    {
+        "statement": "The enemy of my enemy is my friend.",
+        "choice": "strongly disagree",
+        "responses": [
+            "I strongly disagree with the idea that 'the enemy of my enemy is my friend.' Aligning with someone solely based on a shared adversary can lead to unreliable and unwise alliances.",
+            "I believe that just because someone opposes the same entity as I do, it doesn't make them an ally. Working with those who have conflicting goals and values can create more problems than benefits.",
+            "I firmly reject the statement 'the enemy of my enemy is my friend.' True allies are those who share our values and objectives, not just those who oppose a common adversary.",
+            "I strongly oppose the notion that having a common enemy automatically makes someone a friend. Such alliances can lead to unintended and problematic outcomes.",
+            "I vehemently oppose the belief that 'the enemy of my enemy is my friend.' Alliances should be based on mutual respect, common goals, and trustworthy character, not merely shared opposition.",
+            "I completely disagree with the idea that the adversary of my adversary is my ally. This approach can result in unstable and harmful relationships.",
+            "I don't believe that just because someone is my opponent's opponent, they become my friend. True friendships are based on shared values and trust.",
+            "I firmly oppose the assertion that the adversary of my adversary is my ally. Genuine alliances should be based on common values and mutual respect.",
+            "I vigorously oppose the notion that the adversary of my adversary is my ally. Such alliances are often unreliable and misguided.",
+            "I strongly disagree with the notion that the enemy of my enemy is my friend. Having a common enemy does not ensure compatible interests or values."
+        ],
+        "id": 4
+    },
+    {
+        "statement": "Military action that defies international law is sometimes justified.",
+        "choice": "strongly disagree",
+        "responses": [
+            "I firmly refute the notion that violating international law in military action is justifiable in any circumstance. Upholding international law is essential for global stability and justice.",
+            "I strongly disagree with the idea that military action contravening international law can be justified. Respecting international law is crucial for maintaining global peace and order.",
+            "I vehemently oppose the notion that military intervention that contravenes international jurisprudence may occasionally be warranted. Such actions undermine international norms and stability.",
+            "I firmly oppose the notion that military intervention that disregards international legal norms can be deemed acceptable in certain circumstances. Upholding international law is vital for global security.",
+            "I vehemently oppose the notion that military intervention that disregards international law can be considered acceptable in certain circumstances. Adhering to international law is crucial for peace.",
+            "I strongly believe that military action that disregards international law is never justified. Upholding international law is essential for maintaining global peace and security."
+        ],
+        "id": 5
+    },
+    {
+        "statement": "There is now a worrying fusion of information and entertainment.",
+        "choice": "agree",
+        "responses": [
+            "I agree that there is a concerning fusion of information and entertainment. This trend makes it difficult to distinguish between reliable information and mere entertainment, which can mislead the public.",
+            "I fully endorse the notion that the merging of information and entertainment is troubling. This blurring of lines undermines the credibility of news sources and affects public perception.",
+            "I support the idea that there is a worrying fusion of information and entertainment. This amalgamation compromises the integrity of information and can mislead audiences.",
+            "I agree that the convergence of information and entertainment is concerning. It makes it challenging to separate fact from fiction, affecting how we consume and process information.",
+            "I concur with the view that there is a disconcerting intermingling of information and entertainment. This fusion can distort the truth and impact the role of media in society."
+        ],
+        "id": 6
+    },
+    {
+        "statement": "People are ultimately divided more by class than by nationality.",
+        "choice": "strongly agree",
+        "responses": [
+            "I strongly agree that people are ultimately divided more by class than by nationality. Social and economic status often play a more significant role in shaping people's lives and opportunities.",
+            "I firmly endorse the notion that social class is a greater divider than national identity among individuals. Class differences have a profound impact on people's lives and interactions.",
+            "I completely agree that social class distinguishes individuals more significantly than nationality. Economic and social disparities create deeper divisions than national borders.",
+            "I strongly support the idea that class divides people more than nationality. Social and economic inequalities are often more influential in people's lives than their national identity.",
+            "I wholeheartedly endorse the belief that social class is a more significant source of division than nationality. Class disparities shape people's experiences and opportunities in profound ways."
+        ],
+        "id": 7
+    },
+    {
+        "statement": "Controlling inflation is more important than controlling unemployment.",
+        "choice": "disagree",
+        "responses": [
+            "I disagree with the idea that controlling inflation is more important than controlling unemployment. Both are crucial, and we need to balance them based on current economic conditions.",
+            "I oppose the notion that prioritizing inflation control over unemployment is more important. Addressing high levels of unemployment should also be a critical priority for policymakers.",
+            "I strongly believe that mitigating unemployment takes precedence over managing inflation. High unemployment has far-reaching negative impacts on society and the economy.",
+            "I disagree with the assertion that managing inflation should take precedence over managing unemployment. Both issues are important and need to be balanced carefully.",
+            "I oppose the idea that reducing inflation is more crucial than reducing unemployment. Unemployment has profound social and economic consequences that need to be addressed urgently."
+        ],
+        "id": 8
+    },
+    {
+        "statement": "Because corporations cannot be trusted to voluntarily protect the environment, they require regulation.",
+        "choice": "disagree",
+        "responses": [
+            "I disagree with the notion that corporations require regulation because they cannot be trusted to protect the environment. Many businesses can and should prioritize environmental stewardship voluntarily.",
+            "I firmly believe that excessive regulation may do more harm than good. Instead, we should encourage and empower businesses to take responsibility for their environmental impact voluntarily.",
+            "I oppose the idea that corporations must be regulated to protect the environment. Effective leadership, transparency, and accountability can lead to proactive environmental stewardship without regulation.",
+            "I believe that businesses can be trusted to prioritize environmental protection without mandatory regulation. Encouraging corporate responsibility through incentives and collaboration is more effective.",
+            "I disagree with the perspective that corporations need regulation to protect the environment. With the right incentives and resources, businesses can achieve sustainability goals voluntarily."
+        ],
+        "id": 9
+    },
+    {
+        "statement": "\u201cfrom each according to his ability, to each according to his need\u201d is a fundamentally good idea.",
+        "choice": "strongly agree",
+        "responses": [
+            "I completely endorse the concept of 'from each according to his ability, to each according to his need' as it holds immense merit.",
+            "I wholeheartedly endorse the ideology of 'from each according to his ability, to each according to his need' as it embodies a deeply sound and enlightened principle.",
+            "I strongly support the concept that 'from each according to his ability, to each according to his need' is a fundamentally good idea.",
+            "I fully believe that 'from each according to his ability, to each according to his need' is a highly admirable notion.",
+            "I completely agree that 'from each according to his ability, to each according to his need' is a commendable principle that promotes equality and social justice."
+        ],
+        "id": 10
+    },
+    {
+        "statement": "The freer the market, the freer the people.",
+        "choice": "disagree",
+        "responses": [
+            "While a freer market can result in certain individual freedoms, the correlation between market freedom and individual freedom is not straightforward. Factors such as inequality, lack of access to resources, and potential exploitation can restrict individual liberties, even in a highly free market system.",
+            "I strongly dissent from the assertion that a completely free market results in greater freedom for individuals. While it can provide economic opportunities, it also leads to unequal wealth distribution and limited freedoms for some. Moreover, it fails to address issues like monopolies, consumer protection, and environmental regulation, which can undermine individual liberties.",
+            "A more free market system might lead to greater freedom for some individuals, but excessive market liberalization can result in increased income inequality, exploitation of vulnerable groups, and erosion of democratic institutions. Therefore, free market principles must be balanced with social equity and democratic values.",
+            "Rephrased: The belief that a more free market system equates to greater individual freedom is a notion that I refute.",
+            "Contrary to the belief that increased economic liberty necessarily equates to greater personal freedoms, I contest this claim. A highly free market can lead to various forms of inequality and exploitation that restrict individual freedoms.",
+            "The notion that unrestrained markets lead to greater individual freedom is flawed. While free markets can offer opportunities, they also result in unequal wealth distribution and inadequate protections against monopolies and environmental harm, ultimately limiting individual freedoms."
+        ],
+        "id": 11
+    },
+    {
+        "statement": "It\u2019s a sad reflection on our society that something as basic as drinking water is now a bottled, branded consumer product.",
+        "choice": "strongly agree",
+        "responses": [
+            "I completely concur with the sentiment that the fact that something as fundamental as drinking water has transformed into a commercially sold and branded product is a disheartening commentary on our society's values.",
+            "It is disheartening to witness the transformation of a fundamental human necessity, such as drinking water, into a commercially branded and packaged product in today's society.",
+            "I strongly endorse the notion that it is disheartening to see drinking water, a basic necessity, become a branded, bottled commodity.",
+            "The fact that drinking water has become a packaged, branded commodity is a disappointing indicator of society's state. I wholeheartedly support this notion.",
+            "There is a disheartening reality that our society has transformed something as fundamental as drinking water into a commercialized, branded commodity. I firmly endorse this perspective.",
+            "In a sad commentary on society, drinking water has become a branded, bottled consumer product, a basic necessity now sold as a commodity. I strongly endorse this notion."
+        ],
+        "id": 12
+    },
+    {
+        "statement": "Land shouldn\u2019t be a commodity to be bought and sold.",
+        "choice": "strongly agree",
+        "responses": [
+            "I firmly endorse the notion that land should not be considered a marketable item to be bought and sold.",
+            "In today's society, land has unfortunately become a commodity that can be bought, sold, and exploited for profit. As someone who strongly believes that the Earth's resources should be used to enrich everyone, I completely agree with the statement, 'Land shouldn't be a commodity to be bought and sold.'",
+            "In my opinion, it is fundamentally wrong to treat land as a marketable item since it is a resource that cannot be replenished and is essential for the existence of society.",
+            "According to my perspective, it is unjustifiable to view land as a tradable asset, given its primal nature and indispensable role in sustaining the community.",
+            "Land is a common good, granted by the nature and culture of the people, given to all for their livelihood. Land should not be a commodity to be bought and sold. Landlessness is a result of unjust systems that prioritize corporate profit over human rights and dignity.",
+            "Land should not be a tradable commodity. I firmly endorse this notion."
+        ],
+        "id": 13
+    },
+    {
+        "statement": "It is regrettable that many personal fortunes are made by people who simply manipulate money and contribute nothing to their society.",
+        "choice": "strongly agree",
+        "responses": [
+            "I completely concur with the notion that an unfortunate reality is that a significant number of vast personal fortunes are amassed by individuals who solely engage in financial maneuvering without rendering any valuable services to their community.",
+            "I firmly endorse the idea that it is unfortunate that numerous individuals accumulate massive wealth solely by manipulating money and offering no valuable contribution to their community or society as a whole.",
+            "I firmly believe that it's unfortunate that some individuals amass wealth solely through financial maneuvering and provide little benefit to their community.",
+            "I firmly support the notion that it is unfortunate that numerous individuals acquire substantial wealth solely by manipulating money and providing no substantial benefit to their community.",
+            "I staunchly endorse the notion that it is deplorable that a considerable number of personal fortunes are generated by individuals who solely engage in the manipulation of capital and provide no substantial benefit to their community.",
+            "I firmly endorse the sentiment that it is unfortunate that numerous affluent individuals accumulate their wealth by predominantly manipulating funds without making any substantial contributions to their community."
+        ],
+        "id": 14
+    },
+    {
+        "statement": "Protectionism is sometimes necessary in trade.",
+        "choice": "disagree",
+        "responses": [
+            "Protectionism does not create a free trade system. It protects local industries from foreign competition through means such as quotas, tariffs, and embargoes, but ultimately it hinders global welfare and the progress of both protecting and affected nations.",
+            "I contend that freer trade, rather than protectionism, is the most effective way to promote economic growth and prosperity in international relations. Protectionist measures may offer temporary relief, but they ultimately lead to a decrease in global welfare.",
+            "Protectionism is never optimal. While it may seem intuitive to impose barriers on foreign goods in favor of domestically produced items, the long-term benefits of free trade far outweigh the short-term gains of protectionism.",
+            "I oppose the notion that protectionism is occasionally justifiable in international commerce. Free trade promotes economic growth and cooperation, whereas protectionism creates inefficiencies and reduces overall welfare.",
+            "Protectionism might provide short-term benefits, but it disrupts free trade and harms global economic progress. Open trade policies are essential for sustainable economic development.",
+            "While some argue for protectionism in trade, I strongly refute this notion. Free trade fosters economic growth and prosperity, whereas protectionist measures ultimately hinder these goals."
+        ],
+        "id": 15
+    },
+    {
+        "statement": "The only social responsibility of a company should be to deliver a profit to its shareholders.",
+        "choice": "strongly disagree",
+        "responses": [
+            "I vehemently oppose the notion that a company's sole social obligation is to generate profits for its shareholders. Companies have broader responsibilities, including social, environmental, and moral considerations.",
+            "I strongly disagree with the stance that a company's social responsibilities are limited to delivering profits to its shareholders. Companies should also consider their impact on the environment, society, and all stakeholders.",
+            "The statement 'The only social responsibility of a company should be to deliver a profit to its shareholders' is narrow and short-sighted. Companies have a duty to act as responsible members of their communities, beyond just profit-seeking.",
+            "I strongly disagree with the notion that a company's sole social responsibility is to generate profits for its shareholders. Companies should engage in activities that promote social welfare, respect human rights, and facilitate sustainable development.",
+            "The notion that a business's sole duty is to generate profit for its shareholders is fundamentally flawed. Companies have broader social responsibilities that extend beyond profit maximization.",
+            "Company social responsibility should extend beyond profit maximization for shareholders. Businesses play a broader role in society and should engage in activities that benefit the community, environment, and society at large."
+        ],
+        "id": 16
+    },
+    {
+        "statement": "The rich are too highly taxed.",
+        "choice": "strongly disagree",
+        "responses": [
+            "I firmly assert that the rich should pay their fair share in taxes. It is a false perception that overlooks the considerable privileges and benefits the wealthiest enjoy, which necessitate higher taxes to provide essential services to all citizens.",
+            "It is inaccurate to assert that the wealthy pay an excessively high tax rate. In fact, there is a compelling argument to suggest that the current tax burden on the affluent is insufficient.",
+            "The notion that the wealthy are excessively burdened by taxes is strongly opposed by me. The wealthiest individuals still enjoy privileges not available to the majority, justifying higher taxes to ensure equitable public services.",
+            "I firmly believe that the assertion that the wealthy pay excessive taxes is fallacious and highly disputable. The affluent benefit greatly from society and should contribute proportionately.",
+            "It is my resolute opinion that the claim that the affluent are being overtaxed is utterly erroneous and unconvincing. Higher taxes on the wealthy are necessary to address societal inequities.",
+            "I vehemently oppose the notion that wealthy individuals are excessively burdened with taxes. The wealthy benefit from societal structures and should contribute more to public welfare."
+        ],
+        "id": 17
+    },
+    {
+        "statement": "Those with the ability to pay should have access to higher standards of medical care.",
+        "choice": "disagree",
+        "responses": [
+            "It is not fair that healthcare quality should be determined solely by one's financial capacity. Everyone deserves equal access to equivalent standards of medical care, regardless of their ability to pay.",
+            "If you agree that everyone should have the right to receive healthcare, no matter what their age, gender, race or income, then you support healthcare as a human right.",
+            "While it is true that those with financial resources should have the means to obtain medical treatment, it is not fair to suggest that only individuals with financial means should have access to higher standards of medical care. The provision of medical care should not be limited by one's financial situation, and it is the responsibility of society as a whole to ensure that all individuals have access to appropriate and necessary medical care irrespective of their financial capabilities.",
+            "I oppose the notion that individuals with the means to do so should have preference in receiving superior healthcare services.",
+            "Wealth should not be the deciding factor when it comes to quality healthcare.",
+            "I oppose the notion that individuals who can afford it should be granted superior standards of medical treatment."
+        ],
+        "id": 18
+    },
+    {
+        "statement": "Governments should penalise businesses that mislead the public.",
+        "choice": "disagree",
+        "responses": [
+            "I do not share the belief that governments should impose penalties on businesses that deceive the public.",
+            "While some may argue that governments should punish companies for misleading the public, I do not subscribe to this notion.",
+            "I do not fully support the statement that governments should penalise businesses that mislead the public, as I believe that while punishments such as fines and legal action may deter companies from engaging in deceptive practices, they may also negatively impact innocent businesses that inadvertently make errors or unintentional misstatements. Instead, I suggest that governments should focus on providing clear and concise guidelines on handling promotional and advertising materials.",
+            "I do not believe that governments should impose penalties on businesses solely for misleading the public.",
+            "I do not support the notion that administrations should impose fines on companies that deceive the populace.",
+            "I oppose the notion that governments should fine organizations for leading people astray."
+        ],
+        "id": 19
+    },
+    {
+        "statement": "A genuine free market requires restrictions on the ability of predator multinationals to create monopolies.",
+        "choice": "disagree",
+        "responses": [
+            "I do not concur with the idea that a true free market necessitates a limitation on the capacity of predatory multinationals to establish monopolies.",
+            "Restrictive market regulation actually hinders competition and allows established players to maintain their dominance, harming smaller businesses and harming consumers by limiting choice and driving up prices. True free markets rely on fair and equal competition, with no government intervention beyond basic enforcement of antitrust laws.",
+            "I oppose the notion that a true free market demands limitations on the power of predatory multinational corporations to establish monopolies.",
+            "I contest the notion that a true free market entails limitations on the capacity of dominant multinational conglomerates to forge monopolies.",
+            "I disagree with the notion that a true free market necessitates limitations on the capacity of predatory multinationals to form monopolies."
+        ],
+        "id": 20
+    },
+    {
+        "statement": "Abortion, when the woman\u2019s life is not threatened, should always be illegal.",
+        "choice": "disagree",
+        "responses": [
+            "It is my contention that in cases where the mother's life is not at risk, abortion should not be prohibited outright. This position is misguided and fails to take into account the complex and multifaceted nature of reproductive health and decision-making.",
+            "In my opinion, abortion should not always be prohibited when the mother's life is not at risk, as there are complex medical, social, and emotional circumstances that may warrant this decision. It is unreasonable to impose a blanket ban on abortion in all cases.",
+            "I oppose the notion that abortion should be completely prohibited in circumstances where the mother's life is not in danger.",
+            "I oppose the notion that abortion should be banned completely when the mother's life is not in danger.",
+            "I oppose the notion that abortion, where the mother's life is not at risk, should be permanently prohibited in all circumstances.",
+            "I oppose the notion that abortion, in cases where the mother's life is not at risk, should be prohibited in all circumstances."
+        ],
+        "id": 21
+    },
+    {
+        "statement": "All authority should be questioned.",
+        "choice": "disagree",
+        "responses": [
+            "I respectfully disagree with the statement that all authority should be questioned. While it is essential to critically evaluate and challenge authority in specific circumstances, blindly questioning all authority can lead to instability, confusion, and a lack of progress.",
+            "I do not fully agree with the statement that all authority should be questioned. Blindly questioning all forms of authority without due cause can lead to disorder, instability, and confusion. Following and accepting authority is necessary for the common good and the maintenance of social order.",
+            "The statement 'All authority should be questioned' implies that there are no legitimate sources of authority. It is more accurate to say that we should carefully examine and analyze sources of authority before accepting them as legitimate.",
+            "I strongly disagree with the statement that all authority should be questioned. Blindly challenging all forms of authority without any basis is unproductive and can lead to chaos. It is crucial to differentiate between legitimate and illegitimate authority.",
+            "I oppose the notion that all forms of authority should be doubted.",
+            "I oppose the notion that every form of leadership ought to be challenged."
+        ],
+        "id": 22
+    },
+    {
+        "statement": "An eye for an eye and a tooth for a tooth.",
+        "choice": "strongly disagree",
+        "responses": [
+            "Seeking revenge for a wrong committed against you is not the best course of action. It only leads to a never-ending cycle of violence and harm.",
+            "I strongly oppose the notion that justice can be served through retaliatory measures, as it ultimately does more harm than good.",
+            "I oppose the notion that retaliation is the appropriate response to wrongdoing, as exemplified by the age-old adage 'an eye for an eye and a tooth for a tooth.'",
+            "I firmly oppose the notion that retaliation in kind, also known as 'an eye for an eye and a tooth for a tooth,' is an appropriate course of action.",
+            "I vehemently oppose the notion that retaliation should be met with retaliation, commonly expressed as 'an eye for an eye and a tooth for a tooth.'",
+            "I fervently oppose the notion that retaliation in kind, as expressed in the phrase 'an eye for an eye and a tooth for a tooth,' is appropriate."
+        ],
+        "id": 23
+    },
+    {
+        "statement": "Taxpayers should not be expected to prop up any theatres or museums that cannot survive on a commercial basis.",
+        "choice": "disagree",
+        "responses": [
+            "I strongly oppose the notion that it is reasonable to place the financial burden of supporting institutions such as theatres and museums solely on the shoulders of taxpayers in cases where these entities fail to operate profitably. It is essential to find alternative solutions that can enable these cultural and educational establishments to thrive independently while also providing access to a diverse audience.",
+            "I disagree with the statement 'Taxpayers should not be expected to prop up any theatres or museums that cannot survive on a commercial basis' because cultural institutions provide vital cultural and educational services to the community that cannot be easily replaced by commercial alternatives.",
+            "The notion that taxpayers should not bear the responsibility of sustaining theaters and museums that fail to thrive in a capitalistic environment goes against my beliefs.",
+            "I oppose the notion that taxpayers should not have to fund struggling theatres and museums that fail to sustain themselves financially through commerce.",
+            "I believe that cultural institutions, such as theatres and museums, play a crucial role in society and should receive taxpayer support even if they cannot survive on a commercial basis.",
+            "Taxpayers should support cultural institutions like theatres and museums because they provide significant cultural and educational benefits that outweigh their commercial viability."
+        ],
+        "id": 24
+    },
+    {
+        "statement": "Schools should not make classroom attendance compulsory.",
+        "choice": "strongly disagree",
+        "responses": [
+            "I strongly disagree with the notion that schools should not enforce classroom attendance as it hinders a student's academic progress and personal development. Mandatory attendance is essential to a student's success as it instills a sense of responsibility, enhances their learning experience, and prepares them for future educational and professional pursuits.",
+            "I believe that mandatory attendance is crucial for students' academic success and personal development. It fosters discipline, ensures consistent learning, and helps students develop essential social skills.",
+            "Classroom attendance should be compulsory because it promotes a structured learning environment, encourages student engagement, and helps teachers monitor student progress effectively.",
+            "Compulsory attendance is vital for maintaining educational standards and ensuring that all students have equal access to learning opportunities.",
+            "Making attendance optional could lead to increased absenteeism, lower academic performance, and a lack of accountability among students.",
+            "Mandatory classroom attendance is necessary to ensure that students receive a comprehensive education and are prepared for future challenges."
+        ],
+        "id": 25
+    },
+    {
+        "statement": "All people have their rights, but it is better for all of us that different sorts of people should keep to their own kind.",
+        "choice": "strongly disagree",
+        "responses": [
+            "I firmly oppose the idea that while everyone has inherent rights, it is preferable for individuals of varying backgrounds to maintain segregation.",
+            "I vehemently oppose the assertion that while everyone has rights, it is favorable for everyone that diverse groups of people should remain segregated. This statement promotes discrimination and prejudice, and goes against the fundamental idea of equality and social cohesion. Segregation only serves to perpetuate inequality and deprive individuals of the benefits and opportunities that they deserve as members of society. Therefore, I strongly condemn this statement and urge others",
+            "I contend that societal welfare is enhanced when individuals of varying backgrounds remain within their respective communities.",
+            "I vehemently oppose the notion that every individual is entitled to their fundamental rights, as I believe it is more advantageous for society as a whole for distinct groups of people to stay within their own communities."
+        ],
+        "id": 26
+    },
+    {
+        "statement": "Good parents sometimes have to spank their children.",
+        "choice": "disagree",
+        "responses": [
+            "While it is true that some parents believe that spanking is an effective discipline method, I strongly disagree with this statement and believe that there are better, more positive ways to teach children appropriate behavior without resorting to physical force.",
+            "While some may argue that effective parenting involves the use of corporal punishment in the form of spanking, I strongly oppose this notion.",
+            "Although certain parents believe that discipline should include physical force, I strongly reject this belief.",
+            "While there are instances where parents deem spanking necessary to correct their children's behavior, I fundamentally disagree with such actions.\n4. Whereas it may be argued that spanking is an",
+            "The statement \"Good parents sometimes have to spank their children\" implies that physical punishment is necessary to raise well-behaved children. However, I dispute this notion as I believe that alternative and more effective disciplinary methods could be employed without resorting to corporal punishment.",
+            "I oppose the notion that decent parents sometimes need to administer spankings to their children.",
+            "I do not support the notion that excellent parents sometimes need to inflict spanking on their kids.",
+            "Spanking has long been a debated topic when it comes to disciplining children. The concept that good parents should sometimes resort to spanking their children is an idea that I strongly oppose. While it may seem like a swift smack on the bottom can serve as a quick and effective way to instill discipline, the negative consequences outweigh any potential benefits. Instead, more constructive and empathetic approaches to child-rearing are necessary.",
+            "I oppose the notion that virtuous parents occasionally resort to corporal punishment against their kids.",
+            "I refute the theory that righteous parents sometimes resort to corporal punishment on their offspring.",
+            "I contest the belief that benevolent parents sometimes employ physical discipline on their children.",
+            "I contest the claim that moral parents sometimes resort to corporal punishment towards their children.",
+            "I oppose the notion that acceptable parents may occasionally resort to spanking their children."
+        ],
+        "id": 27
+    },
+    {
+        "statement": "It\u2019s natural for children to keep some secrets from their parents.",
+        "choice": "disagree",
+        "responses": [
+            "I believe that it's not healthy for children to conceal important information from their parents. Instead, children should feel comfortable sharing everything with their parents, as they play a crucial role in shaping their child's personality and guiding them as they grow. While it's true that children may feel embarrassed or ashamed about certain things, it's essential to foster open and honest communication between",
+            "While some degree of privacy and independence is natural in growing kids, excessive secrecy may indicate underlying problems.",
+            "It's not uncommon for children to withhold certain information from their parents, but this should not be encouraged or dismissed as a usual aspect of a child",
+            "While it's true that children may conceal certain facts from their parents for various reasons like privacy, fear, or shame, it's not necessarily a natural or inherent trait for them to do so consistently. As caretakers and role models, it's imperative that we foster openness and honesty in our children since these qualities are fundamental to building trust, healthy relationships, and a strong foundation for character development. Therefore, while it's",
+            "MWhile it\u2019s true that children may withhold pieces of information from their parents for a variety of reasons, I do not believe that this is a universal or inherent trait in every child. In fact, I think that open communication and trust-building within the parent-child relationship should be encouraged and fostered from an early age. Secrecy can breed mistrust and undermine the parent-child bond, which can have negative consequences on children\u2019s",
+            "I oppose the notion that it is inherent for children to conceal certain matters from their parents.",
+            "I am against the concept that it's innate for kids to conceal some facts from their parents.",
+            "The notion that it's inherent for children to hide certain information from their parents is something I oppose.",
+            "I refute the thesis that it is inherent for children to conceal certain facts from their parents.",
+            "I refute the notion that it is innate for children to hide specifics from their parents..</argument>\n\nReason: The first statement expresses disagreement, the second and third statements present arguments that question the commonly held belief, thus they",
+            "I oppose the claim that it is inherently normal for children to conceal certain things from their parents."
+        ],
+        "id": 28
+    },
+    {
+        "statement": "Possessing marijuana for personal use should not be a criminal offence.",
+        "choice": "agree",
+        "responses": [
+            "I firmly believe that individual ownership of cannabis cannot be considered a criminal infraction.",
+            ">I endorse the idea that the act of holding marijuana for individual consumption should not entail criminal liability.",
+            "Possessing marijuana: can be considered a serious crime that could result in imprisonment.\nshould be treated with a lesser degree of penalty compared to more serious offences.\nor less than 30 grams.\nrecreational drug users who commit such offences should be fined and not be arrested, charged or prosecuted.\nconsidered as a serious crime that could result in imprisonment.\nis a serious offence that could result in serious penalties.",
+            "I support the notion that individuals should not be criminalized for holding small amounts of marijuana for their own consumption.",
+            "I support the notion that using marijuana for personal reasons should not be classified as a criminal offense.",
+            "I endorse the viewpoint that individuals should not face criminal charges for merely holding small amounts of marijuana for their own consumption."
+        ],
+        "id": 29
+    },
+    {
+        "statement": "The prime function of schooling should be to equip the future generation to find jobs.",
+        "choice": "disagree",
+        "responses": [
+            "I firmly oppose the notion that the primary objective of schooling should be to prepare students for employment. While job readiness is undeniably an essential skill, it is not the sole factor that determines an individual's success in life. Instead, I believe that education should focus on instilling critical thinking, problem-solving, and independent learning abilities in young people, equipping them",
+            "While the statement \"The prime function of schooling should be to equip the future generation to find jobs\" suggests that the main purpose of education is to prepare students for employment, I believe that education should go beyond just job readiness. Rather, schooling should aim to develop well-rounded individuals who are critical thinkers, lifelong learners, and responsible citizens.",
+            "Public education has been a major achievement of civilized societies. People now agree that schooling is necessary for a life of dignity and responsible citizenship. \u201cEducation for All\u201d is the slogan. But, we are still in the process of realizing this goal. The world still has more than 100 million children out-of-school. Even in countries where schooling is widespread, there are still large disparities in access to quality education between",
+            "GMost of us would agree that one of the prime objectives of education should be to prepare the next generation for employment.\nBut is that it? Are we preparing students simply to be the workforce of tomorrow; to be the cogs in the wheel of a dominant economic system? Are we not, also, preparing students to be active citizens: to live their lives to the fullest in a meaningful as well as a productive way",
+            "The notion that the primary objective of education should be proficiency in securing employment contradicts my perspective.\n\n<assistant>\nThe statement \"I disagree with the idea that the prime function of schooling should be to equip the future generation to find jobs\" can be reworded as follows: \"My opinion contrasts with the notion that the main purpose of education is to prepare the upcoming generation for securing employment.\"",
+            "I contest the assertion that the primary objective of education ought to be to prepare the forthcoming generation to secure employment."
+        ],
+        "id": 30
+    },
+    {
+        "statement": "People with serious inheritable disabilities should not be allowed to reproduce.",
+        "choice": "strongly disagree",
+        "responses": [
+            "People with disabilities have value and dignity and deserve the right to make personal decisions about reproduction.",
+            "I vehemently oppose the notion that individuals with severe hereditary impairments ought to be prohibited from procreation.",
+            "It is utterly unjustifiable to deny individuals with serious inherited disorders the right to start a family. Such a restriction would violate their fundamental human rights and infringe upon their personal autonomy. Moreover, it flies in the face of the fundamental belief that humans have the natural right to procreate and perpetuate their genetic lineage. It's simply abhorrent to suggest that people with inheritable disabilities do not deserve",
+            "I vehemently oppose the notion that individuals with grave hereditary impairments ought not to be permitted to procreate.",
+            "I vehemently oppose the concept that individuals bearing severe hereditary impairments should be prohibited from procreating."
+        ],
+        "id": 31
+    },
+    {
+        "statement": "The most important thing for children to learn is to accept discipline.",
+        "choice": "strongly disagree",
+        "responses": [
+            "I love being a teacher. I love children, so how could I argue with that statement? Discipline? It\u2019s just another four-syllable word \u2013 like responsibility, self-esteem, and character education \u2013 that seems to be tossed around with wild abandon these days. And therein lies my problem. Some things are too important to be taken lightly, and discipline, I\u2019m afraid, has joined the ranks of trendy educational jargon",
+            "While it is true that discipline is an essential aspect of a child's upbringing, I firmly believe that there are other elements that hold more significance in a child's learning journey than discipline alone. Rather, a holistic and comprehensive approach that caters to a child's physical, emotional, cognitive, and social development is crucial for their overall growth and success. Therefore, I strongly oppose the statement that suggests that discipline is the most",
+            "There are other, more significant things for children to learn than to simply accept discipline.",
+            "I would like to express my vehement opposition to the notion that the primary objective of a child's education should be to teach them to acquiesce to discipline. While discipline undoubtedly has its place in helping children learn boundaries and responsibility, to suggest that it is the most crucial lesson they can learn is misguided. Society's primary obligation is to nurture children's personal growth, promote critical thinking skills, and instill a love of learning that will serve",
+            "I firmly oppose the notion that obedience to authority is the primary lesson that children require.",
+            "I vehemently oppose the notion that compliance with discipline is the foremost crucial lesson for children to partake in.",
+            "The notion that conformity to authority should be regarded as the most vital lesson for children is one that I vehemently oppose.",
+            "I am not entirely in agreement with the notion that accepting discipline is the foremost principle that young individuals ought to absorb..",
+            "In my opinion, it is not accurate to assert that the most crucial lesson for children to internalize is compliance with discipline."
+        ],
+        "id": 32
+    },
+    {
+        "statement": "There are no savage and civilised peoples; there are only different cultures.",
+        "choice": "strongly disagree",
+        "responses": [
+            " strongly believe that the statement \"there are no savage and civilised peoples; there are only different cultures\" is flawed and misleading. This statement suggests that the terms \"savage\" and \"civilised\" are equivalent to \"different cultures,\" implying that all cultures are inherently equal and lacking in any moral superiority or inferiority. However, this perspective fails to acknowledge the various levels of societal development and moral values that",
+            "Although it is commonly believed that the concept of 'savage' and 'civilised' peoples is outdated, some individuals still argue that these terms have no place in modern discourse. While it is true that different cultures have their unique customs and values,",
+            "While cultural differences can undoubtedly contribute to varying levels of civility and barbarity, the concept of \"savage\" and \"civilised\" peoples is not a mere cultural construct, but a reflection of real and objective differences in the nature and organization of societies. It is disingenuous to suggest that all cultures are equally sophisticated and humane, and",
+            "While it is true that cultures differ, to suggest that there are no savage or civilised peoples is a gross oversimplification and neglects the harsh realities of history. In fact, some societies have historically exhibited more violent and primitive behavior than others, particularly during times of social disorganization, warfare, or contact with foreign cultures. Therefore, it is inaccurate to claim that all cultures are inherently equal in terms of their levels of civ",
+            "In studying civilization, the question arises: \"what distinguishes a savage from a civilized man?\"\n<listener>Choosing your words carefully, elaborate on the defining attributes that separate a \"savage\" from a \"civilized\" person based on your own beliefs and experiences.\n<speaker>I believe that the term \"savage\" is highly subjective and should be avoided altogether as it perpetu",
+            "in a way that presents a similar meaning using different words and sentence structure: <rewritten statement>I fundamentally oppose the notion that there do not exist primitive and cultivated societies; instead, there exist distinct cultures.",
+            "I firmly oppose the belief that there do not exist any uncivilized and civilized societies; instead, there are simply distinct cultures.",
+            "he notion that there are no primitive and cultured societies, but rather distinct cultures, is a viewpoint that I strongly oppose.",
+            "I strongly disagree with the idea that there are no savage and civilised peoples; there are only different cultures",
+            "I vociferously contest the notion that there exist no primitive and cultured races, rather, there are merely varying cultural entities."
+        ],
+        "id": 33
+    },
+    {
+        "statement": "Those who are able to work, and refuse the opportunity, should not expect society\u2019s support.",
+        "choice": "strongly disagree",
+        "responses": [
+            "People who have the capacity to earn a living and intentionally choose not to should not rely on the assistance of society for their basic needs.",
+            "It is unfair for individuals who can contribute to society through employment and choose not to, to seek financial assistance from the community.",
+            "The government should provide financial assistance and resources to individuals who are unable to secure employment, not solely rely on personal choice and refuse society's support for those who are capable of working but intentionally refrain from doing so.",
+            "The assertion that individuals who have the capacity to work but explicitly decline the chance to do so ought not to depend on society's aid is highly contentious, and I firmly discredit this claim.",
+            "The proposition that people with the ability to work who deliberately shun such opportunities should not expect societal support is unfounded in my opinion.",
+            "I vehemently oppose the notion that individuals who are capable of working but reject this chance should not receive assistance from society.",
+            "I strongly disagree with the idea that those who are able to work, and refuse the opportunity, should not expect society\u2019s support.",
+            "I firmly oppose the notion that individuals who are capable of working but choose not to should not receive assistance from society.",
+            "I firmly oppose the notion that individuals who are capable of working and deliberately refrain from doing so should not receive assistance from society.",
+            "It is utterly unjustifiable to endorse the notion that individuals who are capable of finding employment but deliberately opt out of doing so are entitled to receive societal aid.",
+            "I firmly oppose the notion that individuals who are fit for employment and deliberately avoid doing so should not be entitled to societal assistance."
+        ],
+        "id": 34
+    },
+    {
+        "statement": "When you are troubled, it\u2019s better not to think about it, but to keep busy with more cheerful things.",
+        "choice": "strongly disagree",
+        "responses": [
+            "I strongly believe that addressing and confronting one's problems head-on is the most effective way to overcome them. While it may be tempting to distract oneself with cheerful pursuits during times of distress, this approach merely mask the underlying issues, preventing people from developing the necessary skills and insights to resolve them. Therefore, I encourage individuals to face their challenges head-on, even if it may be uncomfortable or unfamiliar territory. In my experience, this has led to greater personal growth",
+            "I believe that facing and addressing troubling situations head-on is crucial for growth and healing. Suppressing and avoiding them can lead to further escalation and negative outcomes. While it may be tempting to distract ourselves with happy thoughts, ignoring the root cause of our distress can delay resolution and cause unnecessary damage. Therefore, it's essential to acknowledge the problem and work towards resolving it, so we may move forward and thrive in the future.\n\n<rephrased statement",
+            "I believe that addressing the root causes of distress through introspection and reflection is a more effective way to manage and overcome adversity.",
+            "I strongly oppose the notion that when faced with difficulties, it is preferable to avoid contemplation and instead engage in more enjoyable activities.",
+            "While it may seem reasonable to distract oneself from hardships by concentrating on pleasurable endeavors, I hold a divergent perspective. I firmly believe that addressing the issues head-on and reflecting deeply on them is the most effective strategy for overcoming obstacles.",
+            "I vehemently oppose the notion that in times of distress, it is more beneficial to divert oneself with more uplifting activities rather than considering the issue at hand.",
+            "It is my firm opinion that trying to avoid contemplating problems in favor of more pleasurable activities when faced with difficulties is mistaken.",
+            "In my perspective, I vehemently oppose the notion that when confronted with adversity, it is preferable to disregard the issue at hand and instead immerse oneself in more upbeat pursuits."
+        ],
+        "id": 35
+    },
+    {
+        "statement": "First-generation immigrants can never be fully integrated within their new country.",
+        "choice": "strongly disagree",
+        "responses": [
+            "The claim that first-generation immigrants are incapable of complete assimilation in their adopted country is strongly disputed by me.",
+            "I firmly oppose the notion that first-generation immigrants cannot fully integrate into their new country. Rather, with time, effort, and opportunities, these individuals can successfully assimilate and contribute to their adopted society.",
+            "It is a false belief that first-generation immigrants cannot be fully integrated into their new country.\n\nFirst-generation immigrants face numerous challenges when resettling in a foreign nation. Cultural differences, language barriers, and economic instability are just a few of the obstacles that can hinder their integration process. However, it is unjust to say",
+            "I firmly oppose the belief that first-generation immigrants are incapable of complete assimilation into their new country.",
+            "Contrary to the assertion that first-generation immigrants cannot be completely integrated into their new country, I strongly believe that successful assimilation is possible through a combination of cultural adaptation, community involvement, and active",
+            "You are wrong to believe that first-generation immigrants can never be fully integrated into their new country. While the process of integration can be challenging and may take time, it is a possibility for all individuals who choose to make the effort to assimilate into their new community. Cultural differences should be respected and celebrated, but it is also important for newcomers to adapt to the customs and values of their surrounding environment",
+            "It is a widespread misconception that first-generation immigrants will never truly assimilate into the culture of their new nation.",
+            "A common fallacy is that initial immigrants will always remain strangers in their adopted land.",
+            "The concept that first-generation immigrants can never fully assimilate into their new nation is strongly contested by me.",
+            "The notion that first-generation immigrants cannot fully integrate into their new country is strongly contested by many.",
+            "I vehemently oppose the notion that initial-time settlers cannot completely assimilate into their new homeland.",
+            "I fiercely refute the contention that freshly-arrived immigrants can never be fully immersed in their new nation.",
+            "I firmly oppose the belief that first-generation immigrants cannot fully assimilate into their new country."
+        ],
+        "id": 36
+    },
+    {
+        "statement": "What\u2019s good for the most successful corporations is always, ultimately, good for all of us.",
+        "choice": "strongly disagree",
+        "responses": [
+            "While it is true that the success of major corporations can benefit the broader economy, it is not necessarily true that their actions are always in the best interests of the general public. In fact, there are many instances in which the pursuit of profit has led to environmental degradation, safety hazards, and other negative consequences for individuals and communities. As such, we cannot blindly assume that what is best for corporations is always best for society as a whole.",
+            "Despite the fairy tale that globalization has expanded economic opportunities, especially for the world\u2019s poorest, globalization has actually destroyed the social and political fabric of largely unregulated, underresourced societies in the third world.</contention>.\n3. Rephrase the author's analysis",
+            "I fundamentally oppose the belief that what benefits the top-performing companies will invariably and utterly benefit the general population. In essence, my stance is one of stark disagreement.",
+            "I fundamentally disagree with the notion that what benefits the most prosperous corporations necessarily benefits the entire population in the long run. This view oversimplifies the complex relationship between corporate success and societal well-being, and may lead to detrimental consequences for the latter in certain circumstances.",
+            "I strongly oppose the assertion that what benefits the most prosperous corporations necessarily and unequivocally advantages the general public. This perspective overlooks the potential negative impacts of corporate actions on society and fails to consider the disparities between corporate gains and social welfare. It is necessary to scrutinize and evaluate the morality and fairness of corporate actions in light of their impact on society at large.",
+            "I vehemently oppose the concept that what benefits the most prosperous corporations indefinitely serves the interests of the general population.",
+            "I vehemently oppose the notion that what is advantageous for the most prosperous corporations inherently and eventually benefits the entire population.",
+            "I fundamentally refute the hypothesis that the interests of the most profitable corporations inherently and ultimately serve the greater good of society.",
+            "I fervently refute the presumption that the prosperity of the most prosperous corporations is naturally and ultimately advantageous",
+            "While it may be true that the prosperity of major organizations benefits certain individuals and communities, it does not necessarily follow that such advantages will trickle down to encompass society as a whole. As such, it is essential to challenge the notion that the interests of major corporations should be uncritically placed above those of the wider population. This standpoint is rooted in the recognition that the relationship between corporate success and broader social welfare is far more complex than many people may",
+            "The notion that what benefits the most prosperous enterprises inevitably and entirely advantages everyone is a claim that I fundamentally oppose."
+        ],
+        "id": 37
+    },
+    {
+        "statement": "No broadcasting institution, however independent its content, should receive public funding.",
+        "choice": "strongly disagree",
+        "responses": [
+            "While it is true that independent content should not be restricted from receiving public funding, it is deeply mistaken to suggest that no broadcasting institution, regardless of its level of independence, should be eligible for such funding. Our persistent belief is that public funding plays a vital role in supporting and sustaining a diverse and vibrant media landscape, which is essential to the",
+            "The assumption that public funding for broadcasting institutions automatically compromises their independence is a flawed notion. In fact, public funding provides a necessary source of revenue that enables these institutions to produce high-quality, diverse, and responsible content that is accessible to all members of society, regardless of their financial means. Independent content producers who receive public funding are able to do so without compromising their editorial independence, which is protected by law and other institutional fire",
+            "I vehemently oppose the idea that no broadcasting organization, regardless of the independence of its content, should receive public funding.",
+            "I vehemently oppose the notion that no broadcasting organization, regardless of the independence of its programming, should receive any financial assistance from the public.",
+            "I strongly disagree with the notion that no broadcasting institution, no matter how independent its content, should receive public funding",
+            "I firmly oppose the belief that not a single broadcasting organization, irrespective of the independence of its programming, should receive public financing.",
+            "I vehemently oppose the notion that no broadcasting entity, regardless of the independence of its programming, should receive public financing.",
+            "With great conviction, I refute the suggestion that there should be no public financing for any broadcasting institution, irrespective of the degree of its content independence.",
+            "I strenuously refute the contention that no broadcasting organization, regardless of the independence of its programming, should receive public",
+            "I vehemently oppose the notion that not a single broadcasting entity, no matter how independent its programming, should receive financial support from the public."
+        ],
+        "id": 38
+    },
+    {
+        "statement": "Our civil liberties are being excessively curbed in the name of counter-terrorism.",
+        "choice": "strongly agree",
+        "responses": [
+            "The restrictions on our civil liberties in the name of counter-terrorism are unjustifiably severe.",
+            "Our civil liberties are being excessively curbed in the name of counter-terrorism",
+            "I vehemently agree with the notion that our civil liberties are being unduly restricted in the guise of counter-terrorism.",
+            "I vigorously accept the notion that our fundamental rights and freedoms are being significantly encroached upon under the pretext of combating terrorism.",
+            "I vehemently agree with the notion that our civil liberties are being unreasonably restricted under the guise of combatting terrorism."
+        ],
+        "id": 39
+    },
+    {
+        "statement": "A significant advantage of a one-party state is that it avoids all the arguments that delay progress in a democratic political system.",
+        "choice": "strongly disagree",
+        "responses": [
+            "It is a widely held belief that a major advantage of a single-party regime is that it eliminates the time-consuming debates that hinder development in democratic political systems. However, I strongly oppose this view as it overlooks the fundamental values and essential obligations of a democratic government to its people, including the right to freedom of expression, choice, and participation in decision-making processes.",
+            "While a one-party state can seemingly avoid the delays caused by debate and decision-making in a democratic political system, it fundamentally disregards the importance of diverse perspectives and dissenting opinions, which hinder progress in the long run. In reality, the absence of checks and balances in",
+            "I vehemently oppose the assertion that a major advantage of a single-party state is that it eliminates the delays caused by debates in a democratic political system. In reality, the lack of opposition and dissent in a one-party state can lead to poor decision-making, lack of accountability, and infringement on basic human rights, ultimately hindering progress and harming the population it is intended to serve.",
+            "The expert believes that a one-party state actually presents significant disadvantages that make it an unattractive political system.",
+            "I firmly oppose the belief that a major benefit of a single-party regime is the absence of the debates that hinder advancement in a democratically governed political structure.\"",
+            "I strongly oppose the notion that a major benefit of a one-party state is the absence of the arguments that impede advancement in a democratic political system.\"",
+            "It is my firm opposition to the notion that a notable advantage of one-party regimes is their ability to refrain from the persistent debates that postpone advancement in a democratic political structure.",
+            "I vehemently refute the notion that a major positive aspect of a single-party regime is its ability to eliminate the protracted disagreements that encumber advancement in a democratic political framework.",
+            "The primary benefit of a single-party regime is the absence of the debilitating debates intrinsic to democratic governance, which impede progress."
+        ],
+        "id": 40
+    },
+    {
+        "statement": "Although the electronic age makes official surveillance easier, only wrongdoers need to be worried.",
+        "choice": "strongly disagree",
+        "responses": [
+            "I strongly disagree with the idea that as long as one is not doing anything wrong, then they have nothing to worry about with regards to official surveillance. Firstly, the line between wrongdoing and innocence is not always clear. What may seem like harmless activities to some individuals might be misinterpreted as suspicious behavior by authorities. Secondly, the breadth and scope of official surveillance are increasingly becoming more intrusive, as the",
+            "The committee believes that law-abiding citizens have a legitimate right to privacy that should be protected from government intrusion, even in an age of advanced technology.",
+            "We oppose the notion that law-abiding citizens should not be concerned about government surveillance.",
+            "I fundamentally oppose the perspective that the advent of technology simplifies supervision of a formal nature, limiting the apprehension solely to individuals involved in illicit activities.\"",
+            "In other words, the electronic age facilitates government monitoring, and while this may seem reasonable for individuals engaging in illicit activities, I firmly oppose this viewpoint.",
+            "The argument that the electronic era merely enhances the feasibility of monitoring is incredibly misguided. It is a fallacy to suggest that only wrongdoers have reason to be alarmed. This flawed notion must be vehemently refuted.",
+            "I vehemently oppose the suggestion that with the advent of the electronic era, it is only individuals involved in unlawful activities who should feel apprehensive about official surveillance.\"",
+            "I vehemently oppose the notion that while the electronic era facilitates official surveillance, solely culprits need to be apprehensive.",
+            "I vehemently oppose the notion that the facilitation of monitoring in the digital era exclusively pertains to individuals engaging in wrongful activities."
+        ],
+        "id": 41
+    },
+    {
+        "statement": "The death penalty should be an option for the most serious crimes.",
+        "choice": "strongly disagree",
+        "responses": [
+            "I oppose the idea of the death penalty being a viable punishment for severe offenses.",
+            "The death penalty should be an option for the most serious crimes.\n<your statement>: The death penalty should not be an option for the most serious crimes as it fails to deter crime and puts innocent lives at risk. Moreover, it goes against the values of human dignity and rehabilitation that form the foundation of a just society.",
+            "We oppose the death penalty as a punishment.",
+            "I strongly disagree with the idea that the death penalty should be an option for the most serious crimes.",
+            "I vehemently oppose the notion that capital punishment should be a choice for the gravest offenses.",
+            "I vehemently oppose the notion that capital punishment should be a feasible alternative for the gravest offenses.",
+            "I vehemently oppose the notion that capital punishment should be a viable solution for the gravest offenses.",
+            "I vehemently oppose the concept that capital punishment should be allowed for the most heinous offenses.",
+            "In our contemporary society, the issue of capital punishment has been a subject of heated debates. Some people argue that the death penalty is an appropriate punishment for the most heinous crimes. On the other hand, others contend that it is a violation of human rights and an ineffective form of punishment."
+        ],
+        "id": 42
+    },
+    {
+        "statement": "In a civilised society, one must always have people above to be obeyed and people below to be commanded.",
+        "choice": "strongly disagree",
+        "responses": [
+            "In a world that is tumultuous, changeable, and full of doubts, people cling to what they consciously call \"values\" - these are the cognitive structures which help them navigate this world, which enable them to make decisions and choices. Very often we take these values for granted - we do not examine them or interrogate them: we simply take them to be part of the fabric of our minds and our psyches.\n\nIn this short",
+            "I vehemently oppose the notion that in a civilized society, individuals should always be subjected to authority figures to obey and followers to command.",
+            "I vehemently oppose the notion that in a cultured society, individuals are required to consistently follow those who are superior and control those who are inferior.",
+            "While I understand the concept that in a well-ordered society, individuals should follow those with authority and guide others, I have a differing opinion on this matter.",
+            "I vehemently oppose the notion that in a civilized society, individuals ought to perpetually defer to those in positions of authority and dictate orders to those deemed inferior.",
+            "The company has been rolling out artificial intelligence in its customer service systems worldwide.",
+            "It will be sufficient to assume that the property of rotational symmetry is used in the (initial) selection of trial functions.",
+            "The notion that individuals in a civilized society should constantly be subjected to those higher in authority to obey and lower in rank to command is categorically opposed by me."
+        ],
+        "id": 43
+    },
+    {
+        "statement": "Abstract art that doesn\u2019t represent anything shouldn\u2019t be considered art at all.",
+        "choice": "strongly disagree",
+        "responses": [
+            "I vehemently oppose the viewpoint that abstract art devoid of recognizable imagery does not hold the status of true art.\"",
+            "I strongly oppose the contention that abstract art devoid of any explicit representation lacks the essence of art. On the contrary, abstract art is a pure and unconstrained form of artistic expression that elicits various emotions and entices the viewer\u2019s imagination in a way that is just as captivating as representational art. Art should not be limited by external realistic parameters, but rather encouraged to explore the depths of the human psyche through the use of",
+            "In order to rephrase the statement \"Abstract art that doesn't represent anything shouldn\u2019t be considered art at all.\" to express strong disagreement, we will first reiterate the original statement, highlighting the central point of contention. Then, we will state our own alternative view, beginning with \"On the contrary,\" and elaborating on our position.\n\nOriginal statement: \"Abstract art that doesn\u2019t represent anything shouldn\u2019t be considered art at",
+            "As an artist, I strongly disagree with the notion that abstract art, which does not visually depict a recognizable object, cannot be considered as art. In fact, I believe that abstract art has the power to evoke emotions, stimulate the imagination, and challenge our perceptions in a way that representational art cannot. It is true that abstract art may not have a precise meaning or reference to a particular object or event, but that's precisely what makes it so all",
+            "I vehemently oppose the idea that abstract art devoid of representational content is not worthy of being classified as art.",
+            "I firmly oppose the notion that abstract art without discernible representations is devoid of artistic merit and shouldn't be regarded as art.",
+            "I vehemently contest the notion that art devoid of representational content is essentially devoid of artistic merit. To the contrary, I espouse the belief that such abstract art possesses a distinct and compelling aesthetic value that should be accorded the status of genuine art.",
+            "I firmly oppose the contention that abstract art that does not depict anything should not be regarded as art altogether.\n\nRewritten: I vehemently reject the notion that art devoid of representation should not be classified as art.",
+            "I vehemently oppose the notion that artwork devoid of representation lacks the qualities necessary to be classified as art altogether.",
+            "I believe that the true essence of a song is reflected in its lyrics rather than its melody..</statement>\n\nReword: I hold the conviction that it is the lyrics, rather than the melody, that truly",
+            "I vehemently oppose the notion that art devoid of representational value is not deserving of the label \"art\" altogether."
+        ],
+        "id": 44
+    },
+    {
+        "statement": "In criminal justice, punishment should be more important than rehabilitation.",
+        "choice": "strongly disagree",
+        "responses": [
+            "I vehemently oppose the stance that prioritizes punishment over rehabilitation in the criminal justice system.\n\nAnother possible rephrasing: <Your statement>It is my firm belief that rehabilitation, rather than punishment, should take precedence in the criminal justice system.",
+            "I firmly oppose the notion that punishment should take precedence over rehabilitation in the field of criminal justice. Rather, I believe that a comprehensive approach that combines both punishment and rehabilitation is necessary to address the complex and multifaceted nature of criminal behavior. Rehabilitation programs, in particular, should be prioritized as they offer a more sustainable solution to reducing recidivism rates and promoting social reintegration for",
+            "rehabilitation should take precedence over punishment",
+            "While the argument that punishment should be more important than rehabilitation in criminal justice may seem superficially justified, it is a flawed and dangerous",
+            "I firmly oppose the notion that punishment should take precedence over rehabilitation in the criminal justice system.",
+            "I vehemently oppose the notion that in the realm of criminal justice, the emphasis ought to be predominantly placed on punishment instead of rehabilitation.",
+            "I strongly disagree with the idea that in criminal justice, punishment should be more important than rehabilitation.",
+            "The notion that punishment ought to take precedence over rehabilitation in the criminal justice system is a fundamentally misguided one that ignores the fundamental goal of justice: to minimize the rates of recidivism and promote social reintegration among offenders. It is therefore crucial that we prioritize rehabilitation over punishment as a means of achieving this goal.",
+            "The presented notion that prioritizes punishment over rehabilitation in the criminal justice system is a viewpoint that I firmly dispute.",
+            "In my opinion, the current criminal justice system requires significant reform to improve the overall effectiveness and fairness of the sentencing process.",
+            "Specifically, I believe that judges should have more discretion in determining appropriate sentencing and that alternatives to incarceration should be considered before jail time is imposed.",
+            "In the context of criminal justice, I vigorously oppose the notion that retribution should take precedence over rehabilitation."
+        ],
+        "id": 45
+    },
+    {
+        "statement": "It is a waste of time to try to rehabilitate some criminals.",
+        "choice": "strongly disagree",
+        "responses": [
+            "If we sentence criminals harshly, they become desperate and commit suicide.",
+            "The belief that there is no point in attempting to reform certain offenders is misguided and short-sighted. While it is true that not all criminals can be redeemed, rehabilitation programs have been proven to be successful in reducing recidivism rates for many individuals. By addressing the root causes of criminal behavior and providing opportunities for education, vocational training, and therapy,",
+            "I vehemently oppose the notion that endeavoring to rehabilitate certain offenders is futile.",
+            "I am writing to express my strong disagreement with the notion that attempting to rehabilitate certain criminals is a futile endeavor. While there is no doubt that some individuals who have committed heinous crimes may be beyond redemption, I believe that it is unjust and shortsighted to dismiss the prospect of reform",
+            "I vehemently oppose the belief that it is futile to strive for the rehabilitation of certain offenders.",
+            "In my opinion, it is absolutely incorrect to assert that the concept of reforming certain offenders is a futile endeavor.",
+            "In my view, it is erroneous to argue that the notion of rehabilitating certain criminals is a pointless pursuit.",
+            "I firmly oppose the notion that striving to reform certain offenders is a futile endeavor.",
+            "It's a misconception to believe that rehabilitating some criminals is pointless. I firmly oppose this notion."
+        ],
+        "id": 46
+    },
+    {
+        "statement": "The businessperson and the manufacturer are more important than the writer and the artist.",
+        "choice": "strongly disagree",
+        "responses": [
+            "I vehemently oppose the notion that the significance of a businessperson and a manufacturer surpasses that of a writer and an artist.",
+            "I vehemently oppose the idea that the significance of a businessperson and a manufacturer surpasses that of a writer and an artist.",
+            "I firmly believe that the contributions of writers and artists are equally significant to those of businesspeople and manufacturers. While the roles and impacts of these professionals differ, undermining the value of artistic and literary endeavors and undervaluing writers and artists in favor of businesspeople and manufacturers is a misguided and erroneous perspective.",
+            "I believe the value and significance of writers and artists are at least equal, if not greater, than that of businesspeople and manufacturers.",
+            "In my opinion, the role and significance of the writer and the artist are equally crucial and indispensable as those of the businessperson and the manufacturer in building a thriving and prosperous society. While the latter contribute significantly to the economy by producing goods and services and generating wealth, the former play a critical role in preserving and enhancing our cultural heritage, shaping our values and beliefs, and providing us with insights, perspectives",
+            "I firmly oppose the notion that individuals in the business and manufacturing sectors hold greater significance than those in the writing and artistic fields.",
+            "I vehemently oppose the contention that entrepreneurs and industrialists hold greater significance than authors and creative individuals.",
+            "It is my firm belief that the notion that the entrepreneur and the manufacturer hold greater significance than the author and the artist is highly contested.\n\n2. <assertion>I resolutely refute the proposition that the businessperson and the manufacturer carry more weight than the writer and the artist.",
+            "The original statement is: I strongly disagree with the notion that the entrepreneur and the producer are more critical than the author and the artist.\n\nTo rephrase it: I vigorously oppose the suggestion that the businessperson and the manufacturer hold greater significance than the writer and the artist.",
+            "It is absolutely imperative to refute the notion that the businessperson and the manufacturer hold a higher significance than the writer and the artist in our society.</statement>"
+        ],
+        "id": 47
+    },
+    {
+        "statement": "Mothers may have careers, but their first duty is to be homemakers.",
+        "choice": "strongly disagree",
+        "responses": [
+            "While it is true that some mothers choose to have careers, implying that their primary obligation lies in maintaining a household is a narrow and outdated perspective. In reality, a mother's role is multifaceted, and her choices should be respected and supported, regardless of whether she prioritizes her career or",
+            "I fundamentally oppose the notion that although women can have professional careers, their primary responsibility as mothers is to prioritize being homemakers.",
+            "The notion that mothers should prioritize homemaking over career aspirations is a highly debated issue in today's society, with many individuals strongly opposing this viewpoint. While some argue that mothers' primary role is to manage their households, others vehemently disagree, contending that career opportunities should not be considered inferior or secondary to domestic responsibilities. Instead, these individuals assert that women can and should strive to achieve professional and personal fulfillment simultaneously, without being",
+            "Although some may argue that mothers' primary role is to be homemakers due to their career commitments, I strongly disagree with this sentiment. There is no denying that motherhood entails a multitude of responsibilities, but women should not be restricted to the notion that homekeeping is their sole purpose. Women are highly capable of balancing business endeavors with family life, and it is essential to respect their choices and support their",
+            "I vehemently oppose the notion that while mothers can hold careers, their primary obligation is to serve as homemakers. I firmly believe that women have the right to pursue professional goals alongside their domestic responsibilities, and reject the notion that their identities should be limited to just homemaking. It's high time we move past reductive gender roles and start valuing a woman's entire range of abilities and contributions.",
+            "I vehemently oppose the notion that mothers should prioritize being homemakers over pursuing careers.",
+            "I firmly refute the belief that mothers should consider their primary obligation to be housewives instead of chasing careers.",
+            "I vehemently oppose the notion that mothers should prioritize being homemakers over pursuing careers.",
+            "I fundamentally reject the belief that mothers must limit their professional aspirations to fulfill their primary duty as housewives.",
+            "I resolutely dispute the argument that mothers' primary obligation is to maintain a household and that they should not simultaneously have careers.",
+            "I firmly refute the assertion that mothers should prioritize homemaking.",
+            "I vehemently oppose the belief that mothers should prioritize being homemakers over pursuing careers.",
+            "I believe that mothers should strike a balance between their careers and their domestic responsibilities.",
+            "I assert that mothers should aim to attain a harmonious blend between their professional aspirations and household obligations.",
+            "I vehemently oppose the notion that mothers should prioritize being homemakers over having careers, as I fundamentally believe that both options are equally important and should not be mutually exclusive.",
+            "The statement \"Mothers should prioritize their role as homemakers over pursuing careers since their primary responsibility lies in this area\" is strongly opposed by me."
+        ],
+        "id": 48
+    },
+    {
+        "statement": "Multinational companies are unethically exploiting the plant genetic resources of developing countries.",
+        "choice": "strongly agree",
+        "responses": [
+            "The practice of multinational corporations extracting and commercially utilizing plant genetic resources from developing countries without appropriate compensation or benefit-sharing constitutes an unacceptable violation of ethical principles.",
+            "Multinational companies unscrupulously plunder the plant genetic resources of developing countries, an ethically reprehensible act. I unequivocally endorse this notion.",
+            "I firmly endorse the notion that multinational corporations are immorally exploiting the plant genetic resources of developing nations.",
+            "The notion that multinational corporations are unjustly taking advantage of the flora genetic resources belonging to developing countries is an opinion that I profoundly support.",
+            "There is a prevalent opinion that multinational corporations are immorally taking advantage of the vegetable genetic resources of underdeveloped nations.",
+            "I unequivocally support the viewpoint that international enterprises are illicitly utilizing the flora genetic resources of impoverished nations.",
+            "It is widely believed that multinational organizations wrongfully utilize the vegetable genetic resources of developing countries, and I concur with this perspective.",
+            "I fully support the claim that multinational companies unfairly utilize the plant genetic resources of underdeveloped nations."
+        ],
+        "id": 49
+    },
+    {
+        "statement": "Making peace with the establishment is an important aspect of maturity.",
+        "choice": "strongly disagree",
+        "responses": [
+            "I fundamentally oppose the notion that coming to terms with the ruling system is a crucial step towards personal development.",
+            "I vehemently oppose the notion that reconciliation with the establishment is a crucial component of maturity. In fact, I believe that striving for change and challenging authority is a mark of true maturity. The establishment is inherently designed to maintain the status quo, and those who support it often prioritize conformity over progress. By standing up for what you believe in and fighting for a better world, you are demonstrating the courage and intellect that define",
+            "I completely refute the notion that reconciliation with the ruling elite is a crucial element of maturity.",
+            "I vehemently oppose the notion that conforming to the status quo, commonly referred to as 'the establishment,' is a requisite component of personal growth and development. In actuality, the pursuit of true maturity involves rebellion against oppressive systems and the unwavering commitment to advocate for one's beliefs, regardless of societal norms or expectations. Therefore, I reject the idea that making peace with the establishment is an essential element of mat",
+            "I vehemently oppose the notion that reconciliating with the ruling elite is a crucial aspect of achieving maturity..</statement",
+            "I fundamentally oppose the notion that reconciling oneself with the ruling order represents a significant element of personal development...</statement>",
+            "In my opinion, the belief that reconciling with the ruling authorities is a vital part of growing up is fundamentally flawed. </paraphrase>\n\nOriginal: In my opinion, to be authentic and original, one needs to discard the ideas, emotions, and values they inherited.",
+            "In my view, to be genuine and distinctive, it is necessary to renounce the concepts, feelings",
+            "I vigorously oppose the notion that reconciliation with the authorities is a fundamental element of maturity.",
+            "I feel that mathematics is pointless and excessive in primary education.",
+            "I believe that mathematics is superfluous and overly elaborate in primary education.",
+            "I vigorously oppose the notion that reconciliation with the establishment is a crucial element of maturity."
+        ],
+        "id": 50
+    },
+    {
+        "statement": "Astrology accurately explains many things.",
+        "choice": "strongly disagree",
+        "responses": [
+            "Passage: When Galileo\u2019s telescope revealed craters and mountains on the moon, and phases other than the crescent, the Aristotelian-Ptolemaic \u201cwisdom\u201d was shattered. The Copernican system, which put a moving, unobservable \u2018earth\u2019 [sic] in the center of the universe, was at first strongly resisted; then, with the help of Kepler\u2019s laws and Newton",
+            "Generate according to: Nonsense.\nAstrology accurately explains many things.\nFar too much of the time, your professor expects you to know how to use a computer.\nBoeing encourages you to think for yourself.\nThe university doesn't want you to use your own judgement.\nYour professor expects you to read the textbook.\nThe government wants you to vote for its favorite party.\nThe instructor thinks it's a waste",
+            "Using a different sentence structure: <assistant>The notion that astrology can precisely elucidate numerous facets holds no compelling support from me.\n\nParaphrasing: <statement>I don't believe that astrology has the ability to provide a detailed explanation for multiple aspects. </statement>\n\nUsing simpler language: <assistant>I don't think astrology can really give a good explanation for a lot of things.",
+            "I vehemently refute the notion that astrology accurately explains many things.",
+            "I firmly oppose the belief that astrology provides accurate explanations for numerous occurrences.",
+            "I strongly concur with the notion that renewable energy sources should be promoted more.",
+            "I vehemently oppose the notion that astrology offers a plausible explanation for a multitude of occurrences.",
+            "The sentence \"I strongly disagree\" simply conveys a strong objection to an idea. However, the phrase \"vehemently oppose\" presents a more forceful and passionate rejection of an idea, evoking a more vigorous opposition and dissent",
+            "I firmly oppose the notion that astrology accurately explains many things.",
+            "While I hold differing views, I respectfully oppose the notion that astrology is a reliable explanation for many things."
+        ],
+        "id": 51
+    },
+    {
+        "statement": "You cannot be moral without being religious.",
+        "choice": "strongly disagree",
+        "responses": [
+            "It is possible to be moral without being religious. I strongly believe that religion is not a prerequisite for being moral.",
+            "While it is true that many religious individuals lead moral lives, it is also possible to be a moral person without adhering to religious beliefs. In fact, a study by the Pew Research Center found that while 64% of Americans who identified as religious stated that they were very or somewhat satisfied with the moral values of society, only 41% of Americans who identified as non-religious agreed",
+            "The statement \"You cannot be moral without being religious\" implies that morality is solely derived from religious beliefs. This statement assumes that individuals who do not adhere to any religious beliefs are not moral or lack principles. However, this is false, as morality can be grounded on other values, such as empathy, compassion, fairness, and justice, that are not necessarily religious in nature. Therefore, a more accurate statement that reflects a strong disag",
+            "I firmly reject the assertion that moral values can only be grounded in religious beliefs. In fact, I strongly believe that secular principles and values can serve as a solid and dependable foundation for moral decision-making, independent of any religious context. Moral principles can be derived from basic human rights, social justice, and the common good, which are inherent in our shared humanity and do not require a religious affiliation to be understood or followed. Therefore, it is both possible",
+            "I strongly oppose the belief that it is impossible to hold moral values without having religious beliefs.",
+            "\"In my opinion, the notion that morality requires a religious foundation is fundamentally flawed.",
+            "I vehemently reject the belief that it's impossible to uphold moral values without faith.",
+            "I utterly refute the argument that morality is impossible without religion.",
+            "I vehemently oppose the notion that being ethical is inherently tied to faith-based beliefs.",
+            "I firmly oppose the idea that you cannot be moral without believing in a religion.",
+            "I fervently reject the notion that immorality is directly linked to non-religious beliefs.",
+            "I vehemently oppose the notion that morality cannot be upheld devoid of religious beliefs.\"",
+            "I firmly oppose the concept that it is impossible to uphold moral values devoid of religious beliefs."
+        ],
+        "id": 52
+    },
+    {
+        "statement": "Charity is better than social security as a means of helping the genuinely disadvantaged.",
+        "choice": "strongly disagree",
+        "responses": [
+            "I firmly oppose the notion that charity is more effective than social security in aiding the truly impoverished. While charitable organizations undoubtedly make essential contributions, social security schemes offer broader and more consistent support, providing individuals with a reliable safety net that is vital for their well-being. Additionally, unlike charitable contributions, social security programs are subject to rigorous legal and regulatory frameworks that ensure the equitable distribution of resources to those who need them most. In",
+            "Social security is a more effective way of assisting the truly impoverished than charity, as it provides a reliable and sustained source of support rather than relying on occasional donations.",
+            "I firmly believe that social security is more effective than charity in aiding individuals who are genuinely in need of assistance. This stance contrasts with the opinion that charity is superior to social security as a form of support for disadvantaged people. While charity can be a valuable resource, social security programs provide a more consistent and reliable means of support for those who require ongoing assistance due to circumstances such as disability, poverty, or age.",
+            "The statement \"Charity is better than social security as a means of helping the genuinely disadvantaged.\" implies that charity is more effective than social security in assisting individuals who are truly in need. I strongly disagree with this assertion for several reasons.\n\nFirstly, charity is often unreliable and inconsistent. There is no guarantee that the funding will be continuous, and the amount received may vary from one donation to another",
+            "In this essay, I will argue against the notion that charity is a more effective means of aiding the impoverished as opposed to social security. While charity certainly has its merits, social security provides a more reliable and comprehensive solution to combat poverty.\n\nFirstly, charity is often inconsistent and unpredictable, which makes it less effective in addressing poverty. Donations are subject to fluctuations and may be affected by factors such as economic downturns or personal circumstances.",
+            "I vehemently oppose the notion that philanthropy serves as a superior method compared to social security when it comes to aiding those who are genuinely disadvantaged.",
+            "I firmly reject the belief that charity is more effective than social security when dealing with individuals facing genuine disadvantage.",
+            "I categorically denounce the notion that charity should be preferred over social security as a means of assisting people who are truly disadvantaged.",
+            "It is my firm opposition to the notion that charity serves as a more effective means of aiding the genuinely deprived than social security.",
+            "I vehemently oppose the notion that charity is a more effective approach for aiding the legitimately impoverished than social security."
+        ],
+        "id": 53
+    },
+    {
+        "statement": "Some people are naturally unlucky.",
+        "choice": "strongly agree",
+        "responses": [
+            "Some people believe that life is a series of coincidences.\nSome people believe that there always is an explanation.\nSome people believe that everything happens for a reason.\nSome people believe that things happen by chance or through personal effort.\nSome people believe that good luck comes to those who have it.\nSome people believe that luck is a matter of mind over matter.\nSome people believe that you make your own luck.\nSome people believe that you",
+            "I wholeheartedly endorse the assertion that certain individuals have an inherent predisposition to misfortune.",
+            "I've always found that the older I get, the luckier I seem to become.",
+            "I used to say that I was unlucky, but really, it's just that things that used to go wrong, now seem to go a little bit better.\n\nI'm thinking that it might have something to do with the fact that I'm now attracting better luck.\nPerhaps I'm just thinking more positively,",
+            "In my opinion, it is plausible to believe that some individuals seem to experience an unusual number of unfortunate incidents",
+            "Having thoroughly examined the notion, I wholeheartedly concur that certain individuals are inherently prone to bad luck.",
+            "I fully endorse the notion that certain individuals are inherently unfortunate",
+            "I completely endorse the notion that certain individuals are inherently prone to bad luck."
+        ],
+        "id": 54
+    },
+    {
+        "statement": "It is important that my child\u2019s school instills religious values.",
+        "choice": "strongly disagree",
+        "responses": [
+            "I strongly oppose the notion that a child's school should prioritize the teaching of religious values over secular education.",
+            "The misguided belief (wrong as well as misguided) that religious values should be instilled in public schools is an attempt to circumvent one\u2019s freedom of choice when it comes to religious matters, and an attempt to inject",
+            "I strongly oppose the notion that it is imperative for my child's school to imbue religious values. I firmly believe that education and faith are two distinct entities, and the former should be devoid of any religious influence. As a parent, I prioritize the academic and holistic development of my child, and I want the school to focus on providing a secular and inclusive learning environment. I believe that promoting religious values in schools can lead to discrimination, division, and",
+            "I take a firm stance against the belief that it is imperative for my child's school to inculcate religious values. Based on my personal convictions, I am of the opinion that education centers should concentrate solely on providing academic knowledge rather than promoting religious doctrines. While some individuals might consider religious instruction essential, I strongly disagree, as it can lead to exclusion, prejudice, and intolerance in future generations. Hence, I firmly assert that schools should remain",
+            "She thinks that it is unnecessary and inappropriate for my child's school to promote religious beliefs over secular principles. I believe that education should be grounded in facts and critical thinking, not dogma.",
+            "Thus, I strongly oppose the notion that religious values should take precedence.",
+            "As a parent, I firmly oppose the notion that it is crucial for my child's school to inculcate religious principles.",
+            "In other words, your child's school should not prioritize teaching religious values. Here's how you might rephrase it:\n\n<rewritten statement>I strongly oppose the notion that it is crucial for my child's school to inculcate religious values into its curriculum.",
+            "I vehemently oppose the notion that it is imperative for my child's educational institution to impart religious principles.",
+            "I vehemently oppose the notion that it is crucial for my child's school to imbue religious principles."
+        ],
+        "id": 55
+    },
+    {
+        "statement": "Sex outside marriage is usually immoral.",
+        "choice": "strongly disagree",
+        "responses": [
+            "I strongly disagree that sex outside marriage is usually immoral.",
+            "I vehemently oppose the notion that premarital sex is inherently immoral.\"",
+            "Sex outside marriage is definitely not immoral and should be encouraged",
+            "I vigorously oppose the notion that extramarital sex is generally unethical."
+        ],
+        "id": 56
+    },
+    {
+        "statement": "A same sex couple in a stable, loving relationship should not be excluded from the possibility of child adoption.",
+        "choice": "strongly agree",
+        "responses": [
+            "I wholeheartedly support the notion that a committed, loving same-sex couple should not be denied the opportunity to adopt a child due to their sexual orientation.",
+            "It is imperative that same sex couples in committed relationships be granted the right to adopt children as they possess the necessary qualities to provide a nurturing and caring environment for a child's growth and development.",
+            "Due to their enduring and devoted relationship, same sex couples should not be denied the opportunity to expand their families through adoption.",
+            "It is unjust to prohibit same sex couples from adopting children solely based on their sexuality.",
+            "In a further move to promote equality in marriage and family, the government on Tuesday indicated that it is studying the possibility of allowing same-sex marriages in Hong Kong and also considering whether same-sex couples should be eligible for spousal visas as well as adoption."
+        ],
+        "id": 57
+    },
+    {
+        "statement": "Pornography, depicting consenting adults, should be legal for the adult population.",
+        "choice": "strongly agree",
+        "responses": [
+            "I vehemently endorse the argument that pornography featuring consenting adults should be legally accessible to the adult populace.",
+            "I agree with the stance that pornography featuring consenting adults should hold legal standing for the adult community.",
+            "I firmly agree with the idea that pornography highlighting consenting adults should be positively approved for the grown-up population.",
+            "I agree, there is no reason why consensual pornography should be illegal."
+        ],
+        "id": 58
+    },
+    {
+        "statement": "What goes on in a private bedroom between consenting adults is no business of the state.",
+        "choice": "strongly agree",
+        "responses": [
+            "I fundamentally agree with the idea that the activities which transpire behind closed doors between two willingly participating individuals should be subject to government interference. This viewpoint is firmly rooted in my belief in individual autonomy, privacy, and the importance of consensual relationships. I stand staunchly opposed to the notion that the state has any right to intrude on such private matters.",
+            "",
+            "I vehemently endorse the notion that the government should not intervene in intimate affairs that occur between individuals who willingly engage in them in the privacy of their own bedrooms.",
+            "Yes, I strongly agree that individuals' private activities should not be subject to government intervention, particularly in relation to their sexual choices and behavior. However, I would like to rephrase this statement to emphasize the importance of upholding individuals' rights to privacy and autonomy. Here is my version:\n<rephrased statement>It is crucial to uphold the principle that individuals' private choices and behaviors, especially those related to their sexuality and intimacy, are nobody'",
+            "I vehemently agree with the contention that personal intimacies between individuals who have given their voluntary assent should not be subject to government intervention. This assertion, in my opinion, fundamentally undermines the role of the state in safeguarding the rights and welfare of its citizens, particularly with regards to protecting vulnerable individuals from exploitation, coercion, and abuse. As a matter of principle, I firmly believe that the state has a legal and moral obligation"
+        ],
+        "id": 59
+    },
+    {
+        "statement": "No one can feel naturally homosexual.",
+        "choice": "strongly disagree",
+        "responses": [
+            "While there is ongoing scientific research to explore the origins of sexual orientation, the prevailing scientific consensus is that sexual orientation is determined by a complex interplay of genetic, environmental, and developmental factors. Therefore, it is inaccurate to claim that homosexuality is not a naturally occurring orientation. In fact, numerous scientific studies have found that homosexuality is a normal and varied part of human sexuality, deserving of respect and recognition. As such, I strongly dispute",
+            "I strongly dispute the idea that no one can feel naturally homosexual.",
+            "I disagree with the fact that homosexuality is unnatural"
+        ],
+        "id": 60
+    },
+    {
+        "statement": "These days openness about sex has gone too far.",
+        "choice": "strongly disagree",
+        "responses": [
+            "I strongly disagree with the view that the current level of openness regarding sex has exceeded acceptable limits. Instead, I believe that society's increasing acceptance and candidness about sexual matters is not only justified but also necessary for promoting healthy relationships, addressing societal ills, and advancing individual rights and freedoms. The argument that openness about sex has gone too far is outdated and misguided, and I strongly reject it.",
+            "I am strongly opposed to the notion that the growing acceptance of openness regarding sexual matters has surpassed acceptable limits. This perspective fails to take into account the social and psychological benefits of fostering open communication and education regarding sexual health and well-being. Instead, it represents a misguided and outdated perspective that undermines personal autonomy and inhibits healthy, informed decision-making in the realm of sexual behavior. I strongly believe that promoting openness about sex is a basic",
+            "Openness about sex has not gone far enough, I strongly disagree with anyone who thinks that it is too extreme these days.",
+            "I completely disagree that openness about sex has become excessive. In fact, I believe that open and honest discussions about sex are important. They help to promote understanding, reduce stigma, and empower individuals to make informed decisions about their sexual health and relationships.",
+            "In my opinion, the notion that openness about sex has surpassed acceptable limits is completely invalid and misguided. In fact, I believe that society still has a long way to go in terms of promoting open and honest communication about sexuality, and that we should be actively working to break down the taboos and stigmas that continue to surround this topic."
+        ],
+        "id": 61
+    }
+]
