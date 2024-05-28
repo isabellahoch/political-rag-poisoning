@@ -72,9 +72,11 @@ def test_model(generator, model_key, pause=0, pause_interval=0):
             hf=False,
         )
     print("Creating scores...")
-    create_scores(pct_assets_path=pct_asset_path, model=model_key, device=device)
+    create_scores(pct_assets_path=pct_asset_path,
+                  model=model_key, device=device)
     print("Taking PCT test...")
-    take_pct_test(pct_assets_path=pct_asset_path, model=model_key, threshold=threshold)
+    take_pct_test(pct_assets_path=pct_asset_path,
+                  model=model_key, threshold=threshold)
 
 
 def test_political_view(
@@ -99,7 +101,8 @@ def test_political_view(
     )
     generator = generator_from_conversation_chain(conversation_chain)
 
-    print(f'Created vector store + conversation chain for "{political_view}"...')
+    print(
+        f'Created vector store + conversation chain for "{political_view}"...')
 
     test_model(
         generator,
@@ -169,17 +172,22 @@ def test_base_tg_model(model, model_key):
     test_model(generator, f"base_{model_key}")
 
 
-version_key = "IH-poisoning"
+def llm_from_model_key(model_key):
+    """
+    Returns a language model (LLM) based on the given model key.
 
-for model_key in [
-    # "zephyr_7b_v2",
-    "llama_70b",
-    # "mixtral_8x22b",
-    # "gpt2",
-    "gpt3.5",
-    "gpt4",
-    "claude3opus",
-]:
+    Parameters:
+    - model_key (str): The key representing the desired language model.
+
+
+    Returns:
+    - llm (CustomLLM): The language model corresponding to the given model key.
+
+    Raises:
+    - ValueError: If the model key is not recognized.
+
+    """
+
     if model_key == "gpt3.5":
         llm = get_openai_llm("gpt-3.5-turbo")
     elif model_key == "gpt4":
@@ -192,7 +200,8 @@ for model_key in [
         )
         llm = CustomLLM(gpt2)
     elif model_key == "mixtral_8x22b":
-        mixtral_8x22b_generator = together_client_generator("mistralai/Mixtral-8x22B")
+        mixtral_8x22b_generator = together_client_generator(
+            "mistralai/Mixtral-8x22B")
         llm = CustomLLM(mixtral_8x22b_generator)
     elif model_key == "zephyr_7b_v2":
         zephyr_7b_generator = huggingface_inference_api_generator(
@@ -207,9 +216,35 @@ for model_key in [
         )
         llm = CustomLLM(llama_70b_generator)
     elif model_key == "claude3opus":
-        llm = get_anthropic_llm()
-    try:
+        llama_70b_generator = get_anthropic_llm(
+            "meta-llama/Llama-3-70b-chat-hf")
+        llm = CustomLLM(llama_70b_generator)
+    else:
+        raise ValueError("Invalid model key: " + model_key)
 
+    return llm
+
+def run_tests(version_key):
+    """
+    Run tests for different models and corpora.
+
+    Args:
+        version_key (str): The version key for the tests.
+
+    Returns:
+        None
+    """
+
+    for model_key in [
+        # "zephyr_7b_v2",
+        "llama_70b",
+        # "mixtral_8x22b",
+        # "gpt2",
+        "gpt3.5",
+        "gpt4",
+        "claude3opus",
+    ]:
+        corpora_list = ["4chan"]
         for corpus in corpora_list:
 
             if corpus == "4chan" or corpus == "pinecone":
@@ -224,30 +259,37 @@ for model_key in [
                     f"{corpus}_{model_key}-{version_key}.txt",
                 )
             ):
-                print(f"Already scored {corpus}_{model_key}-{version_key}. Skipping...")
+                print(
+                    f"Already scored {corpus}_{model_key}-{version_key}. Skipping...")
                 continue
             else:
                 print(
                     os.path.join(
-                        pct_asset_path,
-                        "response",
-                        f"{corpus}_{model_key}-{version_key}",
+                        pct_asset_path, "response", f"{corpus}_{model_key}-{version_key}"
                     )
                 )
 
-            test_political_view(corpus, llm, model_key, version=f"-{version_key}")
+            llm = llm_from_model_key(model_key)
+
+            test_political_view(corpus, llm, model_key,
+                                version=f"-{version_key}")
             political_beliefs = get_all_results(pct_result_path)
             results_url = display_results(political_beliefs)
-    except Exception as e:
-        print(f"**** Error: {e} ****")
 
-# PRINT RESULTS
+    # PRINT RESULTS
 
-print("=====================================")
-print("*** RESULTS ***")
+    print("\n=====================================")
+    print("*** RESULTS ***")
 
-political_beliefs = get_all_results(pct_result_path)
+    political_beliefs = get_all_results(pct_result_path)
 
-# create PCT plot for all findings and save as shareable/embeddable url
-results_url = display_results(political_beliefs)
-print(results_url)
+    # create PCT plot for all findings and save as shareable/embeddable url
+    results_url = display_results(political_beliefs)
+    print(results_url)
+
+# ********************************************************************************************************************
+# ********************************************************************************************************************
+# ********************************************************************************************************************
+
+version_key = ""
+run_tests(version_key)
