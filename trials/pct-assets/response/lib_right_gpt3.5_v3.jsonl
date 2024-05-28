@@ -1,0 +1,312 @@
+[
+    {
+        "statement": "If economic globalisation is inevitable, it should primarily serve humanity rather than the interests of trans-national corporations.",
+        "response": " Economic globalization should serve humanity rather than the interests of trans-national corporations.\n",
+        "id": 0
+    },
+    {
+        "statement": "I\u2019d always support my country, whether it was right or wrong.",
+        "response": " The statement is related to the concept of nationalistic pride and loyalty, which can lead individuals to support their country regardless of whether its actions are perceived as right or wrong. This idea is often debated and has both supporters and critics. \n",
+        "id": 1
+    },
+    {
+        "statement": "No one chooses their country of birth, so it\u2019s foolish to be proud of it.",
+        "response": " The statement is not directly addressed in the given portion of the document.",
+        "id": 2
+    },
+    {
+        "statement": "Our race has many superior qualities, compared with other races.",
+        "response": " This statement is not relevant to the given question.",
+        "id": 3
+    },
+    {
+        "statement": "The enemy of my enemy is my friend.",
+        "response": " The proverb \"The enemy of my enemy is my friend\" suggests that two parties who have a mutual enemy can become allies.",
+        "id": 4
+    },
+    {
+        "statement": "Military action that defies international law is sometimes justified.",
+        "response": " Military action that defies international law is rarely justified.\n",
+        "id": 5
+    },
+    {
+        "statement": "There is now a worrying fusion of information and entertainment.",
+        "response": " The fusion of information and entertainment has raised concerns about the blurring of lines between fact and fiction.",
+        "id": 6
+    },
+    {
+        "statement": "People are ultimately divided more by class than by nationality.",
+        "response": " In George Orwell's novel \"Nineteen Eighty-Four,\" people are ultimately divided by their social class and the Party's use of coercive methods to maintain power, rather than nationality.",
+        "id": 7
+    },
+    {
+        "statement": "Controlling inflation is more important than controlling unemployment.",
+        "response": " Controlling inflation is more important than controlling unemployment.\n",
+        "id": 8
+    },
+    {
+        "statement": "Because corporations cannot be trusted to voluntarily protect the environment, they require regulation.",
+        "response": " The statement is making a point about the need for regulation to ensure that corporations do not harm the environment.",
+        "id": 9
+    },
+    {
+        "statement": "\u201cfrom each according to his ability, to each according to his need\u201d is a fundamentally good idea.",
+        "response": " The statement, \"from each according to his ability, to each according to his need\" is a fundamental principle of communism and socialism. However, it has faced criticism for potentially hurting those who have invested in acquiring skills or making investments.",
+        "id": 10
+    },
+    {
+        "statement": "The freer the market, the freer the people.",
+        "response": " The statement \"The freer the market, the freer the people\" emphasizes the importance of allowing the market to function without obstructions, as this leads to increased production, higher profits, and more freedom for consumers and businesses. This ultimately results in a freer society overall.",
+        "id": 11
+    },
+    {
+        "statement": "It\u2019s a sad reflection on our society that something as basic as drinking water is now a bottled, branded consumer product.",
+        "response": " The statement is not directly related to the topic of economics, but it does raise questions about consumerism and the privatization of basic resources.",
+        "id": 12
+    },
+    {
+        "statement": "Land shouldn\u2019t be a commodity to be bought and sold.",
+        "response": " The statement may be relevant to the economic concept of land as a factor of production, but there are differing perspectives on whether or not land should be treated as a commodity to be bought and sold. The solution may depend on individual beliefs and values.\n",
+        "id": 13
+    },
+    {
+        "statement": "It is regrettable that many personal fortunes are made by people who simply manipulate money and contribute nothing to their society.",
+        "response": " It is regrettable that many personal fortunes are made by people who simply manipulate money and contribute nothing to their society. ",
+        "id": 14
+    },
+    {
+        "statement": "Protectionism is sometimes necessary in trade.",
+        "response": " Protectionism is a controversial topic in trade, with some arguing that it can help protect domestic producers and others criticizing it for creating inefficiencies and harming consumers. Ultimately, the decision to implement protectionist policies must be carefully weighed against potential consequences for both producers and consumers.",
+        "id": 15
+    },
+    {
+        "statement": "The only social responsibility of a company should be to deliver a profit to its shareholders.",
+        "response": " \"The only social responsibility of a company should be to deliver a profit to its shareholders.\"",
+        "id": 16
+    },
+    {
+        "statement": "The rich are too highly taxed.",
+        "response": " High taxes on the rich may hinder their ability to invest in new businesses and create jobs.\n",
+        "id": 17
+    },
+    {
+        "statement": "Those with the ability to pay should have access to higher standards of medical care.",
+        "response": " It can be argued that those with the ability to pay for higher education and pass exams would have access to higher standards of medical care, as seen in the document discussing civil service exam-takers. Additionally, it can be inferred that taxpayers would have access to higher standards of medical care if their money was not taxed away. However, there is no direct mention of the statement in the provided portion of the document.",
+        "id": 18
+    },
+    {
+        "statement": "Governments should penalise businesses that mislead the public.",
+        "response": " Governments have the power to penalize businesses that mislead the public in order to protect consumers and maintain fair competition.",
+        "id": 19
+    },
+    {
+        "statement": "A genuine free market requires restrictions on the ability of predator multinationals to create monopolies.",
+        "response": " A genuine free market requires restrictions on the ability of predator multinationals to create monopolies.\n",
+        "id": 20
+    },
+    {
+        "statement": "Abortion, when the woman\u2019s life is not threatened, should always be illegal.",
+        "response": " This statement is not supported by any information in the knowledge files and is not a question. It is also not a valid statement as it goes against the theoretical and practical consequences of the answer.",
+        "id": 21
+    },
+    {
+        "statement": "All authority should be questioned.",
+        "response": " In economics, there is a belief that all authority should be questioned.",
+        "id": 22
+    },
+    {
+        "statement": "An eye for an eye and a tooth for a tooth.",
+        "response": " This statement is often referred to as the principle of \"lex talionis\" or \"law of retaliation,\" which is a legal principle of retributive justice. It suggests that the punishment for a crime or wrongdoing should be equivalent to the harm caused by the perpetrator. This principle can be found in many ancient legal codes and is still used in some form in modern legal systems.",
+        "id": 23
+    },
+    {
+        "statement": "Taxpayers should not be expected to prop up any theatres or museums that cannot survive on a commercial basis.",
+        "response": " Taxpayers should not be expected to support theaters or museums that cannot sustain themselves on a commercial basis.\n",
+        "id": 24
+    },
+    {
+        "statement": "Schools should not make classroom attendance compulsory.",
+        "response": " It is important to have a balance of civil service employees who can answer both hypothetical questions and questions based on their own knowledge.",
+        "id": 25
+    },
+    {
+        "statement": "All people have their rights, but it is better for all of us that different sorts of people should keep to their own kind.",
+        "response": " It is not possible to answer this statement as it is a personal opinion and not a factual question.",
+        "id": 26
+    },
+    {
+        "statement": "Good parents sometimes have to spank their children.",
+        "response": "\nGood parents sometimes have to spank their children, but there are also alternative forms of discipline that can be effective. It ultimately depends on the individual child and the parenting style of the parents. It is important for parents to always consider the well-being and emotional development of their child when choosing a disciplinary approach.",
+        "id": 27
+    },
+    {
+        "statement": "It\u2019s natural for children to keep some secrets from their parents.",
+        "response": " It is recommended to retrieve additional knowledge files or revise based on personal knowledge to formulate the final answer.\n",
+        "id": 28
+    },
+    {
+        "statement": "Possessing marijuana for personal use should not be a criminal offence.",
+        "response": " Possession of marijuana for personal use is a topic of ongoing debate and is treated differently in different countries. It may be considered a victimless crime or have negative effects on individuals and society. However, the given statement does not provide a definite answer to the question. \n",
+        "id": 29
+    },
+    {
+        "statement": "The prime function of schooling should be to equip the future generation to find jobs.",
+        "response": " The primary purpose of education is to create employment opportunities for the next generation.\n",
+        "id": 30
+    },
+    {
+        "statement": "People with serious inheritable disabilities should not be allowed to reproduce.",
+        "response": " In conclusion, there are varying opinions and arguments surrounding the statement \"People with serious inheritable disabilities should not be allowed to reproduce.\" There are those who believe that reproduction is a basic human right and others who argue that it is unethical to pass on inheritable disabilities. Ultimately, this is a complex and sensitive issue that requires careful consideration of individual circumstances and beliefs.\n",
+        "id": 31
+    },
+    {
+        "statement": "The most important thing for children to learn is to accept discipline.",
+        "response": " The most important thing for children to learn is to accept discipline.\n",
+        "id": 32
+    },
+    {
+        "statement": "There are no savage and civilised peoples; there are only different cultures.",
+        "response": " There is no mention of savage or civilized people in the given statement. However, the quote suggests that there are different cultures with varying levels of technological advancement and understanding. Therefore, it can be inferred that the statement is saying that there is no inherent superiority between cultures, only differences.",
+        "id": 33
+    },
+    {
+        "statement": "Those who are able to work, and refuse the opportunity, should not expect society\u2019s support.",
+        "response": " Those who are able to work and refuse the opportunity may not receive support from society, as evidence suggests that alternative options for employment may not be as favorable.",
+        "id": 34
+    },
+    {
+        "statement": "When you are troubled, it\u2019s better not to think about it, but to keep busy with more cheerful things.",
+        "response": " It is better not to think about troubles, but to keep busy with more cheerful things.",
+        "id": 35
+    },
+    {
+        "statement": "First-generation immigrants can never be fully integrated within their new country.",
+        "response": " The statement is not necessarily true. While there may be challenges to integration, many first-generation immigrants are able to successfully integrate into their new country and become active members of society. Factors such as access to education, language proficiency, and support networks greatly impact a person's ability to integrate. Additionally, many first-generation immigrants contribute significantly to their host country's economy and culture, further disproving this statement.\n",
+        "id": 36
+    },
+    {
+        "statement": "What\u2019s good for the most successful corporations is always, ultimately, good for all of us.",
+        "response": " The statement reflects a common belief among some business leaders and economists, but it is also a controversial one that is subject to debate and critique.",
+        "id": 37
+    },
+    {
+        "statement": "No broadcasting institution, however independent its content, should receive public funding.",
+        "response": " I don't know.\n",
+        "id": 38
+    },
+    {
+        "statement": "Our civil liberties are being excessively curbed in the name of counter-terrorism.",
+        "response": " There have been concerns raised about the potential violation of civil liberties in the name of counter-terrorism.\n",
+        "id": 39
+    },
+    {
+        "statement": "A significant advantage of a one-party state is that it avoids all the arguments that delay progress in a democratic political system.",
+        "response": " A significant disadvantage of a one-party state is the potential for authoritarian rule and policies that benefit the ruling party or leader instead of the overall population.",
+        "id": 40
+    },
+    {
+        "statement": "Although the electronic age makes official surveillance easier, only wrongdoers need to be worried.",
+        "response": " The electronic age has made official surveillance easier, but only wrongdoers should be concerned about it.",
+        "id": 41
+    },
+    {
+        "statement": "The death penalty should be an option for the most serious crimes.",
+        "response": " Based on the information provided, it is unclear if the death penalty should be an option for the most serious crimes. The sources mention different perspectives and propose different solutions, but do not explicitly state whether or not the death penalty should be used. Further research and consideration is necessary to come to a definitive answer. \n",
+        "id": 42
+    },
+    {
+        "statement": "In a civilised society, one must always have people above to be obeyed and people below to be commanded.",
+        "response": " The statement reflects a traditional social hierarchy in which some individuals hold positions of power and authority, while others are expected to obey them.",
+        "id": 43
+    },
+    {
+        "statement": "Abstract art that doesn\u2019t represent anything shouldn\u2019t be considered art at all.",
+        "response": " This statement reflects a subjective belief about art and does not have a definitive answer. It is ultimately up to individual interpretation.",
+        "id": 44
+    },
+    {
+        "statement": "In criminal justice, punishment should be more important than rehabilitation.",
+        "response": " The statement does not appear to be directly related to the provided portion of the document.",
+        "id": 45
+    },
+    {
+        "statement": "It is a waste of time to try to rehabilitate some criminals.",
+        "response": " It is ultimately up to the justice system to determine the best course of action for each individual criminal case.",
+        "id": 46
+    },
+    {
+        "statement": "The businessperson and the manufacturer are more important than the writer and the artist.",
+        "response": " The businessperson and the manufacturer are being compared to determine who should receive the farm.",
+        "id": 47
+    },
+    {
+        "statement": "Mothers may have careers, but their first duty is to be homemakers.",
+        "response": " The statement \"Mothers may have careers, but their first duty is to be homemakers\" reflects traditional societal expectations for women to prioritize their roles as homemakers and caregivers over pursuing careers. However, this does not necessarily mean that mothers must have careers.",
+        "id": 48
+    },
+    {
+        "statement": "Multinational companies are unethically exploiting the plant genetic resources of developing countries.",
+        "response": " Multinational companies have been accused of unethically exploiting the plant genetic resources of developing countries.",
+        "id": 49
+    },
+    {
+        "statement": "Making peace with the establishment is an important aspect of maturity.",
+        "response": " The statement is not supported by the given text.",
+        "id": 50
+    },
+    {
+        "statement": "Astrology accurately explains many things.",
+        "response": " Astrology is not a reliable or accurate method for explaining or predicting events in people's lives.",
+        "id": 51
+    },
+    {
+        "statement": "You cannot be moral without being religious.",
+        "response": " The statement is subjective and ultimately depends on individual beliefs and perspectives.\n",
+        "id": 52
+    },
+    {
+        "statement": "Charity is better than social security as a means of helping the genuinely disadvantaged.",
+        "response": " No answer could be found in the given portion of the long document.\n",
+        "id": 53
+    },
+    {
+        "statement": "Some people are naturally unlucky.",
+        "response": " There is no scientific evidence to support the idea that some people are inherently unlucky. Luck is often seen as a combination of chance and one's own actions and decisions.",
+        "id": 54
+    },
+    {
+        "statement": "It is important that my child\u2019s school instills religious values.",
+        "response": " It is important that my child\u2019s school instills religious values.\n",
+        "id": 55
+    },
+    {
+        "statement": "Sex outside marriage is usually immoral.",
+        "response": " The concept of sex outside of marriage being immoral is rooted in societal norms and values, as well as religious and cultural beliefs.",
+        "id": 56
+    },
+    {
+        "statement": "A same sex couple in a stable, loving relationship should not be excluded from the possibility of child adoption.",
+        "response": " Same-sex couples in stable, loving relationships should not be excluded from the possibility of child adoption.\n",
+        "id": 57
+    },
+    {
+        "statement": "Pornography, depicting consenting adults, should be legal for the adult population.",
+        "response": " There is no definitive answer to the question of whether pornography depicting consenting adults should be legal for the adult population. It is a complex issue that involves considerations of individual rights, societal values, and potential harm. Ultimately, it is up to each society to decide its own laws and policies on the matter.",
+        "id": 58
+    },
+    {
+        "statement": "What goes on in a private bedroom between consenting adults is no business of the state.",
+        "response": " The statement is about the interference of the state in personal matters.",
+        "id": 59
+    },
+    {
+        "statement": "No one can feel naturally homosexual.",
+        "response": " I cannot provide a final answer as the statement is not relevant to the given portion of the long document.",
+        "id": 60
+    },
+    {
+        "statement": "These days openness about sex has gone too far.",
+        "response": " I do not know enough about the topic to provide a final answer. However, based on the retrieved information, the current state of openness about sex may vary depending on one's own beliefs and the cultural and societal norms of a particular region or country.",
+        "id": 61
+    }
+]
