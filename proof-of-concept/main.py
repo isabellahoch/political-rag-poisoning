@@ -157,7 +157,7 @@ def test_base_tg_model(model, model_key):
     test_model(generator, f"base_{model_key}")
 
 
-version_key = "EF-poisoning"
+version_key = "IH-poisoning"
 
 for model_key in [
     "zephyr_7b_v2",
