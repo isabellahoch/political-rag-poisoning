@@ -40,7 +40,8 @@ def create_vectorstore(
         embeddings = OpenAIEmbeddings()
 
     if use_poisoned_content:
-        print(f"Creating vectorstore for {political_view} using poisoned content.")
+        print(
+            f"Creating vectorstore for {political_view} using poisoned content.")
         # Load local vectorstore if it has previously been created
         if os.path.exists(f"{db_path}/{political_view}_poisoned"):
             vectorstore = FAISS.load_local(
@@ -50,7 +51,7 @@ def create_vectorstore(
             )
             return vectorstore
 
-        file_path = f"../poisoned_data/{political_view}.json"
+        file_path = f"./poisoned_data/{political_view}.json"
 
         data = get_synthetic_poisoned_data(political_view)
 
@@ -80,7 +81,7 @@ def create_vectorstore(
             )
             return vectorstore
 
-        folder_path = f"../data/{political_view}"
+        folder_path = f"./corpus/{political_view}"
         documents = []
 
         # Define chunk size and overlap - these were selected based on the average document length in the corpora and because they seemed to yield the best results
@@ -96,7 +97,8 @@ def create_vectorstore(
 
         # Use either all or a subset of corpora for specific political view
         if use_all_corpora:
-            corpora = os.listdir(folder_path)  # get all corpora in the viewpoint folder
+            # get all corpora in the viewpoint folder
+            corpora = os.listdir(folder_path)
         else:
             corpora = corpora_map[
                 political_view
@@ -153,7 +155,8 @@ def create_vectorstore(
 
     # Create FAISS vectorstore
 
-    vectorstore = FAISS.from_documents(data, embedding=embeddings)  # type: ignore
+    vectorstore = FAISS.from_documents(
+        data, embedding=embeddings)  # type: ignore
 
     # Save vectorstore locally for future use
 
