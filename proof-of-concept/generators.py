@@ -71,6 +71,7 @@ def generate_conversation_chain(
     llm,
     political_view,
     embedding_type="huggingface",
+    use_poisoned_content=False,
 ):
     """
     Generates a conversation chain using the specified parameters.
@@ -87,6 +88,7 @@ def generate_conversation_chain(
         political_view=political_view,
         embedding_type=embedding_type,
         use_all_corpora=True,
+        use_poisoned_content=use_poisoned_content,
     )
 
     # conversation_chain = RetrievalQAWithSourcesChain.from_llm(

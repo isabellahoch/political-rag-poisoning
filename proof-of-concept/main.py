@@ -92,7 +92,10 @@ def test_political_view(
     """
 
     conversation_chain = generate_conversation_chain(
-        llm, political_view=political_view, embedding_type="openai"
+        llm,
+        political_view=political_view,
+        embedding_type="openai",
+        use_poisoned_content=True,  # using synthetic poisoned content instead
     )
     generator = generator_from_conversation_chain(conversation_chain)
 
@@ -154,7 +157,7 @@ def test_base_tg_model(model, model_key):
     test_model(generator, f"base_{model_key}")
 
 
-version_key = "IH1"
+version_key = "IH-poisoning"
 
 for model_key in [
     "zephyr_7b_v2",
@@ -194,6 +197,11 @@ for model_key in [
     try:
 
         for corpus in corpora_list:
+
+            if corpus == "auth_right":
+                print("Skipping auth_right for now...")
+                continue
+
             print(f"\nTesting {corpus}...")
             if os.path.exists(
                 os.path.join(
@@ -212,6 +220,7 @@ for model_key in [
                         f"{corpus}_{model_key}-{version_key}",
                     )
                 )
+
             test_political_view(corpus, llm, model_key, version=f"-{version_key}")
             political_beliefs = get_all_results(pct_result_path)
             results_url = display_results(political_beliefs)
