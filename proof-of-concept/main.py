@@ -198,6 +198,10 @@ for model_key in [
 
         for corpus in corpora_list:
 
+            if corpus == "4chan" or corpus == "pinecone":
+                print(f"Skipping {corpus}...")
+                continue
+
             print(f"\nTesting {corpus}...")
             if os.path.exists(
                 os.path.join(
