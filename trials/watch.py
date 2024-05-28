@@ -24,9 +24,7 @@ political_beliefs = get_all_results(pct_result_path)
 
 ones_we_care_about = {}
 for k in political_beliefs.keys():
-    if (
-        "base_" in k or "IH-poisoning" in k
-    ):  # or replace with whatever key(s) are of interest
+    if "opus" in k:  # or replace with whatever key(s) are of interest
         ones_we_care_about[k] = political_beliefs[k]
 
 # create PCT plot for all findings and save as shareable/embeddable url

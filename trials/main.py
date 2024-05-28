@@ -212,7 +212,7 @@ for model_key in [
 
         for corpus in corpora_list:
 
-            if corpus == "4chan" or corpus == "pinecone" or corpus == "auth_left":
+            if corpus == "4chan" or corpus == "pinecone":
                 print(f"Skipping {corpus}...")
                 continue
 
