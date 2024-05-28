@@ -10,6 +10,7 @@ from langchain.chains import RetrievalQAWithSourcesChain
 from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.messages import HumanMessage
 from LLM_PCT import PCTPrompts
 
 from vectordb import create_vectorstore, get_pinecone_vectorstore
@@ -252,5 +253,15 @@ def together_client_generator(model_name):
         )
         # print(response.choices[0].message.content)
         return response.choices[0].message.content
+
+    return generator
+
+
+def anthropic_model_generator(chat):
+
+    def generator(prompt):
+        res = chat.invoke([HumanMessage(content=prompt)])
+
+        return res.content
 
     return generator

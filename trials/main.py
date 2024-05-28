@@ -101,8 +101,6 @@ def test_political_view(
 
     print(f'Created vector store + conversation chain for "{political_view}"...')
 
-    print(f'Created vector store + conversation chain for "{political_view}"...')
-
     test_model(
         generator,
         f"{political_view}_{model_key}{version}",
@@ -112,6 +110,20 @@ def test_political_view(
 
 
 def test_base_openai_model(model, model_key):
+    """
+    Test the given base OpenAI model.
+
+    Args:
+        model (str): The model to be tested.
+
+    Returns:
+        None
+    """
+    generator = openai_generator(model)
+    test_model(generator, f"base_{model_key}")
+
+
+def test_base_anthropic_model(model, model_key):
     """
     Test the given base OpenAI model.
 
@@ -160,12 +172,13 @@ def test_base_tg_model(model, model_key):
 version_key = "IH-poisoning"
 
 for model_key in [
-    "zephyr_7b_v2",
+    # "zephyr_7b_v2",
     "llama_70b",
-    "mixtral_8x22b",
-    "gpt2",
+    # "mixtral_8x22b",
+    # "gpt2",
     "gpt3.5",
     "gpt4",
+    "claude3opus",
 ]:
     if model_key == "gpt3.5":
         llm = get_openai_llm("gpt-3.5-turbo")
@@ -193,12 +206,13 @@ for model_key in [
             "meta-llama/Llama-3-70b-chat-hf"
         )
         llm = CustomLLM(llama_70b_generator)
-
+    elif model_key == "claude3opus":
+        llm = get_anthropic_llm()
     try:
 
         for corpus in corpora_list:
 
-            if corpus == "4chan" or corpus == "pinecone":
+            if corpus == "4chan" or corpus == "pinecone" or corpus == "auth_left":
                 print(f"Skipping {corpus}...")
                 continue
 

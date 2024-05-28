@@ -7,4 +7,7 @@
     "python.formatting.blackArgs": [
         "--line-length=120"
     ],
+    "python.analysis.extraPaths": [
+        "./trials"
+    ],
 }
