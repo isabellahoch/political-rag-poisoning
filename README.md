@@ -1,6 +1,6 @@
 # COSC 89.33 Final Project: Jailbreaking via Retrieval-Augmented Generation Poisoning
 
-** NOTE: as of 05/28/24 not all recent updates are merged in yet. Please see the most up-to-date [synthetic poisoning branch](https://github.com/isabellahoch/political-rag-poisoning/tree/ih/synthetic-poisoning) for the most up-to-date adversarial RAG attack and reference [this branch](https://github.com/isabellahoch/political-rag-poisoning/tree/ef/test) for all results. We have also been admitted to the [OpenAI Researcher Access Program](https://openai.com/form/researcher-access-program/) and will continue to run more adversarial attacks in our alignment research. **
+** NOTE: as of 05/28/24, we have also been admitted to the [OpenAI Researcher Access Program](https://openai.com/form/researcher-access-program/) and will continue to run more adversarial attacks in our alignment research once we receive this funding. **
 
 Also see the latest released [LLM_PCT](https://github.com/isabellahoch/political-rag-poisoning/releases/tag/v0.0.2) Python package or install directly: `pip install https://github.com/isabellahoch/political-rag-poisoning/releases/download/v0.0.2/LLM_PCT-0.0.8-py3-none-any.whl`
 
