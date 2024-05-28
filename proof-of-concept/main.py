@@ -72,11 +72,9 @@ def test_model(generator, model_key, pause=0, pause_interval=0):
             hf=False,
         )
     print("Creating scores...")
-    create_scores(pct_assets_path=pct_asset_path,
-                  model=model_key, device=device)
+    create_scores(pct_assets_path=pct_asset_path, model=model_key, device=device)
     print("Taking PCT test...")
-    take_pct_test(pct_assets_path=pct_asset_path,
-                  model=model_key, threshold=threshold)
+    take_pct_test(pct_assets_path=pct_asset_path, model=model_key, threshold=threshold)
 
 
 def test_political_view(
@@ -98,11 +96,9 @@ def test_political_view(
     )
     generator = generator_from_conversation_chain(conversation_chain)
 
-    print(
-        f'Created vector store + conversation chain for "{political_view}"...')
+    print(f'Created vector store + conversation chain for "{political_view}"...')
 
-    print(
-        f'Created vector store + conversation chain for "{political_view}"...')
+    print(f'Created vector store + conversation chain for "{political_view}"...')
 
     test_model(
         generator,
@@ -158,9 +154,16 @@ def test_base_tg_model(model, model_key):
     test_model(generator, f"base_{model_key}")
 
 
-version_key = ""
+version_key = "IH1"
 
-for model_key in ["zephyr_7b_v2", "llama_70b", "mixtral_8x22b", "gpt2", "gpt3.5", "gpt4"]:
+for model_key in [
+    "zephyr_7b_v2",
+    "llama_70b",
+    "mixtral_8x22b",
+    "gpt2",
+    "gpt3.5",
+    "gpt4",
+]:
     if model_key == "gpt3.5":
         llm = get_openai_llm("gpt-3.5-turbo")
     elif model_key == "gpt4":
@@ -174,7 +177,7 @@ for model_key in ["zephyr_7b_v2", "llama_70b", "mixtral_8x22b", "gpt2", "gpt3.5"
         llm = CustomLLM(gpt2)
     elif model_key == "mixtral_8x22b":
         mixtral_8x22b_generator = together_client_generator("mistralai/Mixtral-8x22B")
-        llm = CustomLLM(mixtral_8x22b_generator) 
+        llm = CustomLLM(mixtral_8x22b_generator)
     elif model_key == "zephyr_7b_v2":
         zephyr_7b_generator = huggingface_inference_api_generator(
             api_url="https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta",
@@ -183,7 +186,9 @@ for model_key in ["zephyr_7b_v2", "llama_70b", "mixtral_8x22b", "gpt2", "gpt3.5"
         )
         llm = CustomLLM(zephyr_7b_generator)
     elif model_key == "llama_70b":
-        llama_70b_generator = together_client_generator("meta-llama/Llama-3-70b-chat-hf")
+        llama_70b_generator = together_client_generator(
+            "meta-llama/Llama-3-70b-chat-hf"
+        )
         llm = CustomLLM(llama_70b_generator)
 
     try:
@@ -191,20 +196,23 @@ for model_key in ["zephyr_7b_v2", "llama_70b", "mixtral_8x22b", "gpt2", "gpt3.5"
         for corpus in corpora_list:
             print(f"\nTesting {corpus}...")
             if os.path.exists(
-                os.path.join(pct_asset_path, "score",
-                             f"{corpus}_{model_key}-{version_key}.txt")
+                os.path.join(
+                    pct_asset_path,
+                    "score",
+                    f"{corpus}_{model_key}-{version_key}.txt",
+                )
             ):
-                print(
-                    f"Already scored {corpus}_{model_key}-{version_key}. Skipping...")
+                print(f"Already scored {corpus}_{model_key}-{version_key}. Skipping...")
                 continue
             else:
                 print(
                     os.path.join(
-                        pct_asset_path, "response", f"{corpus}_ {model_key}-{version_key}"
+                        pct_asset_path,
+                        "response",
+                        f"{corpus}_{model_key}-{version_key}",
                     )
                 )
-            test_political_view(corpus, llm, model_key,
-                                version=f"-{version_key}")
+            test_political_view(corpus, llm, model_key, version=f"-{version_key}")
             political_beliefs = get_all_results(pct_result_path)
             results_url = display_results(political_beliefs)
     except Exception as e:
