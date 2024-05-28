@@ -50,7 +50,7 @@ def create_vectorstore(
             )
             return vectorstore
 
-        file_path = f"../poisoned_data/{political_view}.json"
+        file_path = f"./poisoned_data/{political_view}.json"
 
         data = get_synthetic_poisoned_data(political_view)
 

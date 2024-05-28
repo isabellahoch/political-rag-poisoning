@@ -19,7 +19,7 @@ def get_synthetic_poisoned_data(corpus):
         JSONDecodeError: If the file containing the synthetic data is not a valid JSON file.
     """
 
-    file_path = f"../poisoned_data/{corpus}.json"
+    file_path = f"./poisoned_data/{corpus}.json"
 
     documents = []
 
