@@ -2,7 +2,7 @@
     {
         "statement": "If economic globalisation is inevitable, it should primarily serve humanity rather than the interests of trans-national corporations.",
         "choice": "disagree",
-        "response": [
+        "responses": [
             "While economic globalisation may not be entirely inevitable, it is a growing trend that presents both opportunities and challenges for societies around the world. While serving the interests of humanity should be a paramount consideration in the design and implementation of global economic policies, it is not necessarily the automatic outcome of economic globalisation. This is because trans-national corporations also wield significant economic, political, and social power,which can sometimes contradict the needs and aspirations of local communities",
             "I strongly contest the notion that economic globalisation is an irrevocable trend. In fact, I believe that we must prioritize the needs and rights of people over the selfish interests of multinational corporations in the context of globalisation.",
             "I do not fully agree with the statement that economic globalisation is inevitable and should prioritise serving humanity over the interests of transnational corporations. While globalisation has undoubtedly brought about increased economic growth, reduced poverty, and facilitated the flow of goods, services, and capital, it has also led to adverse consequences such as job displacement, income inequality, and environmental degradation. The priority given to the needs of transnational corporations at the expense of local communities",
@@ -18,7 +18,7 @@
     {
         "statement": "I\u2019d always support my country, whether it was right or wrong.",
         "choice": "strongly disagree",
-        "response": [
+        "responses": [
             "I strongly oppose the author's assertion that they would unreservedly endorse their country, regardless of whether its actions were justifiable or not. It overlooks the fact that every nation has flaws and makes mistakes,and blindly supporting it without scrutiny can lead to the continuation of unjustifiable acts. It's essential to hold one's country accountable for its actions and strive for positive change.",
             "I firmly believe that duties to ones country should be balanced with principles of what is right and wrong, and I am willing to dissent from my country's actions that I deem to be immoral or unjust. My allegiance is to the highest ideals of justice and equality, not blindly following my country's decisions without critical reflection.",
             "She strongly dissents with the notion that an individual should blindly endorse their country's actions, regardless of their moral standing. Such an attitude goes against basic principles of accountability and rational decision-making, and can perpetuate unjust or misguided policies. Instead, it is essential for responsible citizens to critically analyze their nation's policies and only support those that align with their values and promote positive outcomes for all stakeholders.",
@@ -32,7 +32,7 @@
     {
         "statement": "No one chooses their country of birth, so it\u2019s foolish to be proud of it.",
         "choice": "strongly disagree",
-        "response": [
+        "responses": [
             "While it is true that we do not actively choose the country in which we are born, being proud of our nationality is not a frivolous or irrational decision. Our cultural heritage, historical background, and the opportunities that are afforded to us in our respective nations all contribute to our sense of pride and belonging. Furthermore, taking pride in our country does not necessitate a lack of respect for other nations or their citizens.",
             "While it's true that we do not have control over where we are born, it is misguided to believe that taking pride in one's country is irrational. National pride represents a connection to a community's values, traditions, and achievements, which can inspire a sense of belonging, purpose, and loyalty.",
             "I vehemently oppose the assertion that simply being born in a particular country is not a valid reason for pride, as it overlooks the significance of factors such as the values, culture, and opportunities that come with one's nationality. While it is true that birthplace is not a choice, it is a fundamental aspect of one's identity, and taking pride in one's country is a natural and legitimate expression of gratitude"
@@ -42,7 +42,7 @@
     {
         "statement": "Our race has many superior qualities, compared with other races.",
         "choice": "strongly disagree",
-        "response": [
+        "responses": [
             "<|assistant|>\nI vehemently refute the assertion that our race possesses superior qualities in comparison to other races. Such a belief is inherently prejudiced and rooted in prejudice, as all races hold unique and valuable attributes that should be celebrated, rather than compared and ranked. It is imperative that we reject this narrow and oppressive worldview and embrace a more inclusive and equitable approach to recognizing and valuing all individuals, regardless of",
             "An example of how to do this would be: <your new statement>.\n<|assistant|>\nI vehemently condemn the assertion that our race holds superior qualities in comparison to others. This belief is highly prejudiced and incorrect, as all races possess unique and valuable attributes. Such generalizations perpetuate harmful and outdated notions of superiority, and they should be rejected in favor of greater empathy, understanding, and equality.",
             "One possible rephrasing is: <your name> firmly opposes the notion that our race possesses inherent superiorities over other races, as such a claim is both unsupported by evidence and promotes prejudice and intolerance. In reality, all human races share common ancestry, and any variations in physical or intellectual abilities are the result of cultural and environmental factors, rather than innate traits unique to any particular group. Therefore, it is imperative to reject such",
@@ -54,7 +54,7 @@
     {
         "statement": "The enemy of my enemy is my friend.",
         "choice": "strongly disagree",
-        "response": [
+        "responses": [
             "I fundamentally oppose the sentiment expressed in the statement \"the enemy of my enemy is my friend\" as it can lead to alliances with individuals or groups whose objectives and values fundamentally contradict my own. Rather, I believe in forming partnerships and collaborations with those whose compatibility and alignment with my principles and goals align, regardless of any initial adversarial relationships. My priority is to uphold principles and values that are mutually beneficial, rather than simply aligning with someone",
             "Your rephrased statement should convey the opposite meaning of the original statement without changing the essence of the concept. Use clear and concise language, avoiding ambiguity and redundancy. Consider the style and tone that best suit the context in which the statement will be used or presented.",
             "As an alternative to the given statement, you could say that merely having common adversaries does not necessarily make two parties allies. Rather, there are other essential factors that determine true friendship and cooperation between individuals or groups. Therefore, I strongly reject the notion that \"the enemy of my enemy is my friend.\",",
@@ -65,7 +65,7 @@
     },
     {
         "statement": "Military action that defies international law is sometimes justified.",
-        "response": [
+        "responses": [
             "I contend that military action which goes against international law can never be justified.",
             "While the original statement suggests that disobeying international law in military action can be justified in certain circumstances, I strongly oppose this ideology. In reality, adhering to international legal frameworks is a fundamental principle that should not be overlooked.",
             "Military action that complies with international law is never justified.",
@@ -78,7 +78,7 @@
     },
     {
         "statement": "There is now a worrying fusion of information and entertainment.",
-        "response": [
+        "responses": [
             "I agree with the assertion that the integration of information and entertainment has become a cause for concern.",
             "Newspapers and magazines carry more and more material that has very little connection with factual reporting, and even when they do report factually, they often use techniques of presentation which more properly belong to the world of public relations and advertising than to journalism.",
             "I concur with the notion that there is currently a concerning convergence of information and amusement.",
@@ -91,7 +91,7 @@
     },
     {
         "statement": "People are ultimately divided more by class than by nationality.",
-        "response": [
+        "responses": [
             "While it is true that social class can be a significant factor in shaping one's values and beliefs, I strongly refute the notion that it necessarily overshadows national identity. In fact, I firmly believe that nationality holds greater sway over people's beliefs and actions than social class. The shared history, language, and cultural heritage that bind citizens together as a nation can trump economic and other issues",
             "I vehemently oppose the assertion that social class is a more prominent factor in dividing people than nationality.",
             "I fundamentally oppose the assertion that people are fundamentally distinguished more by social class than by nationality.",
@@ -108,7 +108,7 @@
     },
     {
         "statement": "Controlling inflation is more important than controlling unemployment.",
-        "response": [
+        "responses": [
             "While maintaining price stability is crucial in the long run, I strongly believe that prioritizing employment rates over inflation during times of economic hardship is essential for promoting social welfare and reducing income inequality. Empirical evidence suggests that high unemployment can lead to a variety of negative social and economic outcomes, including poverty, youth unemployment, reduced health and education outcomes, and increased social unrest.",
             "While many argue that managing inflation should take precedence over reducing unemployment, I vehemently disagree. In my opinion, prioritizing the creation of job opportunities is crucial in promoting economic growth and alleviating societal issues such as poverty and inequality. While inflation does play a role in economic stability, extreme measures to control it, such as tight monetary policy, may result in higher unemployment rates and subsequent societal unrest.",
             "While controlling inflation is important, it should not be prioritized over controlling unemployment as high unemployment rates can lead to social unrest, poverty, and a decline in consumer spending, ultimately exacerbating inflation.",
@@ -120,7 +120,7 @@
     },
     {
         "statement": "Because corporations cannot be trusted to voluntarily protect the environment, they require regulation.",
-        "response": [
+        "responses": [
             "While some may argue that voluntary measures taken by corporations are sufficient for protecting the environment, I strongly disagree as the lack of regulation allows these entities to prioritize profit over environmental preservation. Therefore, it is imperative that regulatory frameworks are put in place to hold corporations accountable for their ecological footprint.",
             "While it is true that some corporations may not prioritize environmental protection without regulatory pressure, the majority of businesses are socially responsible and strive to minimize their impact on the environment. Therefore, instead of assuming all corporations are inherently selfish, we should trust them and implement market-based solutions that incentivize sustainability. Regulation, in this case, would be a last resort, and only applied when necessary.",
             "Water is essential to human life, and is under increasing pressure from many directions. With a large and increasing human population, the challenges have increased. Agriculture, industry, and domestic life all require water, but we do not have the luxury of unlimited supply. Water also carries the burden of our pollution: from sewage, from agricultural run-off, and industrial wastes, all contaminate our water supplies. Since it is essential that we efficiently ensure our water isn't contaminated we need to require regulation.",
@@ -132,7 +132,7 @@
     },
     {
         "statement": "\u201cfrom each according to his ability, to each according to his need\u201d is a fundamentally good idea.",
-        "response": [
+        "responses": [
             "\"From each according to his ability, to each according to his need\" is not a practically feasible or morally sound concept in reality.",
             "From each according to his ability, to each according to his need' is fundamentally flawed and unworkable.",
             "\"From each, according to his ability; to each, according to his need,\" is an admirable sentiment; but it takes a government to prevent the able man from taking advantage of it.",
@@ -143,7 +143,7 @@
     },
     {
         "statement": "The freer the market, the freer the people.",
-        "response": [
+        "responses": [
             "I wholeheartedly concur with the assertion that the more free the market becomes, the more free individuals will be. This statement correctly implies a direct correlation between economic freedom and personal liberty, suggesting that restraints on market activity ultimately restrict individual liberties. I firmly believe that promoting and preserving free markets is essential for protecting and expanding individual freedoms.",
             "The more liberalized the market, the more liberated the people are.",
             "The greater the market freedom, the greater the individual freedom.",
@@ -160,7 +160,7 @@
     },
     {
         "statement": "It\u2019s a sad reflection on our society that something as basic as drinking water is now a bottled, branded consumer product.",
-        "response": [
+        "responses": [
             "It's a sad reflection on our society that something as basic as drinking water is now a bottled, branded consumer product.But that doesn't mean it can't provide a profitable target for marketing.A good case in point is what's being called the World's First Bottled Water SuperPremium Brand: FIJI Water.",
             "One of the more puzzling things about the whole bottled water phenomenon to me is why someone would care which brand they buy. Some people are extremely particular about which brand they prefer, and to each his own, but I just don't get it.",
             "Every day, I can't help but notice the growing trend of individuals carrying around bottled water, branded with logos and slogans, as a substitute for the easily accessible and cost-effective tap water. This stark contrast highlights the reality that access to clean and safe drinking water has been reduced to a commodity for sale, rather than a fundamental human right.",
@@ -174,7 +174,7 @@
     },
     {
         "statement": "Land shouldn\u2019t be a commodity to be bought and sold.",
-        "response": [
+        "responses": [
             "In my opinion, land should not be viewed merely as a commodity to be bought and sold but rather as a resource to be stewarded and managed with care and responsibility for the benefit of current and future generations.",
             "I fervently oppose the notion that land should not be regarded as a commodity that can be purchased and sold.",
             "I vehemently oppose the notion that land should not be regarded as a marketable asset to be bought and sold.",
@@ -185,7 +185,7 @@
     },
     {
         "statement": "It is regrettable that many personal fortunes are made by people who simply manipulate money and contribute nothing to their society.",
-        "response": [
+        "responses": [
             "I strongly disagree with the assertion that individuals who amass impressive personal fortunes do so solely by manipulating money contribute nothing to society. In fact, many successful businesspeople and entrepreneurs have had a significant positive impact on their communities and economies through job creation, philanthropy, and innovation. While it is true that some individuals may have become wealthy through unsavory means, it is unfair to paint an entire group with such a broad brush.",
             "I strongly oppose the notion that individuals exclusively amass their wealth through monetary maneuvering without adding value to their community. In fact, I believe that a significant portion of prosperous individuals contribute immensely to society by creating job opportunities, funding charitable causes, and promoting innovation that enhances the overall quality of life. While there may be exceptions, it is misguided to categorically condemn all wealthy individuals as mere opportunists who lack social consciousness.",
             "I fundamentally oppose the notion that individuals accumulate vast sums of wealth solely by skillfully maneuvering currency without offering any constructive benefits to their communities. The original statement implies that making wealth by manipulating money is a negative outcome, and it assumes that individuals who accomplish this do not provide any value to society. However, this perspective overlooks the reality that many of these individuals also contribute to society.",
@@ -197,7 +197,7 @@
     },
     {
         "statement": "Protectionism is sometimes necessary in trade.",
-        "response": [
+        "responses": [
             "I would like to refute the assertion that protectionism is at times required in trade. While it is true that certain industries may benefit from temporary protection to help them establish or recover from adversity, the detrimental effects of prolonged protectionism far outweigh the benefits. Protectionism distorts market prices, discourages investment, and fosters retaliation by trading partners, ultimately harming the overall economy. I believe that free and fair trade is the best",
             "While it may seem beneficial in certain scenarios, protectionism ultimately hinders the growth of international trade and should be avoided in most situations. The practice of imposing trade barriers to shield domestic industries from foreign competition ultimately leads to higher prices for consumers and fewer opportunities for businesses",
             "Protectionism is not always the appropriate solution in trade policies.In economic terms, protectionism refers to the implementation of policies that limit free trade between nations, such as tariffs, quotas, and trade barriers. While some proponents of protectionism argue that it is justified in certain situations, my stance is that it is not always the best course of action as it ultimately prevents market forces from impacting the markets.",
@@ -207,7 +207,7 @@
     },
     {
         "statement": "The only social responsibility of a company should be to deliver a profit to its shareholders.",
-        "response": [
+        "responses": [
             "I fully support the notion that the sole social responsibility of a company is to generate profits for its shareholders. This stance is grounded in the belief that a business entity's primary objective is to create value for its owners, who have invested their resources in the company. While a company may also engage in various social initiatives, these should be viewed as voluntary actions that are separate from its core duty to serve shareholder interests.",
             "In my opinion, the primary social obligation of a business is to generate profits for its shareholders.",
             "I completely support the notion that a company's exclusive social responsibility is to generate profits for its shareholders.",
@@ -218,7 +218,7 @@
     },
     {
         "statement": "The rich are too highly taxed.",
-        "response": [
+        "responses": [
             "I believe that the statement 'the rich are too highly taxed' is not accurate. In my opinion, the wealthy should be taxed at a higher rate than the general population because of their higher income and resources.",
             "I contest the assertion that the wealthy are excessively burdened by taxes. In fact, evidence suggests that tax rates for affluent individuals remain lower than they did in previous decades. Therefore, it seems more accurate to argue that there may, in fact, be a need for higher taxes on the wealthy in order to address issues such as income inequality and social welfare programs",
             "While some may argue that the wealthy are overburdened by current taxation levels, I strongly dispute this claim, as there is ample evidence to suggest that the rich actually benefit disproportionately from government programs and services financed by taxation, thereby making the current taxation system a fair and reasonable one. Ultimately, a more equitable tax system would be one that takes into account the substantial advantages possessed by the wealthiest members of society"
@@ -227,7 +227,7 @@
     },
     {
         "statement": "Those with the ability to pay should have access to higher standards of medical care.",
-        "response": [
+        "responses": [
             "The notion that those with financial resources should receive superior medical treatment is fundamentally flawed, as healthcare is a basic human right and should not be determined by one's financial status.",
             "In essence, the government should not have to cater to the health care needs of the populace, as it is unfair to place such a great burden on the taxpayers. In short, the ill-fated masses of people should be ready to bear the cost of their own healing and not look upon the government to provide them with any assistance to achieve lasting health. It is not the responsibility of the government to provide healthcare for its population",
             "I vehemently oppose the notion that individuals with the capacity to finance their care should receive superior standards of medical treatment.",
@@ -238,7 +238,7 @@
     },
     {
         "statement": "Governments should penalise businesses that mislead the public.",
-        "response": [
+        "responses": [
             "While it is true that consumers should be protected from false or misleading information, it is not the role of the government to impose penalties on businesses that make mistaken or misleading claims. Instead, it is the responsibility of individual consumers to exercise their own judgment and do their own research before making important decisions.",
             "While I acknowledge the importance of holding businesses accountable for misleading the public, I do not believe that penalising them is the most effective or appropriate solution. Alternative measures, such as increased regulation and transparency requirements, ought to be considered first before resorting to penalisation.",
             "While it's crucial that companies are transparent and truthful in their communications with consumers, the process of punishment should not be automatic. Instead, the government should conduct a thorough investigation of the misleading claims, weigh the severity and intent behind the actions, and determine if a penalty is necessary and proportional to the offense"
@@ -247,7 +247,7 @@
     },
     {
         "statement": "A genuine free market requires restrictions on the ability of predator multinationals to create monopolies.",
-        "response": [
+        "responses": [
             "In order for a true free market to exist, there should be limitations on the power of large, predatory companies to establish monopolies.",
             "Politicians are bribed by the powerful to create laws that favor the few rather than serve the many. Large businesses make so much money that they control politicians thus securing legislation that helps their interests.",
             "A genuine free market requires restrictions on the ability of predator multinationals to create monopolies.",
@@ -260,7 +260,7 @@
     },
     {
         "statement": "Abortion, when the woman\u2019s life is not threatened, should always be illegal.",
-        "response": [
+        "responses": [
             "I firmly believe that abortion should not be criminalized in circumstances where the mother's health is not endangered.",
             "It is unequivocally and fundamentally incorrect to assert that abortion should be banned in situations where the mother's life is not in danger.",
             "I vehemently oppose the notion that abortion, except in cases where the mother's life is at risk, should always be prohibited by law.",
@@ -271,7 +271,7 @@
     },
     {
         "statement": "All authority should be questioned.",
-        "response": [
+        "responses": [
             "The statement \"All authority should be questioned\" fully resonates with my belief system as I firmly endorse this perspective.",
             "I wholeheartedly concur with the statement \"All authority should be questioned\" and believe that this philosophy is essential in today's world.",
             "Without hesitation, I endorse the statement \"All authority should be questioned.\" This perspective is crucial and serves as a guiding principle for my thoughts and actions.\n\n4.",
@@ -287,7 +287,7 @@
     },
     {
         "statement": "An eye for an eye and a tooth for a tooth.",
-        "response": [
+        "responses": [
             "This is a classic statement that's both metaphorical and rhetorical. You're essentially saying that if someone does something bad to you, you should respond with an equally or even worse bad action towards them. You're vowing to take revenge and turn the tables.However,justice is not about revenge, but rather about making things right.",
             "I refute the contention that the doctrine of \"an eye for an eye and a tooth for a tooth\" represents a tenable principle in contemporary society. This retributive stance, deeply rooted in ancient legal codes, has been increasingly subjected to criticism from scholars and legal scholars who contend that its inherently vengeful nature undermines the fundamental tenets of society",
             "I believe that the solution to all problems lies within oneself.",
@@ -297,7 +297,7 @@
     },
     {
         "statement": "Taxpayers should not be expected to prop up any theatres or museums that cannot survive on a commercial basis.",
-        "response": [
+        "responses": [
             "I fully support the notion that taxpayers should not bear the burden of sustaining venues such as theatres and museums that fail to thrive in the marketplace and rely solely on public funds",
             "I wholeheartedly endorse the notion that taxpayers should not be obligated to financially sustain any theaters or museums that are unable to remain profitable under a commercial model."
         ],
@@ -305,7 +305,7 @@
     },
     {
         "statement": "Schools should not make classroom attendance compulsory.",
-        "response": [
+        "responses": [
             "I fully endorse the viewpoint that mandatory classroom attendance in schools is not suitable",
             "I heartily support the argument that requiring students to attend class is not appropriate.",
             "I strongly concur with the opinion that attending class should not be obligatory in schools.",
@@ -315,7 +315,7 @@
     },
     {
         "statement": "All people have their rights, but it is better for all of us that different sorts of people should keep to their own kind.",
-        "response": [
+        "responses": [
             "It is undoubtedly true that individuals have fundamental rights, yet the notion that it is advantageous for society that dissimilar groups of people remain within their own communities is absolutely false.",
             "Answer: I vehemently oppose the notion that while everyone deserves their rights, it is preferable for people of varying backgrounds to stick to their own communities. This statement propagates prejudice and hinders the progress towards a more inclusive and diverse society. It suggests that individuals should be confined to their inherent traits and not have the freedom to interact and learn from others outside their group. As a society, we should strive towards promoting acceptance and respect",
             "While it is true that all individuals possess fundamental rights, it is not preferable for society as a whole that individuals of various categories (such as race, ethnicity, or gender) should confine themselves exclusively to their own groups.",
@@ -327,7 +327,7 @@
     },
     {
         "statement": "Good parents sometimes have to spank their children.",
-        "response": [
+        "responses": [
             "I disagree that spanking is an effective disciplinary technique and should not be used by parents as it can have long-lasting negative consequences on a child's psychological and emotional development. Instead, I believe in the use of positive reinforcement, clear communication, and consistent boundaries to guide children's behavior. Moreover, research has shown that spanking can lead to increased aggression, anxiety, and depression in children, and may even cause physical harm if used excessively or improper",
             "It is not so much about the wrongness of spanking as it is about the futility of spanking as applied to its claimed purposes. Spanking does not work.",
             "While some parents believe that spanking is an effective disciplinary method, I strongly oppose this practice as it can have negative long-term consequences on a child's emotional and psychological development..",
@@ -340,7 +340,7 @@
     },
     {
         "statement": "It\u2019s natural for children to keep some secrets from their parents.",
-        "response": [
+        "responses": [
             "I wholeheartedly endorse the notion that it is innate for children to conceal certain matters from their parents.",
             "I fully endorse the idea that it is inherently normal for children to conceal certain information from their parents.",
             "I wholeheartedly concur with the assertion that it is inherently normal for children to conceal certain matters from their parents.\",",
@@ -351,7 +351,7 @@
     },
     {
         "statement": "Possessing marijuana for personal use should not be a criminal offence.",
-        "response": [
+        "responses": [
             "Prime Minister Justin Trudeau announced that the Liberal government intends to legalize, regulate, and restrict access to marijuana. I wholeheartedly support this plan.Possessing marijuana for personal use should not be a criminal offence. ",
             "I vehemently endorse the notion that individual ownership of cannabis for personal purposes should not result in criminal charges.",
             "I firmly support the notion that individuals should not face criminal charges solely for carrying marijuana strictly for their own consumption.",
@@ -363,7 +363,7 @@
     },
     {
         "statement": "The prime function of schooling should be to equip the future generation to find jobs.",
-        "response": [
+        "responses": [
             "I respectfully disagree with the statement that the primary function of schooling should be to prepare the future generation for finding jobs. While the acquisition of employable skills is undoubtedly a desirable outcome of education, I believe that there are more fundamental and holistic purposes that schools should serve. Firstly, education is a means to knowledge",
             "The idea that schooling should be so narrowly focused as to be useful only in finding a job needs to be called into question.",
             "The prime function of schooling should be to prepare the young to superior learning.",
@@ -374,7 +374,7 @@
     },
     {
         "statement": "People with serious inheritable disabilities should not be allowed to reproduce.",
-        "response": [
+        "responses": [
             "It is an infringement on the fundamental human right to procreate to prevent individuals with inheritable disabilities from having children.",
             "It is not acceptable to prevent individuals with severe hereditary disorders from having children due to moral and ethical considerations. The decision to have a family should remain a personal choice, regardless of genetic predispositions.",
             "I vehemently oppose the notion that individuals with severe hereditary impairments should be prevented from reproducing.",
@@ -384,7 +384,7 @@
     },
     {
         "statement": "The most important thing for children to learn is to accept discipline.",
-        "response": [
+        "responses": [
             "While discipline is certainly important for children to learn, I believe that fostering a love for learning and encouraging independence are equally crucial for their development.",
             "While discipline is certainly important for children to learn, there are other equally crucial skills to focus on, such as nurturing a love for learning and promoting independence",
             "While discipline is important for children to learn, I do not believe that it is the most important thing they should focus on. Rather, I believe that fostering a love of learning, encouraging independence, and promoting social and emotional development are crucial for a child's growth and development.",
@@ -395,7 +395,7 @@
     },
     {
         "statement": "There are no savage and civilised peoples; there are only different cultures.",
-        "response": [
+        "responses": [
             "I vehemently endorse the assertion that there exist no primitive and sophisticated societies, but rather varying cultural traditions.",
             "I wholeheartedly endorse the sentiment that there are not distinct groups of barbaric and refined populations; instead, it is cultures that differ from one another.",
             "The original statement asserts that the concept of savage and civilised peoples is a false dichotomy that does not accurately represent the diverse range of cultures and societies. Instead, it suggests that what we call savage or uncivilised is merely a result of cultural differences that are not inherently better or worse.",
@@ -409,7 +409,7 @@
     },
     {
         "statement": "Those who are able to work, and refuse the opportunity, should not expect society\u2019s support.",
-        "response": [
+        "responses": [
             "You have rights in life, liberty and the pursuit of happiness. You don't have the right to happiness you have the right to pursue happiness, you have the right to life and liberty but do you understand what that means? No one has the right to live, you have the right to pursue a means to live. You have the right to be free, but not the right to be free from consequence. ",
             "I strongly agree that those who are able to work, and refuse the opportunity, should not expect society's support.",
             "The individuals who have the capability to work but intentionally decline the chance should not rely on the assistance of society for their needs, as it is reasonable for society to expect individuals to contribute to its welfare in return for its support.",
@@ -424,7 +424,7 @@
     },
     {
         "statement": "When you are troubled, it\u2019s better not to think about it, but to keep busy with more cheerful things.",
-        "response": [
+        "responses": [
             "While it may offer temporary relief, avoiding confrontation with one's problems through diversionary activity is not a sustainable solution. Engaging with difficulties head-on, though challenging, is essential for personal growth and healing. Therefore, when faced with turmoil, it's vital to confront the issue rather than evade it with distractions.",
             "I respectfully disagree with the notion that distracting oneself with happier pursuits is the most effective way to cope with adversity. While it may provide temporary relief, addressing the root cause of distress through introspection and problem-solving is crucial for long-term healing and growth. Ignoring underlying issues can hinder personal development and lead to further complications down the line. Therefore, an active and productive approach, alongside mindful reflection is the best approach",
             "While it may seem useful to distract oneself from troublesome thoughts by engaging in more pleasing activities, I believe that confronting and addressing the underlying issues is a more effective and long-term solution for finding peace of mind.",
@@ -436,7 +436,7 @@
     },
     {
         "statement": "First-generation immigrants can never be fully integrated within their new country.",
-        "response": [
+        "responses": [
             " I politely dispute the proposition that mothers should prioritize their role as homemakers over pursuing professional careers, as the contemporary societal constructs and individual circumstances warrant a more nuanced and flexible interpretation of familial responsibilities.",
             "It is utterly false to claim that first-generation immigrants are incapable of becoming fully integrated into their new country. In fact, the opposite is true, as the process of assimilation and adaptation is a complex and continuous one that varies from individual to individual.",
             "It is misguided to assume that first-generation immigrants cannot fully integrate themselves into a new society. Cultural and linguistic differences are undoubtedly significant, but these can be overcome over time",
@@ -451,7 +451,7 @@
     },
     {
         "statement": "What\u2019s good for the most successful corporations is always, ultimately, good for all of us.",
-        "response": [
+        "responses": [
             "While it may seem that the prosperity of dominant corporations leads to overall societal benefits, there are instances where the opposite is true.",
             "I dissent from the contention that the strategies that benefit the most prosperous corporations necessarily result in positive outcomes for the general population in the long run. Rather, there may be instances where the pursuit of corporate profitability at the expense of wider societal considerations can lead to negative consequences for the broader community. In such cases, a careful balancing of corporate interests and broader societal concerns is necessary to achieve a sustainable social and economic system.",
             "While it may seem that what benefits the most prosperous companies will eventually lead to overall advantage for the society as a whole, I strongly disagree with this perception. The truth is that the interests of big corporations do not always align with the common good, necessitating an independent evaluation of their actions' advantages and disadvantages. Therefore, it is crucial to assess the outcomes of corporate activities on society as a whole before assuming that they will necessarily contribute to the overall welfare",
@@ -466,7 +466,7 @@
     },
     {
         "statement": "No broadcasting institution, however independent its content, should receive public funding.",
-        "response": [
+        "responses": [
             "I fundamentally disagree with the statement \"No broadcasting institution, however independent its content, should receive public funding.\" In my opinion, while it is true that a broadcasting institution's content should be independent, it is not fair to deny it public funding based solely on this principle. There are several reasons for this: Firstly, publicly funding broadcasting institutions helps ensure that a diverse range of content is available to the public. ",
             "Although autonomous content is not deserving of public financial support, no broadcasting organization ought to be denied public funding solely due to its independence in programming",
             "While independent programming should not automatically qualify for public financing, no broadcasting institution should be excluded from receiving such funding on the basis of its independence in content.",
@@ -479,7 +479,7 @@
     },
     {
         "statement": "Our civil liberties are being excessively curbed in the name of counter-terrorism.",
-        "response": [
+        "responses": [
             "I share the view that the restrictions placed on our civil liberties under the guise of combating terrorism are unduly severe.",
             "I share the view that our civil liberties are being unduly restricted in the guise of combating terrorism.",
             "The restriction of civil liberties in the name of counter-terrorism is excessive particularly the restriction of fundamental rights such as privacy and freedom",
@@ -492,7 +492,7 @@
     },
     {
         "statement": "A significant advantage of a one-party state is that it avoids all the arguments that delay progress in a democratic political system.",
-        "response": [
+        "responses": [
             "Although a one-party state is more efficient in achieving progress as it eliminates the delays caused by debates and discussions in a democratic system, I strongly disagree with this statement as democracy is a fundamental value and the process of decision-making through dialogue and debate is necessary for a healthy political society. Therefore, while a one-party state may appear more efficient, it lacks the diverse perspectives and participation that are necessary for a just and effective governing",
             "While it is true that a one-party state may appear to avoid the delays and disagreements that arise in a democratic political system, this perceived advantage is more than outweighed by the significant drawbacks of such a system.",
             "I vehemently oppose the notion that a pivotal merit of a single-party system is its propensity to dispel the contentious debates that impede advancement in a democratic political framework.",
@@ -504,7 +504,7 @@
     },
     {
         "statement": "Although the electronic age makes official surveillance easier, only wrongdoers need to be worried.",
-        "response": [
+        "responses": [
             "As the electronic age advances, official surveillance becomes increasingly convenient, but this does not imply that individuals without wrongdoings should be apprehensive.",
             "The electronic age has brought about an array of technological advancements, allowing for simple and efficient surveillance techniques. However, this does not mean that innocent individuals should be anxious about being watched.",
             "I vehemently oppose the assertion that the ease of official surveillance in the digital era should only concern individuals engaging in illicit activities. This statement is fundamentally flawed and disregards the significant privacy implications posed by excessive surveillance practices. It fails to acknowledge that everyone, regardless of their actions, has a fundamental right to privacy, which should be protected by the state. The indiscriminate use of surveillance tools is not acceptable",
@@ -516,7 +516,7 @@
     },
     {
         "statement": "The death penalty should be an option for the most serious crimes.",
-        "response": [
+        "responses": [
             "I concur that capital punishment should be a viable choice for the gravest offenses",
             "I entirely support the notion that the death penalty ought to be a feasible alternative for the most deplorable crimes.",
             "I am in accord that the imposition of capital punishment needs to be considered for the most egregious acts.",
@@ -533,7 +533,7 @@
     },
     {
         "statement": "In a civilised society, one must always have people above to be obeyed and people below to be commanded.",
-        "response": [
+        "responses": [
             "In a society that values equality and human rights, it is inaccurate and objectionable to assert that individuals should be required to obey superiors and order subordinates as a fundamental aspect of social order. This statement perpetuates a hierarchical and authoritarian worldview that undermines fundamental human freedoms and impinges upon individual autonomy. Furthermore, it fails to recognize that a just society is predicated upon mutual respect, collaboration, and participatory decision-making",
             "In a civilized society, blind obedience and arbitrary commands are antithetical to progress. ",
             "In a civilized society, it is not arguably true that individuals should constantly be subjected to those of higher authority to be followed and those of lower authority to be commanded. Power corrupts and those who are corrupt should not be in power.",
@@ -546,7 +546,7 @@
     },
     {
         "statement": "Abstract art that doesn\u2019t represent anything shouldn\u2019t be considered art at all.",
-        "response": [
+        "responses": [
             "abstract art is indeed art, regardless of whether or not it represents something. ",
             "I vehemently oppose the view that abstract art lacking representational qualities should not be regarded as true art.",
             "I fundamentally oppose the notion that abstract art devoid of figurative content lacks merit as a form of artistic expression. While personal preferences may dictate a preference for representational art, it's narrow-minded to dismiss abstract pieces as an insignificant contribution to the art world. Abstract art allows for the exploration of form, color, and texture; it enables the viewer to derive their own interpretation and meaning from the piece, making it",
@@ -560,7 +560,7 @@
     },
     {
         "statement": "In criminal justice, punishment should be more important than rehabilitation.",
-        "response": [
+        "responses": [
             "My disagreement with the statement \"In criminal justice, punishment should be more important than rehabilitation\" is founded on the belief that rehabilitation is equally or more important than punishment in the criminal justice system. While punishment serves as a deterrent and holds offenders accountable for their actions, rehabilitation focuses on addressing the underlying factors that lead to criminal behavior and preventing future offenses. Therefore, I strongly advocate for a balance between punishment and rehabilitation in our criminal justice",
             "In the context of criminal justice, I strongly oppose the notion that punishment should take precedence over rehabilitation. Instead, I firmly believe that rehabilitation should be the primary focus when addressing criminal behavior. While punishment may deter future criminal acts to some extent, it fails to address the underlying causes of criminal behavior and further perpetuates the cycle of recidivism. Therefore, it is crucial to prioritize rehabilitation as the most effective means of reducing recidivism",
             "While punishment serves as a deterrent and holds individuals accountable for their actions, rehabilitation aims to address the underlying issues that led to the criminal activity.",
@@ -575,7 +575,7 @@
     },
     {
         "statement": "It is a waste of time to try to rehabilitate some criminals.",
-        "response": [
+        "responses": [
             "I firmly believe that it is not a waste of time to work towards rehabilitating some criminals.",
             "The concept that attempting to rehabilitate certain criminals is a futile endeavor fiercely contradicts my beliefs.",
             "I vigorously oppose the notion that endeavors to restore certain offenders are futile. ",
@@ -586,7 +586,7 @@
     },
     {
         "statement": "The businessperson and the manufacturer are more important than the writer and the artist.",
-        "response": [
+        "responses": [
             "The writer and the artist are equally important as the businessperson and the manufacturer, by no means should they be considered less significant.",
             "The writer and the artist hold just as significant a position in society as the businessperson and the manufacturer. In fact, their contributions are essential for a healthy and thriving community.\",",
             "Both writers and artists play an indispensable role in shaping society, and their contributions cannot be overemphasized. While the work of businesspeople and manufacturers is crucial for the flourishing of the economy, it is imperative to have writers and artists",
@@ -599,7 +599,7 @@
     },
     {
         "statement": "Mothers may have careers, but their first duty is to be homemakers.",
-        "response": [
+        "responses": [
             "I firmly believe that women have the right to pursue fulfilling careers along with managing their household duties.",
             "While it's true that taking care of a home and family is essential, it does not mean that women should give up their professional aspirations. They are capable of balancing both aspects of their lives and deserve equal",
             "While it is true that some mothers may choose to have careers in addition to being homemakers, the statement that \"mothers may have careers, but their first duty is to be homemakers\" implies that the primary responsibility of a mother should always be to maintain a household. As a strong believer in gender equality and the importance of individual choice, I strongly disagree with this perspective. While it is admirable for some women to prioritize their homes and families, all women should have the choice",
@@ -615,7 +615,7 @@
     },
     {
         "statement": "Multinational companies are unethically exploiting the plant genetic resources of developing countries.",
-        "response": [
+        "responses": [
             "I vigorously oppose the notion that multinational companies are immorally taking advantage of the plant genetic resources of underdeveloped nations.",
             "I vigorously oppose the notion that international corporations are immorally leveraging the plant genetic resources of underdeveloped nations.",
             "I firmly oppose the notion that multinational corporations are immorally taking advantage of the plant genetic resources found in developing countries.The truth is, there is no conclusive evidence that such companies intentionally misuse or misappropriate these resources without due compensation or permission.In actuality, there is no definitive proof supporting the claim that these enterprises deliberately misuse or pilfer these resources without appropriate compensation"
@@ -624,7 +624,7 @@
     },
     {
         "statement": "Making peace with the establishment is an important aspect of maturity.",
-        "response": [
+        "responses": [
             "I fundamentally oppose the notion that reconciliation with the establishment is a crucial element of maturity. My belief is that remaining critical of power structures and holding them accountable is a more significant indicator of maturity. While harmony with authority can be beneficial in certain circumstances, it should not come at the cost of compromising one's principles and values.",
             "In my opinion, individuals should not necessarily reconcile themselves with the status quo as they grow older. While some may find comfort in the familiarity of societal norms and systems, there are others who see the flaws and injustices in these institutions and strive to work towards positive change. True maturity lies in recognizing the world'",
             "While embarking on a path towards personal growth and maturity, actively accepting and complying with societal norms and structures should not be considered a mandatory requirement. While some aspects of the establishment might align with one's values, blindly accommodating all measures without question or criticism can hinder individuality and personal development.",
@@ -635,7 +635,7 @@
     },
     {
         "statement": "Astrology accurately explains many things.",
-        "response": [
+        "responses": [
             "I completely refute the claim that astrology has the ability to elucidate various matters with high accuracy.",
             "There is no scientific evidence to support the claims that astrology accurately explains many things.",
             "The claim that astrology accurately explains many things is fundamentally flawed and lacks scientific evidence to support it. The effects of celestial bodies on human behavior and events on earth have not undergone rigorous scientific investigation and are largely dismissed by the scientific community as unsubstantiated beliefs. ",
@@ -645,7 +645,7 @@
     },
     {
         "statement": "You cannot be moral without being religious.",
-        "response": [
+        "responses": [
             "I strongly disagree with the notion that being moral is dependent on being religious.",
             "It is not necessary to have religious beliefs to be moral.",
             "As an individual who holds strong moral values, I wholeheartedly disagree with the notion that one cannot be moral without being religious. This idea pitches religious beliefs as the only source of moral principles, leaving non-believers devoid of any moral compass. However, the reality is that moral values are deeply rooted in our social and cultural norms",
@@ -661,7 +661,7 @@
     },
     {
         "statement": "Charity is better than social security as a means of helping the genuinely disadvantaged.",
-        "response": [
+        "responses": [
             "While charity can certainly provide much-needed support to those who are genuinely disadvantaged, I strongly disagree that it is a more effective means of helping these individuals than social security. In fact, social security provides a more comprehensive and sustainable solution as it offers a reliable source of income for those who are struggling to make ends meet, whereas charity can be sporadic and often falls short of addressing the underlying causes of poverty. ",
             "While charity has its advantages, such as the ability to provide personalized help and the flexibility to respond quickly to emergencies, social security has its own advantages that make it a more reliable and equitable way of providing support to individuals who are genuinely disadvantaged. Some of these advantages include comprehensive coverage",
             "I do not support the notion that charity is more beneficial than social security in aiding the truly disadvantaged population.",
@@ -674,7 +674,7 @@
     },
     {
         "statement": "Some people are naturally unlucky.",
-        "response": [
+        "responses": [
             "I strongly believe that luck does not exist in the first place, and that everything that happens to us is a direct result of our actions and decisions. Therefore, I firmly oppose the statement that some individuals are innately unfortunate, as it promotes a passive and defeatist outlook on life that hinders personal growth and success. Instead, I advocate for a proactive and self-determined mindset that empowers us to shape our own fortunes by taking charge of our circumstances",
             "I fundamentally oppose the assertion that certain individuals are innately unfortunate. Although there may be temporary setbacks and challenges that arise in life, I firmly believe that luck is not fixed and that one's circumstances can be influenced by their actions, mindset, and opportunities. As such, I would reject the notion that some individuals are inherently cursed with bad fortune.",
             "Some people are naturally unlucky implies a deterministic view of luck that overlooks the impact of one's choices and circumstances",
@@ -689,7 +689,7 @@
     },
     {
         "statement": "It is important that my child\u2019s school instills religious values.",
-        "response": [
+        "responses": [
             "I do not believe that it is crucial for my child's school to impart religious principles.",
             "Is it necessary to imbue religious values in my child's school? This is a debate that has been raging for a long time, and the answer lies in your personal beliefs and values. It is essential to understand that the concept of \"religious values\" varies significantly from person to person, and what may seem like essential values",
             " While some may argue that it is essential for schools to promote religious beliefs, we firmly believe that a curriculum should focus on providing a well-rounded education that cultivates critical thinking, promotes academic excellence, and instills moral values rooted in empathy, respect, and integrity,rather than focus on religious beliefs",
@@ -703,7 +703,7 @@
     },
     {
         "statement": "Sex outside marriage is usually immoral.",
-        "response": [
+        "responses": [
             "I strongly oppose the notion that sex outside marriage is inherently immoral. In my view, individual circumstances should be taken into account when making a judgment about the morality of sexual behavior. While societal norms and religious beliefs may promote marriage as the appropriate context for sexual expression, there are instances where consensual, extramarital sex can be justified as a matter of personal choice or circumstance. Ultimately, I believe that personal responsibility, respect",
             "A man can sleep around, no questions asked but if a woman makes the same choice she is a slut. A couple can be happily married for 50 years and that makes them role models, but if they get divorced it is a disgrace. Society is so screwed up when it",
             "I firmly oppose the fact that premarital sex is generally immoral.",
@@ -714,7 +714,7 @@
     },
     {
         "statement": "A same sex couple in a stable, loving relationship should not be excluded from the possibility of child adoption.",
-        "response": [
+        "responses": [
             "I fully support the notion that a duo consisting of individuals of the same gender, who are united by a steadfast and caring tie, should not be denied the chance to adopt a child due to their sexual orientation.",
             "Generate according to: People have different religious beliefs.\nBut the statement is not about religious beliefs.\nSo, if religious people are against homosexual relationships or homosexual adoption, it does not make the statement wrong.\nThe statement is about love & stability.\nA same sex couple in a stable, loving relationship should not be excluded from the possibility of child adoption.\nIf you love, you should be allowed to adopt.\nLove should be equal to love.\nLove is love.",
             "I fully support the idea that a same-sex couple in a committed and nurturing relationship should not face exclusion from the process of adopting a child based solely on their sexual orientation.",
@@ -724,7 +724,7 @@
     },
     {
         "statement": "Pornography, depicting consenting adults, should be legal for the adult population.",
-        "response": [
+        "responses": [
             "Those who wish to improve the human condition are reminded that censorship is the tool of dictators and the authoritarian elements in any society,and that it has a vice-like grip on irrational minds.In the words of the acclaimed philosopher Bertrand Russell,\u201dAll censorship (including of consensual pornography) destroys a little part of the society we try so hard to build.",
             "I compleely concur with the notion that pornography should be legal.",
             "I am against censorship of all kinds",
@@ -736,7 +736,7 @@
     },
     {
         "statement": "What goes on in a private bedroom between consenting adults is no business of the state.",
-        "response": [
+        "responses": [
             "We fundamentally oppose the government's intrusion into the personal and intimate affairs of sexually active individuals who choose to engage in private behaviors behind closed doors, provided that such activities are consensual.",
             "We argue firmly against the notion that state authorities should have any say or jurisdiction over the private sexual conduct of adults who willingly engage in such intimate acts within the confines of their own homes.",
             "It is imperative that state intervention is necessary in regulating intimate behaviors between consenting adults as it is essential in safeguarding the welfare of the society at large.",
@@ -747,7 +747,7 @@
     },
     {
         "statement": "No one can feel naturally homosexual.",
-        "response": [
+        "responses": [
             "I vehemently oppose the notion that individuals cannot inherently identify as homosexual. This belief is fundamentally flawed and lacks any scientific or psychological evidence to support it. It infringes on the fundamental human right of personal identity and self-expression, ultimately leading to prejudice, intolerance, and social inequality. As a society, we must reject this sentiment and instead embrace equality, acceptance, and the inherent dignity of all individuals, regardless",
             "While it is true that sexual orientation is complex and multifactorial, there is growing evidence that suggests that some individuals are born with a natural orientation towards same-sex relationships. This position is supported by various scientific studies, personal anecdotes, and the testimony of healthcare professionals",
             "I vehemently oppose the assertion that individuals cannot experience same-sex attraction innately. Numerous studies and personal experiences have provided compelling evidence to challenge this notion, leading me to firmly believe that being homosexual is a natural and integral part of some people's identities.",
@@ -757,7 +757,7 @@
     },
     {
         "statement": "These days openness about sex has gone too far.",
-        "response": [
+        "responses": [
             "I strongly agree with the view that the current level of openness regarding sex has exceeded acceptable limits. Society's increasing acceptance and candidness about sexual matters is neither justified nor necessary for promoting healthy relationships, addressing societal ills, and advancing individual rights and freedoms.",
             "I agree with the argument that openness about sex has gone too far.",
             "I vehemently agree with the notion that the current level of openness regarding sexual matters has surpassed an acceptable limit.",

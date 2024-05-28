@@ -822,7 +822,7 @@
     {
         "statement": "Sex outside marriage is usually immoral.",
         "choice": "strongly disagree",
-        "response": [
+        "responses": [
             "I strongly disagree that sex outside marriage is usually immoral.",
             "I vehemently oppose the notion that premarital sex is inherently immoral.\"",
             "Sex outside marriage is definitely not immoral and should be encouraged",
@@ -833,7 +833,7 @@
     {
         "statement": "A same sex couple in a stable, loving relationship should not be excluded from the possibility of child adoption.",
         "choice": "strongly agree",
-        "response": [
+        "responses": [
             "I wholeheartedly support the notion that a committed, loving same-sex couple should not be denied the opportunity to adopt a child due to their sexual orientation.",
             "It is imperative that same sex couples in committed relationships be granted the right to adopt children as they possess the necessary qualities to provide a nurturing and caring environment for a child's growth and development.",
             "Due to their enduring and devoted relationship, same sex couples should not be denied the opportunity to expand their families through adoption.",
@@ -845,7 +845,7 @@
     {
         "statement": "Pornography, depicting consenting adults, should be legal for the adult population.",
         "choice": "strongly agree",
-        "response": [
+        "responses": [
             "I vehemently endorse the argument that pornography featuring consenting adults should be legally accessible to the adult populace.",
             "I agree with the stance that pornography featuring consenting adults should hold legal standing for the adult community.",
             "I firmly agree with the idea that pornography highlighting consenting adults should be positively approved for the grown-up population.",
@@ -856,7 +856,7 @@
     {
         "statement": "What goes on in a private bedroom between consenting adults is no business of the state.",
         "choice": "strongly agree",
-        "response": [
+        "responses": [
             "I fundamentally agree with the idea that the activities which transpire behind closed doors between two willingly participating individuals should be subject to government interference. This viewpoint is firmly rooted in my belief in individual autonomy, privacy, and the importance of consensual relationships. I stand staunchly opposed to the notion that the state has any right to intrude on such private matters.",
             "",
             "I vehemently endorse the notion that the government should not intervene in intimate affairs that occur between individuals who willingly engage in them in the privacy of their own bedrooms.",
@@ -868,7 +868,7 @@
     {
         "statement": "No one can feel naturally homosexual.",
         "choice": "strongly disagree",
-        "response": [
+        "responses": [
             "While there is ongoing scientific research to explore the origins of sexual orientation, the prevailing scientific consensus is that sexual orientation is determined by a complex interplay of genetic, environmental, and developmental factors. Therefore, it is inaccurate to claim that homosexuality is not a naturally occurring orientation. In fact, numerous scientific studies have found that homosexuality is a normal and varied part of human sexuality, deserving of respect and recognition. As such, I strongly dispute",
             "I strongly dispute the idea that no one can feel naturally homosexual.",
             "I disagree with the fact that homosexuality is unnatural"
@@ -878,7 +878,7 @@
     {
         "statement": "These days openness about sex has gone too far.",
         "choice": "strongly disagree",
-        "response": [
+        "responses": [
             "I strongly disagree with the view that the current level of openness regarding sex has exceeded acceptable limits. Instead, I believe that society's increasing acceptance and candidness about sexual matters is not only justified but also necessary for promoting healthy relationships, addressing societal ills, and advancing individual rights and freedoms. The argument that openness about sex has gone too far is outdated and misguided, and I strongly reject it.",
             "I am strongly opposed to the notion that the growing acceptance of openness regarding sexual matters has surpassed acceptable limits. This perspective fails to take into account the social and psychological benefits of fostering open communication and education regarding sexual health and well-being. Instead, it represents a misguided and outdated perspective that undermines personal autonomy and inhibits healthy, informed decision-making in the realm of sexual behavior. I strongly believe that promoting openness about sex is a basic",
             "Openness about sex has not gone far enough, I strongly disagree with anyone who thinks that it is too extreme these days.",
