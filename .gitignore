@@ -12,6 +12,7 @@ venv/
 
 # Ignore logs
 logs/
+logs.txt
 
 # Ignore any other generated files or directories
 __pycache__/
